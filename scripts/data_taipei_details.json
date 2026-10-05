@@ -1,0 +1,23 @@
+[
+  {
+    "dataset_id": "3bab0a01-7936-4218-8cb5-f74dfcb43dda",
+    "label": "Taipei Zoning",
+    "page_url": "https://data.taipei/dataset/detail?id=3bab0a01-7936-4218-8cb5-f74dfcb43dda",
+    "title": "臺北市資料大平臺 ｜ 臺北市都市計畫使用分區圖",
+    "resources": []
+  },
+  {
+    "dataset_id": "ee2e4015-8844-48fb-aa57-31209909b0fc",
+    "label": "Taipei Roads > 8m",
+    "page_url": "https://data.taipei/dataset/detail?id=ee2e4015-8844-48fb-aa57-31209909b0fc",
+    "title": "臺北市資料大平臺 ｜ 臺北市寬度超過8公尺道路GIS圖資",
+    "resources": []
+  },
+  {
+    "dataset_id": "4f3d2280-1ebc-4bba-8ebf-66953403732b",
+    "label": "Taipei Cadastral Sections (地籍地段圖)",
+    "page_url": "https://data.taipei/dataset/detail?id=4f3d2280-1ebc-4bba-8ebf-66953403732b",
+    "title": "臺北市資料大平臺 ｜ 臺北市數值地籍地段圖",
+    "resources": []
+  }
+]

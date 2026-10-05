@@ -1,0 +1,1212 @@
+{
+  "使用分區": [
+    {
+      "id": "a9a97996-3a55-46c8-9076-e5ebdefad6dc",
+      "title": "臺北市實價周報",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/a9a97996-3a55-46c8-9076-e5ebdefad6dc/resource/2979c431-7a32-4067-9af2-e716cd825c4b/download",
+      "fields": "成交案件類型(CASE_T)、行政區(DISTRICT)、交易標的/租賃標的(CASE_F)、預售屋建案名稱(BUILD_NAME)、土地區段位置或建物區門牌(LOCATION)、土地移轉總面積(坪)/土地租賃總面積(坪)(LANDA)、都市土地使用分區(LANDA_Z)、交易年月(SDATE)、交易筆棟數/租賃筆棟數(SCNT)、預售屋交易標的(TRANS_TARGET)、移轉層次(SBUILD)、總樓層數(TBUILD)、建物型態(BUITYPE)、主要用途(PBUILD)、主要建材(MBUILD)、建築完成年月(FDATE)、建物移轉總面積(坪)/租賃總面積(坪)(FAREA)、建物現況格局_房(BUILD_R)、建物現況格局_廳(BUILD_L)、建物現況格局_衛(BUILD_B)、建物現況格局_隔間(BUILD_P)、有無管理組織(RULE)、有無附傢俱(BUILD_C)、交易總價(萬元)/租賃總價(萬元)(TPRICE)、交易單價(萬元/坪)/租賃單價(元/坪)(UPRICE)、單價是否含車位(UPNOTE)、車位類別及數量(PARKTYPE)、車位移轉總面積(坪)/車位租賃總面積(坪)(PAREA)、車位移轉總價(萬元)/車位租賃總價(元)(PPRICE)、有無電梯(ELEVATOR)、主建物總面積(MB_AREA)、附屬建物總面積(SB_AREA)、共有部分總面積(PU_AREA)、備註(RMNOTE)、建物出租型態(RENT_TYPE)、租賃期間(RENT_PERIOD)、有無管理員(MANAGE)、租賃住宅服務(RENT_SERVICE)"
+    },
+    {
+      "id": "48661fd0-c2c6-4f99-b1cd-716b016dad41",
+      "title": "臺北市政府財政局經管市有非公用不動產公開徵求認養綠美化土地清冊",
+      "org": "財政局",
+      "format": "CSV",
+      "url": "/api/dataset/48661fd0-c2c6-4f99-b1cd-716b016dad41/resource/4913e5a0-9f09-4a14-8c2f-7d36280a05be/download",
+      "fields": "編號、土地標示、可提供使用面積_㎡、土地公告地價金額_元/㎡、都市計畫使用分區、備註"
+    },
+    {
+      "id": "0816f991-e6c8-4da0-a789-d022fee1462b",
+      "title": "臺北市115年度使用執照摘要",
+      "org": "都發局建管處",
+      "format": "XML",
+      "url": "/api/dataset/0816f991-e6c8-4da0-a789-d022fee1462b/resource/74a8b311-906e-44c4-91fb-7f413842d4e1/download",
+      "fields": "執照年度、執照號碼、發照日期、原核發執照、設計人、監造人、承造人、建造類別、構造種類、使用分區、幢數、棟數、地上層數、地下層數、戶數、騎樓基地面積、其他基地面積、建築面積、法定空地面積、地上避難面積、地下避難面積、建物高度、工程金額、竣工日期、開工日期、地址、地段號、樓層、說明、停車空間說明、法令、備註說明、變更概要"
+    },
+    {
+      "id": "d8834353-ff8e-4a6c-9730-a4d3541f2669",
+      "title": "臺北市115年度建造執照摘要",
+      "org": "都發局建管處",
+      "format": "XML",
+      "url": "/api/dataset/d8834353-ff8e-4a6c-9730-a4d3541f2669/resource/43624c8e-c768-4b3c-93c4-595f5af7a9cb/download",
+      "fields": "執照年度、執照號碼、發照日期、建造類別、構造種類、使用分區、幢數、棟數、地上層數、地下層數、戶數、地址、地段號、建築面積、騎樓基地面積、其他基地面積、建築期限、工程金額、起造人、監造人、設計人、樓層、說明、法令、備註說明"
+    },
+    {
+      "id": "c876ff02-af2e-4eb8-bd33-d444f5052733",
+      "title": "臺北市歷年使用執照摘要",
+      "org": "都發局建管處",
+      "format": "XML",
+      "url": "/api/dataset/c876ff02-af2e-4eb8-bd33-d444f5052733/resource/0f3f9675-8356-4f1a-9908-1ce8892012fa/download",
+      "fields": "執照年度、執照號碼、發照日期、原核發執照、設計人、監造人、承造人、建造類別、構造種類、使用分區、棟數、地上層數、地下層數、戶數、騎樓基地面積、其他基地面積、建築面積、法定空地面積、地上避難面積、地下避難面積、建物高度、工程金額、竣工日期、開工日期、地址、地段號、樓層、說明、停車空間說明、適用法令概要、備註說明、變更概要"
+    },
+    {
+      "id": "e20ea68e-c79d-4882-a2f9-2f3eeb45384b",
+      "title": "臺北市歷年建造執照摘要",
+      "org": "都發局建管處",
+      "format": "XML",
+      "url": "/api/dataset/e20ea68e-c79d-4882-a2f9-2f3eeb45384b/resource/2d9396af-863b-496a-9893-0d2f2a8d8b71/download",
+      "fields": "執照年度、執照號碼、發照日期、建造類別、構造種類、使用分區、棟數、地上層數、地下層數、戶數、建築地點、地段號、建築面積、騎樓基地面積、其他基地面積、建築期限、工程金額、起造人、設計人、監造人、樓層、說明、適用法令概要、備註說明"
+    },
+    {
+      "id": "e5e450ea-a283-470a-8659-18381671d7b8",
+      "title": "臺北市政府財政局經管市有非公用閒置土地清冊",
+      "org": "財政局",
+      "format": "CSV",
+      "url": "/api/dataset/e5e450ea-a283-470a-8659-18381671d7b8/resource/b54d1c90-f80b-4bc6-8072-e1a0e379a985/download",
+      "fields": "土地標示、列管面積_㎡、都市計畫使用分區、年月、公告地價_金額_元、年月、公告現值_金額_元"
+    },
+    {
+      "id": "a132a433-db7c-4387-8085-83e6a093b17f",
+      "title": "臺北市土地使用分區",
+      "org": "都發局",
+      "format": "CSV",
+      "url": "/api/dataset/a132a433-db7c-4387-8085-83e6a093b17f/resource/bed9a0d3-cb43-438e-825b-93810f8f2b9d/download",
+      "fields": "項次、區段代碼、行政區代碼、行政區、大段、小段、母號、子號、分區說明"
+    },
+    {
+      "id": "d1a8a4b8-f389-498b-a9bc-d93b64f2c2a9",
+      "title": "臺北市地籍清理公告標售土地清冊",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/d1a8a4b8-f389-498b-a9bc-d93b64f2c2a9/resource/9f996b76-47e6-449c-9d0a-346cdc21bb42/download",
+      "fields": "標號、鄉鎮市區、段小段、地號、面積（平方公尺）、使用分區/使用地類別、權利範圍、原登記名義人、他項權利人姓名或名稱、權利種類、標售底價金額、標售總底價金額、保證金金額、備註"
+    },
+    {
+      "id": "d61ca24b-7b2b-4e75-8004-c568902e6300",
+      "title": "臺北市土地使用內容與使用管制彙整表",
+      "org": "都發局",
+      "format": "CSV",
+      "url": "/api/dataset/d61ca24b-7b2b-4e75-8004-c568902e6300/resource/e2a43cdf-07c8-43db-9d37-62bb2e19654b/download",
+      "fields": "行政區、分區、筆數、建蔽率/百分比、容積率上限/百分比、面積/平方公尺"
+    },
+    {
+      "id": "3bab0a01-7936-4218-8cb5-f74dfcb43dda",
+      "title": "臺北市都市計畫使用分區圖",
+      "org": "都發局",
+      "format": "SHP,SHP",
+      "url": "/api/dataset/3bab0a01-7936-4218-8cb5-f74dfcb43dda/resource/0cb6e68a-87c1-4846-b766-bcde3ebe179c/download,/api/dataset/3bab0a01-7936-4218-8cb5-f74dfcb43dda/resource/10196e7d-2460-4b8a-b1d2-84001d09d7a4/download",
+      "fields": "編號、圖層、顏色、街廓編號、分區代碼、分區簡稱、使用分區、分區說明、原屬分區、變更前代碼、變更前簡稱、變更前分區"
+    },
+    {
+      "id": "7e6081b5-e9e2-4956-b49e-7f27ea8895f6",
+      "title": "臺北市都市計畫土地使用分區面積",
+      "org": "都發局",
+      "format": "CSV",
+      "url": "/api/dataset/7e6081b5-e9e2-4956-b49e-7f27ea8895f6/resource/1261ce84-9485-447a-afad-6dcbcda28715/download",
+      "fields": "區別、總計、計1、住宅區、商業區（Area）、工業區（Area）、行政區（Area）、文教區（Area）、公共設施用地、特定專用區、其他1、計2、農業區、保護區、風景區、河川區、其他2\n\n\n"
+    },
+    {
+      "id": "a4da6624-d896-4d54-9651-3d4bbd839942",
+      "title": "臺北市土地使用分區圖資",
+      "org": "都發局",
+      "format": "CSV",
+      "url": "/api/dataset/a4da6624-d896-4d54-9651-3d4bbd839942/resource/1a116328-e0c9-4a4d-9c43-f37e8da3ffd6/download",
+      "fields": "項次、行政區代碼、土地使用分區行政區、連結、備註"
+    }
+  ],
+  "8公尺": [
+    {
+      "id": "eb46bd14-5657-42ce-806a-0d761164a30b",
+      "title": "臺北市政府新工處施作路寬8公尺以上道路銑鋪期程維護管制區",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/eb46bd14-5657-42ce-806a-0d761164a30b/resource/17b6e6d3-911b-4874-afb3-605e8a104462/download",
+      "fields": "編號、工程名稱、行政區、路段、施作範圍、預計開工日期、預計完工日期、實際開工日期、實際竣工日期、備註"
+    },
+    {
+      "id": "3573ae05-3ba6-49bb-8c01-542b0d7762c3",
+      "title": "臺北市政府新工處施作路寬8公尺以上道路調降人孔蓋下地數量",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/3573ae05-3ba6-49bb-8c01-542b0d7762c3/resource/356b5e19-a155-4df1-b58c-4215840fd87f/download",
+      "fields": "年月、縣市別、縣市代碼、行政區、行政區代碼、數量"
+    },
+    {
+      "id": "ee2e4015-8844-48fb-aa57-31209909b0fc",
+      "title": "臺北市寬度超過8公尺道路GIS圖資",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "/api/dataset/ee2e4015-8844-48fb-aa57-31209909b0fc/resource/074a401d-45a2-4748-bf62-7d5372d53d45/download",
+      "fields": "OBJECTID、RoadLenght、RoadWidth、Road_ID、TT、RoadName、TOWNNAME、Omission、POINT_X、POINT_Y、POINT_Z、SWalk_Area、Ditch_Area、Cen_Median、Car_Median、Admin_NO、Admit_Dir、Intersect、Shape_Leng、AVG、Max、Min、Shape_Le_1、Shape_Area"
+    },
+    {
+      "id": "ae958f44-afbc-49ac-bc63-8563c2f83de0",
+      "title": "臺北市道路長度面積",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5800&kind=21&type=0&funid=a05020001&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、道路數量[條]、道路/總計/長度[公尺]、道路/總計/長度/快速道路完工長度[公尺]、道路/總計/面積[平方公尺]、道路/總計/面積/6公尺以上車用面積[平方公尺]、道路/總計/平均寬度[公尺]、道路/未滿6公尺/長度[公尺]、道路/未滿6公尺/面積[平方公尺]、道路/6~未滿8公尺/長度[公尺]、道路/6~未滿8公尺/面積[平方公尺]、道路/8~未滿10公尺/長度[公尺]、道路/8~未滿10公尺/面積[平方公尺]、道路/10~未滿15公尺/長度[公尺]、道路/10~未滿15公尺/面積[平方公尺]、道路/15~未滿20公尺/長度[公尺]、道路/15~未滿20公尺/面積[平方公尺]、道路/20~未滿30公尺/長度[公尺]、道路/20~未滿30公尺/面積[平方公尺]、道路/30~未滿40公尺/長度[公尺]、道路/30~未滿40公尺/面積[平方公尺]、道路/40~未滿50公尺/長度[公尺]、道路/40~未滿50公尺/面積[平方公尺]、道路/50~未滿60公尺/長度[公尺]、道路/50~未滿60公尺/面積[平方公尺]、道路/60~未滿70公尺/長度[公尺]、道路/60~未滿70公尺/面積[平方公尺]、道路/70公尺以上/長度[公尺]、道路/70公尺以上/面積[平方公尺]、公路/長度[公里]、公路/面積[千平方公尺]、列管山區道路數量[條]、列管山區道路長度[公里]、產業道路數量[條]、產業道路長度[公里]"
+    }
+  ],
+  "道路寬度": [
+    {
+      "id": "068be2c7-eea1-4303-91f8-fbf50c9b2aec",
+      "title": "臺北市道路寬度",
+      "org": "都發局",
+      "format": "SHP",
+      "url": "/api/dataset/068be2c7-eea1-4303-91f8-fbf50c9b2aec/resource/f8fc1725-b1df-4701-9bdf-c26939904b4e/download",
+      "fields": "road_width、angle"
+    },
+    {
+      "id": "89202d05-0e3e-4781-a04f-45327bf12b30",
+      "title": "臺北市市區自行車道",
+      "org": "交通局交工處",
+      "format": "CSV",
+      "url": "/api/dataset/89202d05-0e3e-4781-a04f-45327bf12b30/resource/a69988de-6a49-4956-9220-40ebd7c42800/download",
+      "fields": "路段序號、自行車道路線編號、路段名稱、路段起點描述、路段迄點描述、縣市別、鄉鎮別、管養單位、所屬道路寬度（M）、自行車道車行方向、自行車道類型、自行車道鋪面類別、自行車道長度（M）、自行車道寬度（M）、自行車道道路結構、補助經費（百萬元）、補助機關、完工日期、路徑（X）、路徑（Y）、備註，資料及欄位代號來自自行車道資料建置平台bikeway.nlma.gov.tw/Bikeway/"
+    }
+  ],
+  "道路": [
+    {
+      "id": "1cfc3073-c9e8-4cf9-a62b-2fa162ddc607",
+      "title": "臺北市道路交通音量監測不合格情形",
+      "org": "環保局",
+      "format": "ODS",
+      "url": "/api/dataset/1cfc3073-c9e8-4cf9-a62b-2fa162ddc607/resource/ec735f8c-d7dd-4e51-bfee-64f6f45d6e29/download",
+      "fields": "期間、管制區、總計監測站數、總計不合格時段數、總計不合格率、日間不合格站數、日間不合格率、晚間不合格站數、晚間不合格率、夜間不合格站數、夜間不合格率"
+    },
+    {
+      "id": "65398632-6b10-44ab-8996-ae89df6fcfde",
+      "title": "臺北市政府環境保護局洗街車資料",
+      "org": "環保局",
+      "format": "CSV",
+      "url": "/api/dataset/65398632-6b10-44ab-8996-ae89df6fcfde/resource/d80e0cde-d220-442b-b53b-57fb2c2b8285/download",
+      "fields": "車輛、車號、路線、道路名稱、路線起點、路線迄點、街道長度、洗掃次數、維護里程數"
+    },
+    {
+      "id": "39fe308f-c427-4418-bd88-83abd68b177f",
+      "title": "臺北市道路交通事故按月別",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8701&kind=21&type=0&funid=a04003501&cycle=1&outmode=12&compmode=0&outkind=3&deflst=2&nzo=1&nzo=1",
+      "fields": "統計期、發生件數[件]、車輛肇事率[件/萬輛]、死亡人數[人]、受傷人數[人]、酒後駕車發生件數[件]、酒後駕車死亡人數[人]、酒後駕車受傷人數[人]"
+    },
+    {
+      "id": "f5264c33-f991-481d-9f14-addc69f86e73",
+      "title": "臺北市交通執法按月別",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8701&kind=21&type=0&funid=a04002701&cycle=1&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、違反道路交通管理處罰條例舉發件數[件]、違反道路交通管理處罰條例處罰件數[件]、拖吊違規車輛數/汽車[含大型車][輛]、拖吊違規車輛數/機車[輛]、取締道路障礙件數[件]"
+    },
+    {
+      "id": "dc4e7a4c-7611-4419-aa92-8ba7e28fa090",
+      "title": "臺北市孔洞檢測清單",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/dc4e7a4c-7611-4419-aa92-8ba7e28fa090/resource/ae7b1fa8-3f98-4dde-8075-8114ae3b8f06/download",
+      "fields": "項次、年度、孔洞代碼、縣市別、行政區、路名、緯度、經度、孔洞位置（M）、孔洞長度（M）、孔洞寬度（M）、危險程度、檢測日期、提送日期、鑽心日期、鑽心結果、開挖日期、開挖結果"
+    },
+    {
+      "id": "aa8db2d9-eee3-42d9-bf0a-ae084eb03c8f",
+      "title": "臺北市30日臨時使用道路路段",
+      "org": "工務局新工處",
+      "format": "JSON",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/Rally/ThirtyDaysUrgentCase.json",
+      "fields": "BILL_CODE、URGENT_RCV_DATE、URGENT_START_DATE、 URGENT_END_DATE、URGENT_ADDRESS1、X1、Y1、URGENT_ADDRESS2、X2、Y2"
+    },
+    {
+      "id": "eb46bd14-5657-42ce-806a-0d761164a30b",
+      "title": "臺北市政府新工處施作路寬8公尺以上道路銑鋪期程維護管制區",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/eb46bd14-5657-42ce-806a-0d761164a30b/resource/17b6e6d3-911b-4874-afb3-605e8a104462/download",
+      "fields": "編號、工程名稱、行政區、路段、施作範圍、預計開工日期、預計完工日期、實際開工日期、實際竣工日期、備註"
+    },
+    {
+      "id": "af2c015a-f11f-4a59-a3b0-bf4db7db2238",
+      "title": "臺北市政府新建工程處道路公共設施維護管理資訊公開系統",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/af2c015a-f11f-4a59-a3b0-bf4db7db2238/resource/cc2a47e8-69db-4036-9abe-da1d2f08fc2b/download",
+      "fields": "序號、主類別、次類別、設施名稱、主管法規之中央目的事業主管機關、養護機關、上一級養護管理機關、中央部會或地方政府、養護頻率_年數量、養護紀錄_檔案民國年月、最近一次養護日期、維護管理狀況為、近期維護管理執行情形"
+    },
+    {
+      "id": "d4be59a5-141a-44ff-a224-a7d089715c6f",
+      "title": "臺北市市區道路新建及改善工程完成數量",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/d4be59a5-141a-44ff-a224-a7d089715c6f/resource/e691d9b3-bd18-47fb-a804-462e98f2ca29/download",
+      "fields": "項次、行政區、工程項目、長、寬、開工日期、完工日期\n"
+    },
+    {
+      "id": "9c872bdd-89d7-4bde-9e20-cef7c89c35db",
+      "title": "臺北市30日使用道路集會路段",
+      "org": "工務局新工處",
+      "format": "JSON",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/Rally/ThirtyDaysRallyCase.json",
+      "fields": "RAL_CODE、RAL_RCV_DATE、RAL_START_DATE、RAL_END_DATE、RAL_ADDRESS1、X1、Y1、RAL_ADDRESS2、X2、Y2"
+    },
+    {
+      "id": "98b1b6a8-a092-423c-aab0-7dcb981d2a58",
+      "title": "臺北市道路銑鋪區塊圖資",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "/api/dataset/98b1b6a8-a092-423c-aab0-7dcb981d2a58/resource/1eb0cd43-3088-4d91-bbf3-f120469a955e/download",
+      "fields": "AREACODE( 行政區編號)、ROAD( 道路名稱)、ROADX( 交叉路口)、STA_ROAD ( 開始道路)、END_ROAD( 截止道路)、MAP_AREA( 幾何面積)、WIDTH( 寬度)、NFCL_CODE( 銑鋪區塊編號)"
+    },
+    {
+      "id": "aaea574f-9264-4d9f-b4cd-5b0fced7e37c",
+      "title": "臺北市今日使用道路集會路段",
+      "org": "工務局新工處",
+      "format": "JSON",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/Rally/TodayRallyCase.json",
+      "fields": "RAL_CODE、RAL_RCV_DATE、RAL_START_DATE、RAL_END_DATE、RAL_ADDRESS1、X1、Y1、RAL_ADDRESS2、X2、Y2"
+    },
+    {
+      "id": "7c81e793-a67f-4b44-86df-8788af892368",
+      "title": "臺北市今日臨時使用道路路段",
+      "org": "工務局新工處",
+      "format": "JSON",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/Rally/TodayUrgentCase.json",
+      "fields": "BILL_CODE、URGENT_RCV_DATE、URGENT_START_DATE、URGENT_END_DATE、URGENT_ADDRESS1、X1、Y1、URGENT_ADDRESS2、X2、Y2"
+    },
+    {
+      "id": "81004147-1760-4a62-b2f9-cc6fa4268ec6",
+      "title": "臺北市開闢道路用地徵收取得統計",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/81004147-1760-4a62-b2f9-cc6fa4268ec6/resource/76ab2fad-0cdc-4442-9213-2d5296a9422c/download",
+      "fields": "年度、縣市、縣市代碼、行政區、行政區代碼、累計徵收土地_筆數、累計徵收面積_公頃、備註欄"
+    },
+    {
+      "id": "3573ae05-3ba6-49bb-8c01-542b0d7762c3",
+      "title": "臺北市政府新工處施作路寬8公尺以上道路調降人孔蓋下地數量",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/3573ae05-3ba6-49bb-8c01-542b0d7762c3/resource/356b5e19-a155-4df1-b58c-4215840fd87f/download",
+      "fields": "年月、縣市別、縣市代碼、行政區、行政區代碼、數量"
+    },
+    {
+      "id": "03e017d7-674d-4665-b874-5a6a020668e4",
+      "title": "臺北市地下道資訊",
+      "org": "工務局新工處",
+      "format": "JSON",
+      "url": "/api/dataset/03e017d7-674d-4665-b874-5a6a020668e4/resource/7ce99e98-be5e-4332-a2b6-4f0980de82e3/download",
+      "fields": "ID(系統ID)、Nether_id(地下道編號)、Nether_name(地下道名稱)、NetherKind(地下道類型)、AdminUnit(管理機關)、CountyCode(所在縣市)、AreaCode(所在區鄉)、Route(道路等級)、CrossoverObject(跨越道路)、adopt_status(認養情況)、DesignEngineers(設計單位)、SuperviseEngineers(監造單位)、BuildEngineers(施工單位)、Length(地下道總長)、Area(地下道總總投影面積)、Length1(主通道結構體長度)、Length2(出入口副通道/引道長度)、MaxWidth(最大淨寬)、MinWidth(最小淨寬)、UpHeight(主通道最小淨高)、DriveWay(總車道數)、Obj_Longitude(GMap經度座標)、Obj_Latitude(GMap緯度座標)、Exits(地下道-出入口資料)、No(出入口編號)、Longitude_exit(出入口GPS經度)、Latitude_exit(出入口GPS緯度)"
+    },
+    {
+      "id": "ee2e4015-8844-48fb-aa57-31209909b0fc",
+      "title": "臺北市寬度超過8公尺道路GIS圖資",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "/api/dataset/ee2e4015-8844-48fb-aa57-31209909b0fc/resource/074a401d-45a2-4748-bf62-7d5372d53d45/download",
+      "fields": "OBJECTID、RoadLenght、RoadWidth、Road_ID、TT、RoadName、TOWNNAME、Omission、POINT_X、POINT_Y、POINT_Z、SWalk_Area、Ditch_Area、Cen_Median、Car_Median、Admin_NO、Admit_Dir、Intersect、Shape_Leng、AVG、Max、Min、Shape_Le_1、Shape_Area"
+    },
+    {
+      "id": "caeceb7e-5991-488c-becd-382ffc3015f5",
+      "title": "臺北市都市計畫區域內現有已開闢道路長度及面積",
+      "org": "工務局新工處",
+      "format": "CSV",
+      "url": "/api/dataset/caeceb7e-5991-488c-becd-382ffc3015f5/resource/1e2a8450-181d-4040-8297-3737e72cac48/download",
+      "fields": "序號、縣市、行政區、行政區代碼、長度數量_公尺、面積_平方公尺\n"
+    },
+    {
+      "id": "b60ae44f-2c0e-4b9f-b76c-914db5213c78",
+      "title": "臺北市工務統計資料",
+      "org": "工務局",
+      "format": "CSV",
+      "url": "/api/dataset/b60ae44f-2c0e-4b9f-b76c-914db5213c78/resource/4b29a286-c7a5-4707-8f2e-530dd5777238/download",
+      "fields": "項次、表名、資料期、項目、統計數值"
+    },
+    {
+      "id": "c208dabd-2da0-4e6d-8dbd-a004b9782b0a",
+      "title": "臺北市 今日施工資訊",
+      "org": "工務局",
+      "format": "JSON",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/Todaywork.json",
+      "fields": "Ac_no、sno、AppMode、X、Y、AppTime、App_Name、C_Name、Addr、Cb_Da、Ce_Da、Co_Ti、Tc_Ma、Tc_Tl、Tc_Ma3、Tc_Tl3、NPurp、DType、DLen、IsStay、IsBlock、PlanB、WItem、Positions"
+    },
+    {
+      "id": "e7c980e4-2667-41c6-8017-6961fca05055",
+      "title": "臺北市明日道路施工預約資訊",
+      "org": "工務局",
+      "format": "JSON",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/Reserve.json",
+      "fields": "geometry、rmode、ac_no、ap_name、addr、wdate、co_ti、rtime、tc_na、tc_ma、tc_tl、tc_ma3、tc_tl3、rtype"
+    },
+    {
+      "id": "4ad9c4ad-96e9-4fca-912d-85c22f03921f",
+      "title": "臺北市道路申請活動使用管制圖資",
+      "org": "工務局",
+      "format": "JSON",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/ExtRest/ExtRest.json",
+      "fields": "geometry、er_name、rnote、road、st_date、en_date、ha_unitn、ma_unitn、contman、contact"
+    },
+    {
+      "id": "68ae8838-b2d3-4b12-8613-4f29bd22b17b",
+      "title": "臺北市公告土地現值劃分地價區段及最高最低地價",
+      "org": "地政局",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/3cd6a28b-6983-4112-9ea1-99cb1816ecbf/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/ba1187d0-8ec7-4d2c-a0db-733c03d896ee/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/9cc23744-d9a9-4182-94cd-acfa7646f585/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/e2923afb-4835-45d3-a245-8d7ffc487d64/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/eded54cc-ac11-4a05-a85e-4d671de3cf0d/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/3714e2b7-ffde-4ade-9c5a-a70dfb10c1de/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/84ee02e9-be81-4bef-8922-c5b91d08f304/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/c5e71b2b-ed3a-42ff-95c2-5a911b578f95/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/a270ae0a-6723-4f7c-beb0-3762e1608372/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/444270ef-4171-4151-a271-476e1b137ea7/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/50c521ba-cc0a-4af2-9f4b-449add5cde5f/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/ccb743f6-667c-4980-95d0-3feee0d5b3da/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/0fabea90-5265-4ca1-8fa9-ac1f19e03fa4/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/3ad14cc7-d870-4a69-8d85-472f4b538130/download,/api/dataset/68ae8838-b2d3-4b12-8613-4f29bd22b17b/resource/34f82b20-2f1c-4f75-9719-ffd2328cb94c/download",
+      "fields": "行政區、區段數總計筆數、一般區段價區段筆數、繁榮街道路線價區段筆數、一般路線價區段筆數、最高一般區段價_元/平方公尺、最低一般區段價_元/平方公尺、最高繁榮街道路線價_元/平方公尺、最低繁榮街道路線價_元/平方公尺、最高一般路線價_元/平方公尺、最低一般路線價_元/平方公尺、最高宗地地價_元/平方公尺"
+    },
+    {
+      "id": "b5726297-d172-4ba7-b5c4-31de38e184e1",
+      "title": "臺北市列管登山步道",
+      "org": "工務局大地處",
+      "format": "CSV",
+      "url": "/api/dataset/b5726297-d172-4ba7-b5c4-31de38e184e1/resource/0d1d7db3-efc1-40d1-ad24-5a1a1f88e06b/download",
+      "fields": "序號、行政區、登山步道路線、總長M、單程步行時間min、步道分級、起點、起點經度座標、起點緯度座標、起點是否為階梯、迄點、迄點經度座標、迄點緯度座標、迄點是否為階梯、步道口是否有路擋、是否適合輪椅通行、輪椅可通行段平均坡度、輪椅可通行段長度M、行動電話通訊情形、是否有流動廁所、流動廁所位置、是否為無障礙廁所"
+    },
+    {
+      "id": "1c8df090-0c31-46c9-b27d-41579fdef957",
+      "title": "臺北市列管山區道路",
+      "org": "工務局大地處",
+      "format": "KML",
+      "url": "/api/dataset/1c8df090-0c31-46c9-b27d-41579fdef957/resource/4e294fde-5718-4951-9548-5320f11278d3/download",
+      "fields": "OID_、Name、FolderPath、SymbolID、AltMode、Base、Clamped、Extruded、Snippet、PopupInfo、Shape_Leng"
+    },
+    {
+      "id": "da715207-29e8-4b8d-b680-7fc120211512",
+      "title": "臺北市交通事件裁決所本年度因違反道路交通管理事件提出申訴條款前5名",
+      "org": "交通局裁決所",
+      "format": "CSV",
+      "url": "/api/dataset/da715207-29e8-4b8d-b680-7fc120211512/resource/4c772c1d-6f69-45ce-b093-8abf6248ffee/download",
+      "fields": "民國年月、排名、條款、條款中文說明、件數"
+    },
+    {
+      "id": "11fa1dbc-4952-46b7-a319-1c3cbefba741",
+      "title": "臺北市公路里程概況",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8700&kind=21&type=0&funid=a05043101&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、總長度數值[公里]、公路長度數值/合計[公里]、公路長度數值/國道[公里]、公路長度數值/省道[公里]、公路長度數值/市道[公里]、公路長度數值/區道[公里]、公路長度數值/專用道路[公里]、市區道路長度數值[公里]"
+    },
+    {
+      "id": "64dd3cf9-e062-46dd-8075-f36d8673130f",
+      "title": "臺北市總預算附屬單位預算及綜計表_特別收入基金_現金流量綜計表_依基金別分列",
+      "org": "主計處",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/d1e0046b-ab2b-40f9-b93b-ca363be43103/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/77992411-6465-42a2-b587-9612cc81536c/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/8c71dd02-4711-4609-8dd4-7dc61f7dd630/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/121352ea-f643-4ce5-a1f1-f70c45c81393/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/f0276786-d57a-488e-8413-a73d065e95fb/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/b6cd399b-0605-4058-b58a-c2bc0bc41815/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/33daf6e9-a939-48c4-ae10-2e0309307802/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/51255a0c-90d1-42a2-a7ab-eea68c3879b1/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/86ad4859-1ea6-468b-ba19-158b038d13fc/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/8bddedf2-0ea5-49db-88d7-7c9ef1fd3240/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/cebb3406-f315-4513-9336-dff9401dc939/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/0ee03cdb-eaa0-48e4-b59d-9fbf76e2b860/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/4ca8fb0d-761d-48bc-9e2d-2f94f379b13d/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/7d7588de-390d-47b2-a48c-fecbe7d2e311/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/ebf7adca-9ac7-4d96-bbed-fa82841588dd/download,/api/dataset/64dd3cf9-e062-46dd-8075-f36d8673130f/resource/44f595d9-2a02-4c94-8583-ccef5ebd94bb/download",
+      "fields": "項目、合計、教育局主管臺北市地方教育發展基金、產業發展局主管臺北市農業發展基金、產業發展局主管臺北市溫泉資源管理基金、產業發展局主管臺北市產業發展基金、工務局主管臺北市道路基金、社會局主管臺北市公益彩券盈餘分配基金、勞動局主管臺北市勞工權益基金、勞動局主管臺北市身心障礙者就業基金、環境保護局主管臺北市環境保護基金、都市發展局主管臺北市建築物無障礙設備與設施改善基金、都市發展局主管臺北市容積代金基金,文化局主管臺北市公共藝術基金、地政局主管臺北市土地重劃抵費地出售盈餘款基金、捷運工程局主管臺北市臺北都會區捷運固定資產重置基金、捷運工程局主管臺北市大眾捷運系統建設基金"
+    },
+    {
+      "id": "985743f7-a33e-4ac1-ad2e-7ef5ffea02e2",
+      "title": "臺北市婦幼安全警示地點",
+      "org": "警察局婦幼隊",
+      "format": "CSV",
+      "url": "/api/dataset/985743f7-a33e-4ac1-ad2e-7ef5ffea02e2/resource/f87ecf10-7379-49de-8945-cb50017ec838/download",
+      "fields": "編號、縣市別代碼、地點位置、管轄分局、郵遞區號、備註"
+    },
+    {
+      "id": "4fefd1b3-58b9-4dab-af00-724c715b0c58",
+      "title": "臺北市自行車道(河濱)",
+      "org": "工務局水利處",
+      "format": "KML",
+      "url": "/api/dataset/4fefd1b3-58b9-4dab-af00-724c715b0c58/resource/0912d803-688f-493a-b682-27da729ed593/download",
+      "fields": "LENGTH(KM)、TIME、MRT、DRIVE、CONNECT"
+    },
+    {
+      "id": "3e62c860-0753-4c79-8fe1-bcb3e0243534",
+      "title": "臺北市水利處雨水下水道人孔資料",
+      "org": "工務局水利處",
+      "format": "CSV",
+      "url": "/api/dataset/3e62c860-0753-4c79-8fe1-bcb3e0243534/resource/dcaebd40-45e1-48f6-9d2e-00e1c0283f8a/download",
+      "fields": "圖幅編號、人孔編號、X坐標、Y坐標、主集水區名稱、行政區、行政里、道路名稱、人孔蓋型式、人孔種類、箱涵屬性、使用狀態、資料狀態、人孔深度（m）、人孔尺寸長度（m）、人孔尺寸寬度（m）、人孔頂高程（m）、人孔頂路面寬（m）、地盤標高（m）"
+    },
+    {
+      "id": "068be2c7-eea1-4303-91f8-fbf50c9b2aec",
+      "title": "臺北市道路寬度",
+      "org": "都發局",
+      "format": "SHP",
+      "url": "/api/dataset/068be2c7-eea1-4303-91f8-fbf50c9b2aec/resource/f8fc1725-b1df-4701-9bdf-c26939904b4e/download",
+      "fields": "road_width、angle"
+    },
+    {
+      "id": "2f238b4f-1b27-4085-93e9-d684ef0e2735",
+      "title": "臺北市死傷交通事故資料",
+      "org": "警察局交通大隊",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/4c71c50e-9851-471d-8acc-5e8362b0f8e0/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/8a319d4b-cadf-436e-8396-d1a356b6c886/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/341f2def-117a-481b-80f7-179a03dc296f/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/0c6e230f-32b7-4ef4-a03c-e66ce35bfb86/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/660d29dd-1399-4898-abc5-3e624708d5e4/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/fd15b53c-b417-4217-9409-f93db1d7fed2/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/cd47ccc6-9ebc-4120-8a86-4622f653b29a/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/83d6d29c-6801-41a2-95c6-47d551646db3/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/1a08afea-6b2e-4c07-a7a2-17dfba7541f5/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/abf81068-1bb7-414f-868e-29dffd7561bf/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/2b92f718-bc87-4260-9b38-68d48bf01658/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/ebdbe6de-71da-4a42-aed4-21b818e79f70/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/98b5e133-4478-4541-9e12-e8f721f0b03b/download,/api/dataset/2f238b4f-1b27-4085-93e9-d684ef0e2735/resource/f47c1289-9e2f-49aa-a328-37708402a9ac/download",
+      "fields": "發生年度、發生月、發生日、發生時-Hours、發生分、區序、肇事地點、死亡人數、2-30日死亡人數、受傷人數、當事人序號、車種、天候、光線、道路類別、速限-速度限制、道路型態、事故位置、路面狀況1、路面狀況2、路面狀況3、道路障礙1、道路障礙2、號誌1、號誌2、車道劃分-分向、車道劃分-分道1、車道劃分-分道2、車道劃分-分道3、事故類型及型態、性別、年齡、受傷程度、主要傷處、保護裝置、行動電話、車輛用途、當事者行動狀態、駕駛資格情形、駕駛執照種類、飲酒情形、車輛撞擊部位1、車輛撞擊部位2、肇因碼-個別、肇因碼-主要、個人肇逃否、職業、座標-X、座標-Y"
+    },
+    {
+      "id": "3a3e8049-5460-4c48-9772-b9e7c10c198b",
+      "title": "臺北市環境音量監測不合格情形(88至98年)",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8800&ymt=9800&kind=21&type=0&funid=a05033601&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、一般地區監測站數[站數]、一般地區監測時段數[時段數]、一般地區不合格時段數按時段別/總計[時段數]、一般地區不合格時段數按時段別/早[5~7時][時段數]、一般地區不合格時段數按時段別/日[7~20時][時段數]、一般地區不合格時段數按時段別/晚[20~22時][時段數]、一般地區不合格時段數按時段別/夜[22~5時][時段數]、一般地區不合格時段百分比按時段別/總計[%]、一般地區不合格時段百分比按時段別/早[5~7時][%]、一般地區不合格時段百分比按時段別/日[7~20時][%]、一般地區不合格時段百分比按時段別/晚[20~22時][%]、一般地區不合格時段百分比按時段別/夜[22~5時][%]、一般地區不合格時段數按管制區別/總計[時段數]、一般地區不合格時段數按管制區別/第一類管制區[時段數]、一般地區不合格時段數按管制區別/第二類管制區[時段數]、一般地區不合格時段數按管制區別/第三類管制區[時段數]、一般地區不合格時段數按管制區別/第四類管制區[時段數]、一般地區不合格時段百分比按管制區別/總計[%]、一般地區不合格時段百分比按管制區別/第一類管制區[%]、一般地區不合格時段百分比按管制區別/第二類管制區[%]、一般地區不合格時段百分比按管制區別/第三類管制區[%]、一般地區不合格時段百分比按管制區別/第四類管制區[%]、道路交通監測站數[站數]、道路交通監測時段數[時段數]、道路交通不合格時段數按時段別/總計[時段數]、道路交通不合格時段數按時段別/早[5~7時][時段數]、道路交通不合格時段數按時段別/日[7~20時][時段數]、道路交通不合格時段數按時段別/晚[20~22時][時段數]、道路交通不合格時段數按時段別/夜[22~5時][時段數]、道路交通不合格時段百分比按時段別/總計[%]、道路交通不合格時段百分比按時段別/早[5~7時][%]、道路交通不合格時段百分比按時段別/日[7~20時][%]、道路交通不合格時段百分比按時段別/晚[20~22時][%]、道路交通不合格時段百分比按時段別/夜[22~5時][%]、道路交通不合格時段數按管制區別/總計[時段數]、道路交通不合格時段數按管制區別/第一類管制區[時段數]、道路交通不合格時段數按管制區別/第二類管制區[時段數]、道路交通不合格時段數按管制區別/第三類管制區[時段數]、道路交通不合格時段數按管制區別/第四類管制區[時段數]、道路交通不合格時段百分比按管制區別/總計[%]、道路交通不合格時段百分比按管制區別/第一類管制區[%]、道路交通不合格時段百分比按管制區別/第二類管制區[%]、道路交通不合格時段百分比按管制區別/第三類管制區[%]、道路交通不合格時段百分比按管制區別/第四類管制區[%]"
+    },
+    {
+      "id": "59cea37a-27bb-4e0b-9cae-963d53cf0987",
+      "title": "臺北市都市計畫公共用設施用地面積",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=9100&kind=21&type=0&funid=a05018301&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、計畫面積[公頃]/ 總計、計畫面積[公頃]/ 公園、計畫面積[公頃]/ 綠地、計畫面積[公頃]/ 廣場、計畫面積[公頃]/ 兒童遊樂場、計畫面積[公頃]/ 體育場、計畫面積[公頃]/ 道路及人行步道、計畫面積[公頃]/ 停車場、計畫面積[公頃]/ 加油站、計畫面積[公頃]/ 市場、計畫面積[公頃]/ 學校、計畫面積[公頃]/ 社教機構、計畫面積[公頃]/ 醫療衛生機構、計畫面積[公頃]/ 機關用地、計畫面積[公頃]/ 墓地、計畫面積[公頃]/ 變電所及電力事業用地、計畫面積[公頃]/ 郵政及電信用地、計畫面積[公頃]/ 民用航空站及機場、計畫面積[公頃]/ 溝渠河道用地、計畫面積[公頃]/ 港埠用地、計畫面積[公頃]/ 捷運系統與交通車站及鐵路、計畫面積[公頃]/ 環保設施用地、計畫面積[公頃]/ 其他用地、已闢建面積[公頃]/ 總計、已闢建面積[公頃]/ 公園、已闢建面積[公頃]/ 綠地、已闢建面積[公頃]/ 廣場、已闢建面積[公頃]/ 兒童遊樂場、已闢建面積[公頃]/ 體育場、已闢建面積[公頃]/ 道路及人行步道、已闢建面積[公頃]/ 停車場、已闢建面積[公頃]/ 加油站、已闢建面積[公頃]/ 市場、已闢建面積[公頃]/ 學校、已闢建面積[公頃]/ 社教機構、已闢建面積[公頃]/ 醫療衛生機構、已闢建面積[公頃]/ 機關用地、已闢建面積[公頃]/ 墓地、已闢建面積[公頃]/ 變電所及電力事業用地、已闢建面積[公頃]/ 郵政及電信用地、已闢建面積[公頃]/ 民用航空站及機場、已闢建面積[公頃]/ 溝渠河道用地、已闢建面積[公頃]/ 港埠用地、已闢建面積[公頃]/ 捷運系統與交通車站及鐵路、已闢建面積[公頃]/ 環保設施用地、已闢建面積[公頃]/ 其他用地"
+    },
+    {
+      "id": "25704c8f-e806-44bb-a6ac-57d6810867ba",
+      "title": "臺北市建築管理各項證照核發件數",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5700&kind=21&type=0&funid=a05018601&cycle=4&outmode=12&compmode=0&outkind=3&deflst=2&nzo=1",
+      "fields": "統計期、核發件數/總計、核發件數/建築執照/合計[件]、核發件數/建築執照/建造執照/計[件]、核發件數/建築執照/建造執照/新建[件]、核發件數/建築執照/建造執照/增建[件]、核發件數/建築執照/建造執照/改建[件]、核發件數/建築執照/雜項執照[件]、核發件數/建築執照/使用執照[件]、核發件數/建築執照/拆除執照[件]、核發件數/修建證[件]、核發件數/道路使用執照[件]、核發件數/變更使用執照[件]、核發件數/變更設計[件]、核發件數/工程展期[件]、核發件數/其他[件]、申請建造執照平均處理日數[日/件]"
+    },
+    {
+      "id": "c2ca47a6-6575-485a-801c-40bed703c50e",
+      "title": "臺北市總決算附屬單位決算特別收入基金收入支出綜計表(依機關及基金別)",
+      "org": "主計處",
+      "format": "XML,XML,XML,XML,XML",
+      "url": "/api/dataset/c2ca47a6-6575-485a-801c-40bed703c50e/resource/cbe4c52d-2855-4f5b-b5a6-521bffa7b4ba/download,/api/dataset/c2ca47a6-6575-485a-801c-40bed703c50e/resource/6e93fcf0-81e0-48a7-87e5-f3bf0329dcca/download,/api/dataset/c2ca47a6-6575-485a-801c-40bed703c50e/resource/f5104905-a313-4476-809a-236669e5d124/download,/api/dataset/c2ca47a6-6575-485a-801c-40bed703c50e/resource/dd0e4a5a-92a6-4951-8578-76d379e96852/download,/api/dataset/c2ca47a6-6575-485a-801c-40bed703c50e/resource/347fe4fc-48c5-416a-9094-b30e7a9e2b23/download",
+      "fields": "科目、合計、教育局主管-臺北市地方教育發展基金、產業發展局主管-臺北市農業發展基金、產業發展局主管-臺北市溫泉資源管理基金、產業發展局主管-臺北市產業發展基金、工務局主管-臺北市道路基金、社會局主管-臺北市公益彩券盈餘分配基金、勞動局主管-臺北市勞工權益基金、勞動局主管-臺北市身心障礙者就業基金、環境保護局主管-臺北市環境保護基金、都市發展局主管-臺北市建築物無障礙設備與設施改善基金、都市發展局主管-臺北市容積代金基金、文化局主管-臺北市公共藝術基金、地政局主管-臺北市土地重劃抵費地出售盈餘款基金、捷運工程局主管-臺北市臺北都會區捷運固定資產重置基金、捷運工程局主管-臺北市大眾捷運系統建設基金"
+    },
+    {
+      "id": "7d4b4b78-5976-491f-9f5f-7c73f175c2fe",
+      "title": "臺北市辦理市地重劃成果",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&kind=21&type=0&funid=a05002101&cycle=4&outmode=12&compmode=0&outkind=3&deflst=2&nzo=1",
+      "fields": "統計期、市地重劃別、重劃筆數[筆]、重劃面積/總計[公頃]、重劃面積/提供建築用地面積[公頃]、重劃面積/無償取得公共設施用地/合計[公頃]、重劃面積/無償取得公共設施用地/道路[公頃]、重劃面積/無償取得公共設施用地/溝渠[公頃]、重劃面積/無償取得公共設施用地/遊樂場及公園[公頃]、重劃面積/無償取得公共設施用地/廣場及綠地[公頃]、重劃面積/無償取得公共設施用地/學校用地[公頃]、重劃面積/無償取得公共設施用地/停車場[公頃]、重劃面積/無償取得公共設施用地/零售市場[公頃]、重劃面積/無償取得公共設施用地/其他[公頃]、重劃面積/其他公共設施用地[公頃]、節省政府用地徵購及工程建設費用/總計[元]、節省政府用地徵購及工程建設費用/用地徵購地價[元]、節省政府用地徵購及工程建設費用/工程建設費用[元]、地價變動情形/重劃前[元/平方公尺]、地價變動情形/重劃後[元/平方公尺]、抵費地/筆數[筆]、抵費地/面積[公頃]"
+    },
+    {
+      "id": "5143ade7-0d98-4653-b7e2-d70aec0baa39",
+      "title": "臺北市環境音量監測不合格情形(99年以後)",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=9900&kind=21&type=0&funid=a05033602&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、一般地區監測站數[站數]、一般地區監測時段數[時段數]、一般地區不合格時段數按時段別/總計[時段數]、一般地區不合格時段數按時段別/日間[時段數]、一般地區不合格時段數按時段別/晚間[時段數]、一般地區不合格時段數按時段別/夜間[時段數]、一般地區不合格時段百分比按時段別/總計[%]、一般地區不合格時段百分比按時段別/日間[%]、一般地區不合格時段百分比按時段別/晚間[%]、一般地區不合格時段百分比按時段別/夜間[%]、一般地區不合格時段數按管制區別/總計[時段數]、一般地區不合格時段數按管制區別/第一類管制區[時段數]、一般地區不合格時段數按管制區別/第二類管制區[時段數]、一般地區不合格時段數按管制區別/第三類管制區[時段數]、一般地區不合格時段數按管制區別/第四類管制區[時段數]、一般地區不合格時段百分比按管制區別/總計[%]、一般地區不合格時段百分比按管制區別/第一類管制區[%]、一般地區不合格時段百分比按管制區別/第二類管制區[%]、一般地區不合格時段百分比按管制區別/第三類管制區[%]、一般地區不合格時段百分比按管制區別/第四類管制區[%]、道路交通監測站數[站數]、道路交通監測時段數[時段數]、道路交通不合格時段數按時段別/總計[時段數]、道路交通不合格時段數按時段別/日間[時段數]、道路交通不合格時段數按時段別/晚間[時段數]、道路交通不合格時段數按時段別/夜間[時段數]、道路交通不合格時段百分比按時段別/總計[%]、道路交通不合格時段百分比按時段別/日間[%]、道路交通不合格時段百分比按時段別/晚間[%]、道路交通不合格時段百分比按時段別/夜間[%]、道路交通不合格時段數按管制區別/總計[時段數]、道路交通不合格時段數按管制區別/第一類管制區[時段數]、道路交通不合格時段數按管制區別/第二類管制區[時段數]、道路交通不合格時段數按管制區別/第三類管制區[時段數]、道路交通不合格時段數按管制區別/第四類管制區[時段數]、道路交通不合格時段百分比按管制區別/總計[%]、道路交通不合格時段百分比按管制區別/第一類管制區[%]、道路交通不合格時段百分比按管制區別/第二類管制區[%]、道路交通不合格時段百分比按管制區別/第三類管制區[%]、道路交通不合格時段百分比按管制區別/第四類管制區[%]"
+    },
+    {
+      "id": "79776240-525e-467d-8911-8dbe3aeea888",
+      "title": "臺北市道路交通事故原因",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5700&kind=21&type=0&funid=a05029701&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、件數/總計、件數/駕駛人過失/合計、件數/駕駛人過失/超速失控、件數/駕駛人過失/酒後駕車、件數/駕駛人過失/未注意前車狀況、件數/駕駛人過失/肇事逃逸、件數/駕駛人過失/未保持行車安全間距、件數/駕駛人過失/未依規定讓車、件數/駕駛人過失/行駛疏忽、件數/駕駛人過失/違反號誌管制、件數/駕駛人過失/違反標誌標線、件數/駕駛人過失/逆向行駛、件數/駕駛人過失/轉彎不當、件數/駕駛人過失/搶越行人穿越道、件數/駕駛人過失/其他、件數/機件故障、件數/非駕駛人過失、件數/交通管制設施、件數/其他"
+    },
+    {
+      "id": "61b59d0e-071e-4e78-b9ae-8fa55a9f8f70",
+      "title": "臺北市市容綠美化",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=7000&kind=21&type=0&funid=a05019901&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、道路綠地綠美化面積[平方公尺]、行道樹[株]、公園內喬木數[株]、鄰里公園內喬木數[株]、草花培育數[盆]、灌木培育數[株]、樹木修剪數[株]、路燈器具清洗汰換數[盞]、後巷美化累計巷數[條]、公有田園城市示範園圃/建置數[處]、公有田園城市示範園圃/面積[平方公尺]"
+    },
+    {
+      "id": "ae958f44-afbc-49ac-bc63-8563c2f83de0",
+      "title": "臺北市道路長度面積",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5800&kind=21&type=0&funid=a05020001&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、道路數量[條]、道路/總計/長度[公尺]、道路/總計/長度/快速道路完工長度[公尺]、道路/總計/面積[平方公尺]、道路/總計/面積/6公尺以上車用面積[平方公尺]、道路/總計/平均寬度[公尺]、道路/未滿6公尺/長度[公尺]、道路/未滿6公尺/面積[平方公尺]、道路/6~未滿8公尺/長度[公尺]、道路/6~未滿8公尺/面積[平方公尺]、道路/8~未滿10公尺/長度[公尺]、道路/8~未滿10公尺/面積[平方公尺]、道路/10~未滿15公尺/長度[公尺]、道路/10~未滿15公尺/面積[平方公尺]、道路/15~未滿20公尺/長度[公尺]、道路/15~未滿20公尺/面積[平方公尺]、道路/20~未滿30公尺/長度[公尺]、道路/20~未滿30公尺/面積[平方公尺]、道路/30~未滿40公尺/長度[公尺]、道路/30~未滿40公尺/面積[平方公尺]、道路/40~未滿50公尺/長度[公尺]、道路/40~未滿50公尺/面積[平方公尺]、道路/50~未滿60公尺/長度[公尺]、道路/50~未滿60公尺/面積[平方公尺]、道路/60~未滿70公尺/長度[公尺]、道路/60~未滿70公尺/面積[平方公尺]、道路/70公尺以上/長度[公尺]、道路/70公尺以上/面積[平方公尺]、公路/長度[公里]、公路/面積[千平方公尺]、列管山區道路數量[條]、列管山區道路長度[公里]、產業道路數量[條]、產業道路長度[公里]"
+    },
+    {
+      "id": "3c834e59-1bd5-48ed-beaa-c72d13ada512",
+      "title": "臺北市人行道",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=6300&kind=21&type=0&funid=a05020401&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、長度[公尺]、面積[平方公尺]、完工工程/項數[項]、完工工程/長度[公尺]、完工工程/總面積[平方公尺]、應設置人行道路段長度[公尺]、已設置人行道路段長度[公尺]"
+    },
+    {
+      "id": "52916103-adad-4522-a757-38dc04c9b59f",
+      "title": "臺北市道路交通事故",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5700&kind=21&type=0&funid=a05029601&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、造成30日內人員傷亡之道路交通事故肇事件數[件]、造成30日內人員傷亡之道路交通事故肇事率[件/萬輛]、造成30日內人員傷亡之道路交通事故肇事件數車輛別/汽車總計[件]、造成30日內人員傷亡之道路交通事故肇事件數車輛別/大型汽車[件]、造成30日內人員傷亡之道路交通事故肇事件數車輛別/小型汽車[件]、造成30日內人員傷亡之道路交通事故肇事件數車輛別/特種車[件]、造成30日內人員傷亡之道路交通事故肇事件數車輛別/機車[件]、造成30日內人員傷亡之道路交通事故肇事件數車輛別/自行車[件]、造成30日內人員傷亡之道路交通事故肇事件數車輛別/其他[件]、造成30日內人員傷亡之道路交通事故死傷人數/總計[人]、造成30日內人員傷亡之道路交通事故死傷人數/死亡[人]、造成30日內人員傷亡之道路交通事故死傷人數/死亡/男[人]、造成30日內人員傷亡之道路交通事故死傷人數/死亡/女[人]、造成30日內人員傷亡之道路交通事故死傷人數/受傷[人]、道路交通事故平均等候[反應]時間[分]"
+    },
+    {
+      "id": "616b09ab-de85-480f-a9eb-bc201fe5c2c2",
+      "title": "臺北市總決算附屬單位決算特別收入基金現金流量綜計表(依機關及基金別)",
+      "org": "主計處",
+      "format": "XML,XML,XML,XML,XML,XML,XML,XML",
+      "url": "/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/740e431f-7483-41c1-a63c-5984562fc066/download,/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/f4c65940-7ccb-442b-a747-af9c4f1352cc/download,/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/d07781eb-4427-4e97-9da6-e202c0241111/download,/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/68060b1d-013f-41df-acc2-22415d1c6db7/download,/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/86bbeea1-e51c-4344-8f13-d0b9b93f6591/download,/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/e0973abb-635d-4e10-aaa4-80117f271b03/download,/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/21df942a-c354-42d5-b0f5-bb1b95385e70/download,/api/dataset/616b09ab-de85-480f-a9eb-bc201fe5c2c2/resource/9a033641-d53d-4b99-ad54-a5a534286527/download",
+      "fields": "項目、合計、教育局主管-臺北市地方教育發展基金、產業發展局主管-臺北市農業發展基金、產業發展局主管-臺北市溫泉資源管理基金、產業發展局主管-臺北市產業發展基金、工務局主管-臺北市道路基金、社會局主管-臺北市公益彩券盈餘分配基金、勞動局主管-臺北市勞工權益基金、勞動局主管-臺北市身心障礙者就業基金、環境保護局主管-臺北市環境保護基金、都市發展局主管-臺北市建築物無障礙設備與設施改善基金、都市發展局主管-臺北市容積代金基金、文化局主管-臺北市公共藝術基金、地政局主管-臺北市土地重劃抵費地出售盈餘款基金、捷運工程局主管-臺北市臺北都會區捷運固定資產重置基金、捷運工程局主管-臺北市大眾捷運系統建設基金"
+    },
+    {
+      "id": "e02146bd-5caa-4c48-a8b5-9b74d67c36d1",
+      "title": "臺北市總決算附屬單位決算特別收入基金平衡綜計表(依機關及基金別)",
+      "org": "主計處",
+      "format": "XML,XML,XML,XML,XML,XML,XML,XML",
+      "url": "/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/01fe24ee-516e-473d-b098-06fffc43c6dc/download,/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/85bf140e-5f23-4810-8ddc-e6a69d596b2a/download,/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/39b50a8a-4518-4a2b-a994-7d15500a8b37/download,/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/14113ab3-c5bf-41b8-965e-1bf8b5eb3909/download,/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/254621df-02ae-43ab-b23e-506d0b32c54d/download,/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/60518273-40bf-4fe9-a386-d28e340c1089/download,/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/cbab8d15-45d6-4fbe-a5f2-0e5d5c5b5178/download,/api/dataset/e02146bd-5caa-4c48-a8b5-9b74d67c36d1/resource/cb61d0bc-89c3-4be3-b64d-f8f2e02facca/download",
+      "fields": "科目、合計-金額、合計-百分比、教育局主管-臺北市地方教育發展基金-金額、教育局主管-臺北市地方教育發展基金-百分比、產業發展局主管-臺北市農業發展基金-金額、產業發展局主管-臺北市農業發展基金-百分比、產業發展局主管-臺北市溫泉資源管理基金-金額、產業發展局主管-臺北市溫泉資源管理基金-百分比、產業發展局主管-臺北市產業發展基金-金額、產業發展局主管-臺北市產業發展基金-百分比、工務局主管-臺北市道路基金-金額、工務局主管-臺北市道路基金-百分比、社會局主管-臺北市公益彩券盈餘分配基金-金額、社會局主管-臺北市公益彩券盈餘分配基金-百分比、勞動局主管-臺北市勞工權益基金-金額、勞動局主管-臺北市勞工權益基金-百分比、勞動局主管-臺北市身心障礙者就業基金-金額、勞動局主管-臺北市身心障礙者就業基金-百分比、環境保護局主管-臺北市環境保護基金-金額、環境保護局主管-臺北市環境保護基金-百分比、都市發展局主管-臺北市建築物無障礙設備與設施改善基金-金額、都市發展局主管-臺北市建築物無障礙設備與設施改善基金-百分比、都市發展局主管-臺北市容積代金基金-金額、都市發展局主管-臺北市容積代金基金-百分比、文化局主管-臺北市公共藝術基金-金額、文化局主管-臺北市公共藝術基金-百分比、地政局主管-臺北市土地重劃抵費地出售盈餘款基金-金額、地政局主管-臺北市土地重劃抵費地出售盈餘款基金-百分比、捷運工程局主管-臺北市臺北都會區捷運固定資產重置基金-金額、捷運工程局主管-臺北市臺北都會區捷運固定資產重置基金-百分比、捷運工程局主管-臺北市大眾捷運系統建設基金-金額、捷運工程局主管-臺北市大眾捷運系統建設基金-百分比"
+    },
+    {
+      "id": "ceb88d1d-bf97-4f9f-a47a-50ec21433e75",
+      "title": "臺北市道路交通設施",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8900&kind=21&type=0&funid=a05041001&cycle=4&outmode=12&compmode=0&outkind=3&deflst=2&nzo=1",
+      "fields": "統計期、交通標誌[面]、行人專用號誌燈[路口]、30公分放大型行人專用號誌[路口]、行車管制號誌燈[路口]、行車紅燈倒數計時器[路口]、號誌連線數[條]、公車專用道行駛長度[公里]、標線型人行道長度[公里]"
+    },
+    {
+      "id": "0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d",
+      "title": "臺北市道路交通事故斑點圖",
+      "org": "警察局交通大隊",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d/resource/d4aaaaa6-d03e-4539-945b-cdbd9387007d/download,/api/dataset/0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d/resource/ecacdff3-01b1-495a-bfe7-49933bb084de/download,/api/dataset/0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d/resource/96699db1-43c5-48a1-8e87-9a847e48b4f1/download,/api/dataset/0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d/resource/1a8336f2-7157-42db-8a5e-033a1cba0e08/download,/api/dataset/0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d/resource/06e7a03c-9bb1-4427-a86f-150599c7414b/download,/api/dataset/0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d/resource/c4db4188-c13b-45e5-b5bb-6054a95d6bea/download,/api/dataset/0554bac7-cbc2-4ef3-a55e-0aad3dd4ee1d/resource/3302e53c-3d2c-4934-8258-5a34559effe8/download",
+      "fields": "發生時間、處理別、肇事地點、座標-X、座標-Y"
+    },
+    {
+      "id": "a6fae9f8-8d0f-4605-98ac-577388a7734f",
+      "title": "臺北市即時交通訊息",
+      "org": "交通局",
+      "format": "JSON",
+      "url": "https://tcgbusfs.blob.core.windows.net/dotapp/news.json",
+      "fields": "chtmessage(中文訊息)、engmessage(英文訊息)、starttime(開始時間)、endtime(結束時間)、updatetime(資料上傳時間)、content(內容)、areaname(影響區域名稱)"
+    },
+    {
+      "id": "65bbfd51-374a-4263-89ef-89d90cc6ef89",
+      "title": "臺北市禁止遊動廣告車輛停放本市所有道路",
+      "org": "交通局",
+      "format": "CSV",
+      "url": "/api/dataset/65bbfd51-374a-4263-89ef-89d90cc6ef89/resource/ede2aa73-b1bb-414b-8f9c-2eee83c82375/download",
+      "fields": "縣市別、縣市別代碼、機關名稱、機關代碼、資料存取位址（網址）"
+    },
+    {
+      "id": "cff440d5-bebc-41ee-ac74-38f6a601eaf6",
+      "title": "臺北市違反道路交通管理事件處罰原因",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5800&kind=21&type=0&funid=a05023401&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、總件數、牌照未領用偽變借用及污穢件數、拆除消音器或損壞不修件數、計程車不按錶收費件數、無照或越級駕駛件數、未帶駕照駕駛件數、不依規定繳交高速公路通行費件數、裝載超重或載運人員違反規定件數、行駛快速道路未繫安全帶件數、騎乘機車未戴安全帽件數、違反高快速公路管制規定件數、疲勞酒醉或患病駕車件數、赤足穿木屐或拖鞋駕車件數、不照規定路線行駛件數、違反速率規定行駛件數、不依規定按鳴喇叭及減速慢行件數、不依規定使用燈光件數、不依規定超車件數、不依規定轉彎迴車倒車件數、闖平交道闖紅燈及紅燈右轉件數、不依規定停車或臨時停車件數、未保持行車距離件數、車輛拋錨未依規定處理件數、不遵守標線標誌號誌指示件數、不服交通警察取締件數、肇事致人傷亡或撞傷警員件數、肇事逃逸件數、道路障礙件數、其他件數"
+    },
+    {
+      "id": "3ca21e55-7e52-403c-8d07-12094bc2fd69",
+      "title": "臺北市違反道路交通管理事件處理情形",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5900&kind=21&type=0&funid=a05023301&cycle=4&outmode=12&compmode=0&outkind=3&deflst=2&nzo=1",
+      "fields": "統計期、舉發件數/總計[件]、舉發件數/汽車違規[件]、舉發件數/機車違規[件]、舉發件數/行人違規[件]、舉發件數/道路障礙[件]、舉發件數/其他[件]、處罰件數/總計[件]、處罰件數/罰鍰[件]、處罰件數/罰鍰之沒入[件]、處罰件數/吊扣駕駛執照或牌照[件]、處罰件數/吊銷駕駛執照或牌照[件]、處罰件數/行人違規[件]、罰鍰金額[元]、移公路監理機關處理之舉發件數[件]、移公路監理機關處理之舉發件數占舉發數百分比[%]、取締移動式道路障礙[件]\n"
+    },
+    {
+      "id": "23e2898f-5b0a-4530-83c6-41bfe26b99d0",
+      "title": "臺北市道路新建、拓寬及改善完工工程",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5700&kind=21&type=0&funid=a05020101&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、新建完工工程/項數[項]、新建完工工程/長度[公尺]、新建完工工程/總面積[平方公尺]、拓寬完工工程/項數[項]、拓寬完工工程/長度[公尺]、拓寬完工工程/總面積[平方公尺]、改善完工工程/項數[項]、改善完工工程/長度[公尺]、改善完工工程/總面積[平方公尺]\n"
+    },
+    {
+      "id": "da4ebab8-309a-4b54-8106-3d29f5a6c5fa",
+      "title": "臺北市道路經常養護工程",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=5700&kind=21&type=0&funid=a05020201&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、瀝青路面維護面積[平方公尺]、路基修護面積[平方公尺]、人行道地磚修護面積[平方公尺]、安全島分界島緣石等修護[公尺]、護欄欄杆等修護[公尺]"
+    },
+    {
+      "id": "1743954f-845c-4181-a14e-325e9c146f59",
+      "title": "臺北市一般道路改善工程",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=9700&kind=21&type=0&funid=a05020301&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "統計期、一般道路路面更新面積[平方公尺]、人手孔累計減少處數[處]、列管山區道路路面更新改善面積[平方公尺]、登山步道鋪面更新改善面積[平方公尺]"
+    },
+    {
+      "id": "84a6801d-68a5-496c-9935-5b1ffe0c56d1",
+      "title": "臺北市道路挖掘及透水鋪面鋪設",
+      "org": "主計處",
+      "format": "CSV",
+      "url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=10500&kind=21&type=0&funid=a05040701&cycle=4&outmode=12&compmode=0&outkind=1&deflst=2&nzo=1",
+      "fields": "年別、道路申請挖掘案件數/新案/總計[案]、道路申請挖掘案件數/新案/中華電信股份有限公司[案]、道路申請挖掘案件數/新案/台灣電力公司[案]、道路申請挖掘案件數/新案/臺北自來水事業處[案]、道路申請挖掘案件數/新案/臺北市政府其他機關[案]、道路申請挖掘案件數/新案/瓦斯公司[案]、道路申請挖掘案件數/新案/視訊公司[案]、道路申請挖掘案件數/新案/其他[案]、道路申請挖掘案件數/變更[案]、道路申請挖掘案件數/延期[案]、道路申請挖掘案件數/續期[案]、道路申請挖掘案件數/註銷[案]、道路申請挖掘案件數/結案[案]、道路申請挖掘長度/總計[公尺]、道路申請挖掘長度/依道路類別分/車道[公尺]、道路申請挖掘長度/依道路類別分/人行道[公尺]、道路申請挖掘長度/依道路類別分/其他[公尺]、道路申請挖掘長度/依申請單位分/中華電信股份有限公司[公尺]、道路申請挖掘長度/依申請單位分/台灣電力公司[公尺]、道路申請挖掘長度/依申請單位分/臺北自來水事業處[公尺]、道路申請挖掘長度/依申請單位分/臺北市政府其他機關[公尺]、道路申請挖掘長度/依申請單位分/瓦斯公司[公尺]、道路申請挖掘長度/依申請單位分/視訊公司[公尺]、道路申請挖掘長度/依申請單位分/其他[公尺]、透水鋪面鋪設面積/總計[平方公尺]、透水鋪面鋪設面積/人行道[平方公尺]、透水鋪面鋪設面積/其他[平方公尺]"
+    },
+    {
+      "id": "7983e5d7-2905-4c74-bbed-58e71b996d76",
+      "title": "臺北市大貨車聯結車禁行範圍",
+      "org": "交通局交工處",
+      "format": "CSV",
+      "url": "/api/dataset/7983e5d7-2905-4c74-bbed-58e71b996d76/resource/2184aa5c-1c80-4d11-b353-85c0a9b68968/download",
+      "fields": "行政區、地址-行政區域代碼、路段或區域、車種及噸數（含）、禁行時段"
+    },
+    {
+      "id": "f524d134-c5d6-4417-bbb5-c37038b69922",
+      "title": "臺北市大客車禁行路段",
+      "org": "交通局交工處",
+      "format": "CSV",
+      "url": "/api/dataset/f524d134-c5d6-4417-bbb5-c37038b69922/resource/5b81bd2b-3d08-468d-b936-b1e26314adbd/download",
+      "fields": "項次、縣市別、縣市別代碼、鄉鎮市區、地址-行政區域代碼、路線路名、路線樁號及起迄地名、管制通行措施、路況概述"
+    },
+    {
+      "id": "77c7af11-5e86-462a-9f10-6fc3777ef943",
+      "title": "臺北市機車例外管制路口列表",
+      "org": "交通局交工處",
+      "format": "CSV,CSV,CSV",
+      "url": "/api/dataset/77c7af11-5e86-462a-9f10-6fc3777ef943/resource/e77ab72d-cffa-46be-8b5c-16d60c32fce5/download,/api/dataset/77c7af11-5e86-462a-9f10-6fc3777ef943/resource/86c7c859-78d4-430c-bada-277203abd881/download,/api/dataset/77c7af11-5e86-462a-9f10-6fc3777ef943/resource/a15f2a8d-eb1a-489d-a25f-3d816af10177/download",
+      "fields": "編號、分區、路口、方向、開放時間"
+    },
+    {
+      "id": "efe9a83f-023d-420f-8e63-872fd2c12df8",
+      "title": "臺北市平面道路禁行機車",
+      "org": "交通局交工處",
+      "format": "CSV",
+      "url": "/api/dataset/efe9a83f-023d-420f-8e63-872fd2c12df8/resource/2c833533-071f-4b3c-9d17-39662d805b66/download",
+      "fields": "縣市別代碼、地址-行政區域代碼、行政區、路名、方向、起點、迄點、速限、管制原因、建議替代動線"
+    },
+    {
+      "id": "e57afe7f-3c9e-4f31-9208-eed859a92600",
+      "title": "臺北市車輛偵測器(VD)資料",
+      "org": "交通局交工處",
+      "format": "CSV,XML",
+      "url": "/api/dataset/e57afe7f-3c9e-4f31-9208-eed859a92600/resource/53f55026-4f5e-445d-9af7-c323ffc0d46e/download,https://tcgbusfs.blob.core.windows.net/blobtisv/GetVDDATA.xml",
+      "fields": "縣市、檔案名稱、介接網址、主要欄位說明、更新頻率\n"
+    },
+    {
+      "id": "89202d05-0e3e-4781-a04f-45327bf12b30",
+      "title": "臺北市市區自行車道",
+      "org": "交通局交工處",
+      "format": "CSV",
+      "url": "/api/dataset/89202d05-0e3e-4781-a04f-45327bf12b30/resource/a69988de-6a49-4956-9220-40ebd7c42800/download",
+      "fields": "路段序號、自行車道路線編號、路段名稱、路段起點描述、路段迄點描述、縣市別、鄉鎮別、管養單位、所屬道路寬度（M）、自行車道車行方向、自行車道類型、自行車道鋪面類別、自行車道長度（M）、自行車道寬度（M）、自行車道道路結構、補助經費（百萬元）、補助機關、完工日期、路徑（X）、路徑（Y）、備註，資料及欄位代號來自自行車道資料建置平台bikeway.nlma.gov.tw/Bikeway/"
+    },
+    {
+      "id": "45fde530-6bd0-425b-98bc-de82c635f7ad",
+      "title": "臺北市標誌資料(10條快速道路及34條主次要幹道)",
+      "org": "交通局交工處",
+      "format": "CSV,CSV",
+      "url": "/api/dataset/45fde530-6bd0-425b-98bc-de82c635f7ad/resource/c9ffa9ef-f085-415b-bbd3-9b9431d54450/download,/api/dataset/45fde530-6bd0-425b-98bc-de82c635f7ad/resource/c2cce902-c2bc-4301-baf5-52e538035d8b/download",
+      "fields": "標誌型式、標誌內容、附牌、方向、座標"
+    },
+    {
+      "id": "ba35cc86-d2b7-4367-ab26-d0032967050f",
+      "title": "臺北市市區道路速限表",
+      "org": "交通局交工處",
+      "format": "CSV,CSV",
+      "url": "/api/dataset/ba35cc86-d2b7-4367-ab26-d0032967050f/resource/7bc423ef-4cc4-4c8b-a31d-f257b5680609/download,/api/dataset/ba35cc86-d2b7-4367-ab26-d0032967050f/resource/bf38a8ff-8af3-447d-a1b4-962019fb10cb/download",
+      "fields": "縣市別代碼、類別、路段、速限、備註"
+    },
+    {
+      "id": "b5aaf33a-a6dc-4836-bce6-09986241fe11",
+      "title": "臺北市道路速率",
+      "org": "交通局交工處",
+      "format": "CSV",
+      "url": "/api/dataset/b5aaf33a-a6dc-4836-bce6-09986241fe11/resource/447c3f04-bce8-4fa4-95a8-16b61e295246/download",
+      "fields": "縣市、資料名稱、介接網址、欄位說明、檔案格式、更新頻率"
+    },
+    {
+      "id": "1a5e28c2-9b75-406f-9d37-4bf4e8821a0c",
+      "title": "臺北市環境影響評估案件統計",
+      "org": "環保局",
+      "format": "CSV",
+      "url": "/api/dataset/1a5e28c2-9b75-406f-9d37-4bf4e8821a0c/resource/b1b9a080-6c8e-4f4e-840c-23bbeb5a7cb9/download",
+      "fields": "年份、工廠之設立及園區之開發件數、道路,鐵路,大眾捷運系統,港灣及機場之開發件數、土石採取及探礦,採礦件數、蓄水,供水,抽水,引水,防洪排水工程之開發件數、農,林,漁,牧地之開發利用件數、遊樂,風景區,高爾夫球場,運動場地之開發件數、文教,醫療建設之開發件數、新市區建設及高樓建築或舊市區更新件數、環境保護工程之興建件數、核能及其他能源之開發及放射性廢棄物貯存或處理設施之興建件數、其他件數"
+    }
+  ],
+  "地段圖": [
+    {
+      "id": "4f3d2280-1ebc-4bba-8ebf-66953403732b",
+      "title": "臺北市數值地籍地段圖",
+      "org": "地政局開發總隊",
+      "format": "SHP",
+      "url": "/api/dataset/4f3d2280-1ebc-4bba-8ebf-66953403732b/resource/86430589-4e8b-4e21-9d5f-08b0e5c2ce3f/download",
+      "fields": "序號、縣市、縣市別、段代碼、地段名、行政區"
+    }
+  ],
+  "地段代碼": [
+    {
+      "id": "a17a8d52-dd60-4de1-88b4-5447a69c3838",
+      "title": "臺北市各行政區地段代碼表",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/a17a8d52-dd60-4de1-88b4-5447a69c3838/resource/e309ef35-9c44-4a01-8cff-3372fedfcd34/download",
+      "fields": "縣市、行政區、段別、小段、編碼"
+    }
+  ],
+  "地籍": [
+    {
+      "id": "8f3d95e4-47b4-4862-a7f4-c5cb0a30ea5f",
+      "title": "臺北市地籍測量專業資格證明核發紀錄",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/8f3d95e4-47b4-4862-a7f4-c5cb0a30ea5f/resource/053ebae8-5de3-4717-aef1-2d917f5d34f4/download",
+      "fields": "證明書字號、申請人姓名、性別、依據測量技師地籍測量專業資格認可辦法、符合測量技師地籍測量專業資格認可辦法、核發日期、發文日期及字號、補換發日期"
+    },
+    {
+      "id": "4f3d2280-1ebc-4bba-8ebf-66953403732b",
+      "title": "臺北市數值地籍地段圖",
+      "org": "地政局開發總隊",
+      "format": "SHP",
+      "url": "/api/dataset/4f3d2280-1ebc-4bba-8ebf-66953403732b/resource/86430589-4e8b-4e21-9d5f-08b0e5c2ce3f/download",
+      "fields": "序號、縣市、縣市別、段代碼、地段名、行政區"
+    },
+    {
+      "id": "e7b8404d-3742-4157-98fd-e101b40ba5c7",
+      "title": "臺北市水土保持法違規案件",
+      "org": "工務局大地處",
+      "format": "CSV",
+      "url": "/api/dataset/e7b8404d-3742-4157-98fd-e101b40ba5c7/resource/7a546895-2511-449e-85ca-4f3bd5178bff/download",
+      "fields": "違規案件編號、處分日期、案件狀態、地籍_區、地籍_段、地籍_小段、地籍_地號、違規面積_平方公尺、違規類別、暫停開發兩年、暫停開發到期日、罰鍰金額"
+    },
+    {
+      "id": "c7afc6a7-b324-4c41-80f3-b036e7b0947c",
+      "title": "臺北市地籍清理標售價金保管款清冊",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/c7afc6a7-b324-4c41-80f3-b036e7b0947c/resource/2d7e29ad-c7b4-4f0a-bd54-e0bb39c12ce7/download",
+      "fields": "編號、存支日期、存支編號、標售金額、應納稅賦、行政處理費、地籍清理獎金、存入金額、應領金額、應領取人姓名"
+    },
+    {
+      "id": "068be2c7-eea1-4303-91f8-fbf50c9b2aec",
+      "title": "臺北市道路寬度",
+      "org": "都發局",
+      "format": "SHP",
+      "url": "/api/dataset/068be2c7-eea1-4303-91f8-fbf50c9b2aec/resource/f8fc1725-b1df-4701-9bdf-c26939904b4e/download",
+      "fields": "road_width、angle"
+    },
+    {
+      "id": "d17edba8-f7f2-435a-be92-84d425a4a0f6",
+      "title": "臺北市地籍清理囑託登記國有公告清冊",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/d17edba8-f7f2-435a-be92-84d425a4a0f6/resource/6c124cb2-1334-407d-ab55-791e077a0617/download",
+      "fields": "編號、鄉鎮市區、段小段、地/建號、面積（平方公尺）、原登記名義人之姓名或名稱、原登記名義人之住址、權利範圍、囑託登記完畢日期、第二次標售底價金額"
+    },
+    {
+      "id": "460ff255-8900-40e9-899d-a581115bc421",
+      "title": "臺北市地籍清理公告開標結果土地清冊",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/460ff255-8900-40e9-899d-a581115bc421/resource/593e3e45-c2ac-4e75-9dfa-95b37931a7cf/download",
+      "fields": "標號、鄉鎮市區、段小段、地號、面積（平方公尺）、原登記名義人、權利範圍、標售底價金額、標售總底價金額、決標金額金額、得標人"
+    },
+    {
+      "id": "d1a8a4b8-f389-498b-a9bc-d93b64f2c2a9",
+      "title": "臺北市地籍清理公告標售土地清冊",
+      "org": "地政局",
+      "format": "CSV",
+      "url": "/api/dataset/d1a8a4b8-f389-498b-a9bc-d93b64f2c2a9/resource/9f996b76-47e6-449c-9d0a-346cdc21bb42/download",
+      "fields": "標號、鄉鎮市區、段小段、地號、面積（平方公尺）、使用分區/使用地類別、權利範圍、原登記名義人、他項權利人姓名或名稱、權利種類、標售底價金額、標售總底價金額、保證金金額、備註"
+    }
+  ],
+  "段籍": [],
+  "門牌位置": [
+    {
+      "id": "b7c8e724-1e98-45ee-a0bd-f3840623ed97",
+      "title": "臺北市門牌位置數值資料",
+      "org": "民政局",
+      "format": "CSV",
+      "url": "/api/dataset/b7c8e724-1e98-45ee-a0bd-f3840623ed97/resource/ce76ca0c-7f94-4935-ab47-1d2a41ca2abb/download",
+      "fields": "省市縣市代碼、鄉鎮市區代碼、村里、鄰、街路段、地區、巷、弄、號、橫座標、縱座標"
+    }
+  ],
+  "都市更新": [
+    {
+      "id": "c8df054a-b697-400d-9a8a-8a2039491f1d",
+      "title": "臺北市 都市更新事業(重建區段)建築物工程造價要項",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/c8df054a-b697-400d-9a8a-8a2039491f1d/resource/6bd9dcad-c123-4e61-980b-46f5571cc5c8/download",
+      "fields": "民國年月、DocNo（文號）、Description（內容）、ArticleType、CountyCode。"
+    },
+    {
+      "id": "7bfc0003-cc0b-489f-9013-67f0c6c1d052",
+      "title": "臺北市都市更新事業及權利變換計畫內有關費用提列總表",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/7bfc0003-cc0b-489f-9013-67f0c6c1d052/resource/1b38fd27-d33a-4669-8399-239c6f8ae1f2/download",
+      "fields": "民國年月、DocNo（文號）、Description（內容）、ArticleType、CountyCode。"
+    },
+    {
+      "id": "cda6b568-0035-420b-bd05-6ca9bfd4bda0",
+      "title": "臺北市都市更新容積獎勵案件統計表",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/cda6b568-0035-420b-bd05-6ca9bfd4bda0/resource/01dc6879-2e74-4e74-a033-43674c7af019/download",
+      "fields": "Year（西元年）、Quantity（核定案件數量）、Area（總計獲得容積獎勵單位平方公尺）、Region、CountyCode。\n"
+    },
+    {
+      "id": "e38369aa-6af3-4139-8638-b5116035cc0e",
+      "title": "臺北市都市更新及爭議處理審議會委員",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/e38369aa-6af3-4139-8638-b5116035cc0e/resource/0bad6ec6-b798-4b69-9a86-53eb2ba61046/download",
+      "fields": "民國年、session（屆次）、tenure（任期）、jobtitle（職稱）、name（姓名）、Gender（性別）、Description（附註）。"
+    },
+    {
+      "id": "6bc30ace-9322-412c-9092-aa151bdf4a03",
+      "title": "臺北市 都市更新相關法規",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/6bc30ace-9322-412c-9092-aa151bdf4a03/resource/0670e3bd-04a5-4659-99c3-7702f78999d6/download",
+      "fields": "SeqNo（編號）、ItemName（標題）、民國年月日（民國日期）、ArticleType、CountyCode。"
+    },
+    {
+      "id": "e87b41a4-d194-4966-a6cc-7ab032cb4ca0",
+      "title": "臺北市 都市更新及爭議處理審議會歷次會議通案重要審議原則",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/e87b41a4-d194-4966-a6cc-7ab032cb4ca0/resource/26106e98-6412-478b-91e3-383650083663/download",
+      "fields": "民國年月、DocNo（文號）、Description（內容）、ArticleType、CountyCode。"
+    },
+    {
+      "id": "dbe02285-8d6e-4b3d-97d7-700047cbe4da",
+      "title": "臺北市都市更新審議會議程及紀錄",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/dbe02285-8d6e-4b3d-97d7-700047cbe4da/resource/a2aff1bf-3484-449f-9438-167e6a7bce25/download",
+      "fields": "民國年、民國年月日（民國日期）、agenda（議程）、record（會議記錄）、CountyCode。"
+    },
+    {
+      "id": "f623f9d5-6029-4289-808d-53f3023d5701",
+      "title": "臺北市總預算附屬單位預算及綜計表_作業基金_收支餘絀綜計表(依基金別分列)",
+      "org": "主計處",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/7fda5735-0b9f-47aa-a225-72aa96b52a24/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/686be060-f569-4f65-94e7-1ebdd655bf17/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/411b5a83-42b4-474e-adec-620ff91f282d/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/f9b7f2eb-9a97-46f1-8697-ce1d421ad17e/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/2d42f500-7099-4715-a369-f0644d6641df/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/e006ec6d-7f3e-438a-9c5c-6bee52794743/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/d8916331-b918-4ebc-944c-09303c3be6b9/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/93b66068-be00-462e-94fc-35deacf62968/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/ef103af4-59ca-4e61-8aad-9848c89eae97/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/62da5521-0afd-439a-b7a0-76235756bce6/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/e27721a5-2f32-4c22-a0d2-84cb0c179472/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/b67d0076-093f-4537-b9d6-a758e15ae1a3/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/7763078b-1453-4ce6-a151-b51febb810ac/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/ca6cc6d6-1ddb-4350-830f-a576d33cf95e/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/afdeb982-3678-4326-bccd-7330c7e506ee/download,/api/dataset/f623f9d5-6029-4289-808d-53f3023d5701/resource/ddd1cf63-3ba0-4acf-99f9-ba8e6f9ac8f9/download",
+      "fields": "科目、合計_金額、合計_％、輔助公教人員購置住宅及急難貸款基金金額、輔助公教人員購置住宅及急難貸款基金％、市有財產開發基金金額 、市有財產開發基金％、市立大學校務發展基金金額、市立大學校務發展基金％、市場發展基金金額、市場發展基金％、共同管道基金金額、共同管道基金％、公有收費停車場基金金額、公有收費停車場基金％、聯合醫院醫療基金金額、聯合醫院醫療基金％、住宅基金金額、住宅基金％、都市更新基金金額、都市更新基金％、文化設施發展基金金額、文化設施發展基金％、實施平均地權基金金額、實施平均地權基金％"
+    },
+    {
+      "id": "55be5c73-0fe5-4cd7-8c30-eda5099c322a",
+      "title": "臺北市總預算附屬單位預算及綜計表_作業基金_現金流量綜計表(依基金別分列)",
+      "org": "主計處",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/ea204bd6-e945-458b-8851-519741557fbf/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/0ab04e66-baae-48b0-92a6-c9b265a69a17/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/4cf752fa-f204-4c56-b160-6413d1d1002c/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/01492eb5-fc09-4d69-b546-8c94745b70f2/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/5466f79d-a543-45ed-83ee-d36db1e485cd/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/9112351a-a7d2-4fd1-a12c-8513b3f49edd/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/275031db-2c50-43d5-ab6d-e7ef4ae5e1a6/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/f58cc457-4cbb-44c5-9096-840a39d1d328/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/d28ac7dc-cf24-450e-97bf-80487054eea7/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/17a70a3d-0909-49ca-8a2b-884dd4b0410f/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/d8f64e46-f29d-4279-824f-ce6e58b92bb6/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/795d9990-caf0-468f-84ff-f3f495547f12/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/77bd9bd2-6782-43fa-ac25-dc9ed00248b8/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/fd8348f9-aafa-49fe-86c6-13ed16c305d5/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/8e1bbb23-5c99-4ae9-8ed8-671449178493/download,/api/dataset/55be5c73-0fe5-4cd7-8c30-eda5099c322a/resource/f2916f73-90a9-417c-8a5f-da641d5b01fe/download",
+      "fields": "項目、合計、人事處主管臺北市輔助公教人員購置住宅及急難貸款基金、財政局主管臺北市市有財產開發基金、教育局主管臺北市立大學校務發展基金、產業發展局主管臺北市市場發展基金、工務局主管臺北市共同管道基金、交通局主管臺北市公有收費停車場基金、衛生局主管臺北市立聯合醫院醫療基金、都市發展局主管臺北市住宅基金、都市發展局主管臺北市都市更新基金、文化局主管臺北市文化設施發展基金、地政局主管臺北市實施平均地權基金"
+    },
+    {
+      "id": "ad729162-6e1e-4291-950f-d8f10be12dd5",
+      "title": "臺北市總預算附屬單位預算及綜計表_作業基金_餘絀撥補綜計表(依基金別分列)",
+      "org": "主計處",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/8e4b72d7-d27d-479f-bbb0-e63c74a1674e/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/9b285c49-7437-4d19-acca-c71f7a242519/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/3d1739cf-5c61-46ef-9666-d6bde63380e3/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/4dd5c35d-38b1-44e1-b4d6-8abeab6cf1d2/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/2495ff87-6204-48e1-8622-ce740d4892ac/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/2b9be2f0-9862-4968-aded-e5a23d3c5cdd/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/b5d20eb2-18cd-47f5-97cf-ea9cd3d20914/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/8096908b-6479-46f3-a492-1db13878c97c/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/9eeec7bc-f462-484f-be4d-71592141341c/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/2ef2c25c-9666-4e5d-ab6a-0011871da40a/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/9240a8c1-c69f-4913-85aa-00bf1eb972ee/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/91390728-aacf-4e8d-860a-ce8d6ce7bbb5/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/9531ba51-2a5a-4769-a0b1-309675be5a92/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/a5cae82c-da03-4221-88a1-95502a884b53/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/59e52fb5-6bb5-4a72-affa-89376fbbf6bc/download,/api/dataset/ad729162-6e1e-4291-950f-d8f10be12dd5/resource/4df9d95f-e3cf-4be1-9cb5-bb0082357197/download",
+      "fields": "項目、合計_金額、合計_％、人事處主管臺北市輔助公教人員購置住宅及急難貸款基金_金額、人事處主管臺北市輔助公教人員購置住宅及急難貸款基金_％、財政局主管臺北市市有財產開發基金_金額 、財政局主管臺北市市有財產開發基金_％、教育局主管臺北市立大學校務發展基金_金額、教育局主管臺北市立大學校務發展基金_％、產業發展局主管臺北市市場發展基金_金額、產業發展局主管臺北市市場發展基金_％、工務局主管臺北市共同管道基金 _金額、工務局主管臺北市共同管道基金 _％、交通局主管臺北市公有收費停車場基金_金額、交通局主管臺北市公有收費停車場基金_％、衛生局主管臺北市立聯合醫院醫療基金_金額、衛生局主管臺北市立聯合醫院醫療基金_％、都市發展局主管臺北市住宅基金_金額、都市發展局主管臺北市住宅基金_％、都市發展局主管臺北市都市更新基金_金額、都市發展局主管臺北市都市更新基金_％、文化局主管臺北市文化設施發展基金_金額、文化局主管臺北市文化設施發展基金_％、地政局主管臺北市實施平均地權基金_金額、地政局主管臺北市實施平均地權基金_％"
+    },
+    {
+      "id": "560b633f-4ca7-4e37-957a-53879eccf5ea",
+      "title": "臺北市市有土地參與都市更新案件進度表",
+      "org": "財政局",
+      "format": "CSV",
+      "url": "/api/dataset/560b633f-4ca7-4e37-957a-53879eccf5ea/resource/fc61bcd2-079a-46c4-8aa6-c3e2b3766c81/download",
+      "fields": "序號、地區別、案名、市有土地地號、更新前市有土地總面積（平方公尺）、更新單元總面積（平方公尺）、最新辦理情形\n"
+    },
+    {
+      "id": "9a241082-4bd8-49e2-ab56-bcbf8e04f51f",
+      "title": "臺北市政府財政局主導辦理都市更新案件進度表",
+      "org": "財政局",
+      "format": "CSV",
+      "url": "/api/dataset/9a241082-4bd8-49e2-ab56-bcbf8e04f51f/resource/9843047a-ca24-4f76-8cc2-ffd8f4746f68/download",
+      "fields": "序號、辦理階段、地區別、案件名稱、市有地地號、更新地區面積合計、市有地面積合計_AREA、市有地面積比率、共同負擔比率、本府更新前後應分配權利價值、備註"
+    },
+    {
+      "id": "377f9ac7-521d-4247-b552-0075012d10fe",
+      "title": "臺北市市有土地參與都市更新完工或結案案件表",
+      "org": "財政局",
+      "format": "CSV",
+      "url": "/api/dataset/377f9ac7-521d-4247-b552-0075012d10fe/resource/bab102de-b01d-4bd5-a558-fc9e9c35acb1/download",
+      "fields": "編號、地區別、案名、更新前市有土地地號、更新後市有土地地號、更新前市有土地總面積（平方公尺）_AREA、更新單元總面積（平方公尺）_AREA、更新前市有土地面積占更新單元總面積比率、完成點交時間或領取補償金時間、本府分回房屋類型（含樓層）或領取補償金金額（元）、分回房屋使用現況、備註"
+    },
+    {
+      "id": "e1089ab3-1555-4c73-bb71-09ddb85606dc",
+      "title": "臺北市都市更新停看聽",
+      "org": "都發局更新處",
+      "format": "CSV",
+      "url": "/api/dataset/e1089ab3-1555-4c73-bb71-09ddb85606dc/resource/d9faae65-49ce-4055-b129-eab7009ed3da/download",
+      "fields": "ArticleNo（條號）、ArticleType（條文型態）、ItemName（注意事項）、Description（內容）、CountyCode。"
+    },
+    {
+      "id": "40047f37-bf0f-40c5-9292-0d12284994a8",
+      "title": "臺北市總決算附屬單位決算作業基金現金流量綜計表(依機關及基金別)",
+      "org": "主計處",
+      "format": "XML,XML,XML,XML,XML,XML,XML,XML",
+      "url": "/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/a203b649-15b3-4292-bdaf-bc36de6141f1/download,/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/51f0bc04-83b1-4950-9145-71fa4369d11c/download,/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/9aa6376c-1252-4630-a6dc-560258f90034/download,/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/b85ebb29-38f3-4eb8-a670-33a165f73cb7/download,/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/297d88f2-6dd0-4f74-a84e-4bc365d4b368/download,/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/0eb84d66-09ac-4e09-91cc-5555bd44bd2a/download,/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/3f4bb85d-9ae8-4c34-9501-d63b57059548/download,/api/dataset/40047f37-bf0f-40c5-9292-0d12284994a8/resource/edef5d1f-cbda-4460-ac51-c167b2128798/download",
+      "fields": "項目、合計、人事處主管-臺北市輔助公教人員購置住宅及急難貸款基金、財政局主管-臺北市市有財產開發基金、教育局主管-臺北市立大學校務發展基金、產業發展局主管-臺北市市場發展基金、工務局主管-臺北市共同管道基金、交通局主管-臺北市公有收費停車場基金、衛生局主管-臺北市立聯合醫院醫療基金、都市發展局主管-臺北市住宅基金、都市發展局主管-臺北市都市更新基金、文化局主管-臺北市文化設施發展基金、地政局主管-臺北市實施平均地權基金、以下空白"
+    },
+    {
+      "id": "026b4c64-63bf-4fa0-9b02-c65710349e2d",
+      "title": "臺北市總決算附屬單位決算作業基金收支餘絀綜計表(依機關及基金別)",
+      "org": "主計處",
+      "format": "XML,XML,XML,XML,XML,XML,XML,XML",
+      "url": "/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/881183d9-ec26-4774-a99e-011e8df0595d/download,/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/0ab58a54-42df-4aa6-9324-d2e876a37254/download,/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/3356fb09-ecdc-41b4-a888-ed73378e5048/download,/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/6cefc261-e457-4b03-b9b3-2a4f3614a93e/download,/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/12040186-6ce9-481b-916a-25f774a51d58/download,/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/72ee1d99-b39f-452f-a56e-dacec4b33b81/download,/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/487cea09-a86d-4736-a7a9-4c77e1737eb0/download,/api/dataset/026b4c64-63bf-4fa0-9b02-c65710349e2d/resource/1391ba8b-56cb-45a6-a312-59f7d2601278/download",
+      "fields": "科目、合計-金額、合計-百分比、人事處主管-臺北市輔助公教人員購置住宅及急難貸款基金-金額、人事處主管-臺北市輔助公教人員購置住宅及急難貸款基金-百分比、財政局主管-臺北市市有財產開發基金-金額、財政局主管-臺北市市有財產開發基金-百分比、教育局主管-臺北市立大學校務發展基金-金額、教育局主管-臺北市立大學校務發展基金-百分比、產業發展局主管-臺北市市場發展基金-金額、產業發展局主管-臺北市市場發展基金-百分比、工務局主管-臺北市共同管道基金-金額、工務局主管-臺北市共同管道基金-百分比、交通局主管-臺北市公有收費停車場基金-金額、交通局主管-臺北市公有收費停車場基金-百分比、衛生局主管-臺北市立聯合醫院醫療基金-金額、衛生局主管-臺北市立聯合醫院醫療基金-百分比、都市發展局主管-臺北市住宅基金-金額、都市發展局主管-臺北市住宅基金-百分比、都市發展局主管-臺北市都市更新基金-金額、都市發展局主管-臺北市都市更新基金-百分比、文化局主管-臺北市文化設施發展基金-金額、文化局主管-臺北市文化設施發展基金-百分比、地政局主管-臺北市實施平均地權基金-金額、地政局主管-臺北市實施平均地權基金-百分比、以下空白"
+    },
+    {
+      "id": "d41a9b7d-9197-4ee0-a24e-de717c133579",
+      "title": "臺北市總決算附屬單位決算作業基金餘絀撥補綜計表(依機關及基金別)",
+      "org": "主計處",
+      "format": "XML,XML,XML,XML,XML,XML,XML,XML",
+      "url": "/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/cf93d53b-b749-41c3-ba2f-83b7039f7fe0/download,/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/f5d1b660-da57-47d7-b560-feac6ac3b823/download,/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/b64d4387-943b-4677-a3ca-1d08a3fb513e/download,/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/2de64260-036f-4902-b7d2-baedacd2806f/download,/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/394862b1-1053-4680-b4bb-7fb009a28973/download,/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/63eaf7a8-0513-4681-b263-5b55d4ce7904/download,/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/b6821903-d127-4262-b009-847bd900d471/download,/api/dataset/d41a9b7d-9197-4ee0-a24e-de717c133579/resource/178a1a15-3f1c-4365-b5a4-2d84a241c222/download",
+      "fields": "項目、合計-金額、合計-百分比、人事處主管-臺北市輔助公教人員購置住宅及急難貸款基金-金額、人事處主管-臺北市輔助公教人員購置住宅及急難貸款基金-百分比、財政局主管-臺北市市有財產開發基金-金額、財政局主管-臺北市市有財產開發基金-百分比、教育局主管-臺北市立大學校務發展基金-金額、教育局主管-臺北市立大學校務發展基金-百分比、產業發展局主管-臺北市市場發展基金-金額、產業發展局主管-臺北市市場發展基金-百分比、工務局主管-臺北市共同管道基金-金額、工務局主管-臺北市共同管道基金-百分比、交通局主管-臺北市公有收費停車場基金-金額、交通局主管-臺北市公有收費停車場基金-百分比、衛生局主管-臺北市立聯合醫院醫療基金-金額、衛生局主管-臺北市立聯合醫院醫療基金-百分比、都市發展局主管-臺北市住宅基金-金額、都市發展局主管-臺北市住宅基金-百分比、都市發展局主管-臺北市都市更新基金-金額、都市發展局主管-臺北市都市更新基金-百分比、文化局主管-臺北市文化設施發展基金-金額、文化局主管-臺北市文化設施發展基金-百分比、地政局主管-臺北市實施平均地權基金-金額、地政局主管-臺北市實施平均地權基金-百分比、以下空白"
+    },
+    {
+      "id": "9240a5f1-b218-4a3a-a412-c7474d27af26",
+      "title": "臺北市總決算附屬單位決算作業基金平衡綜計表(依機關及基金別)",
+      "org": "主計處",
+      "format": "XML,XML,XML,XML,XML,XML,XML,XML",
+      "url": "/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/614b2aad-67ed-465c-8481-f61cfb4020c6/download,/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/a6c71e1f-8fe0-4fab-8900-3a20c12494aa/download,/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/6969a37b-903f-40f7-94c0-e9dcc0e43a1b/download,/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/2135dbf0-a660-4de4-89f7-dec3e2081059/download,/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/6d77b3a8-926b-4bb3-addf-d9845a9dd8a3/download,/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/1d0f1b80-b9bd-4dbb-94ff-a6ee70967fd0/download,/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/fd639498-07ca-4ee8-aac2-914d26e17d9a/download,/api/dataset/9240a5f1-b218-4a3a-a412-c7474d27af26/resource/3d2d0bcf-0bd0-4647-8fa2-93e859345d10/download",
+      "fields": "科目、合計-金額、合計-百分比、人事處主管-臺北市輔助公教人員購置住宅及急難貸款基金-金額、人事處主管-臺北市輔助公教人員購置住宅及急難貸款基金-百分比、財政局主管-臺北市市有財產開發基金-金額、財政局主管-臺北市市有財產開發基金-百分比、教育局主管-臺北市立大學校務發展基金-金額、教育局主管-臺北市立大學校務發展基金-百分比、產業發展局主管-臺北市市場發展基金-金額、產業發展局主管-臺北市市場發展基金-百分比、工務局主管-臺北市共同管道基金-金額、工務局主管-臺北市共同管道基金-百分比、交通局主管-臺北市公有收費停車場基金-金額、交通局主管-臺北市公有收費停車場基金-百分比、衛生局主管-臺北市立聯合醫院醫療基金-金額、衛生局主管-臺北市立聯合醫院醫療基金-百分比、都市發展局主管-臺北市住宅基金-金額、都市發展局主管-臺北市住宅基金-百分比、都市發展局主管-臺北市都市更新基金-金額、都市發展局主管-臺北市都市更新基金-百分比、文化局主管-臺北市文化設施發展基金-金額、文化局主管-臺北市文化設施發展基金-百分比、地政局主管-臺北市實施平均地權基金-金額、地政局主管-臺北市實施平均地權基金-百分比、以下空白"
+    },
+    {
+      "id": "cdd6bbf5-bb50-47d6-9f61-85679283bfb7",
+      "title": "臺北市住宅及都市更新中心年度預算書",
+      "org": "都發局",
+      "format": "CSV",
+      "url": "/api/dataset/cdd6bbf5-bb50-47d6-9f61-85679283bfb7/resource/be1537e1-2f27-4d87-a916-f4dd350c608e/download",
+      "fields": "行政區域代碼、行政區、統計年度、統計年度收入預算數、統計年度支出預算數、賸餘預算數、網址超連結"
+    }
+  ],
+  "雙子星": [],
+  "C1": [
+    {
+      "id": "18420210-9d9d-497d-8db1-ed06b6b16c35",
+      "title": "臺北市國民住宅配售(租)概況",
+      "org": "都發局",
+      "format": "CSV,CSV,CSV,CSV,CSV,CSV,CSV,CSV",
+      "url": "/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/37475a79-3f35-41fc-a225-22b386dc0be1/download,/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/593a24ab-e638-48cf-8ee1-23d5ddfaf81f/download,/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/4ca9d429-9365-42ba-909a-c9e7fbbfc984/download,/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/f776f0ab-f3f7-4f4d-bfcf-018507605d74/download,/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/d877052d-ef54-4f27-9e31-4800c60cf9f7/download,/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/d1f862aa-e42d-4047-841c-212911a9b732/download,/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/4c0dc5af-595e-4d40-8128-6a1a3c4a8f0a/download,/api/dataset/18420210-9d9d-497d-8db1-ed06b6b16c35/resource/a8cdb163-2948-4f69-9544-5b431ff890d2/download",
+      "fields": "項次、國宅別、樓層別、類型、興建戶數/D=A4.B4.C1.C2總合、出售之本季承購戶數/A1、出售承購戶累計數/A2、出售之本季簽約數/A3、出售簽約戶累計數/A4、出租之本季承租戶數/B1、出租之承租累計數/B2、出租簽約戶本季數/B3、出租簽約戶累計數/B4、待出售戶數/C1、待出租戶數/C2、備註"
+    }
+  ],
+  "D1": [
+    {
+      "id": "62bc76da-6e6b-46ee-8976-c1945092d504",
+      "title": "臺北市站牌",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstStop.json,/api/dataset/62bc76da-6e6b-46ee-8976-c1945092d504/resource/8ddf973e-c1c3-4107-8742-c6417a6fcac2/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "33a7cd78-cf37-45bd-92b0-1f0d97339ff0",
+      "title": "臺北市業者營運基本資料",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstProvider.json,/api/dataset/33a7cd78-cf37-45bd-92b0-1f0d97339ff0/resource/1ea82e23-3241-4cc7-a0c5-1ed1d4955c2f/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "3e9f580d-ef7d-4389-939f-e93f7b9af535",
+      "title": "臺北市機動班次時刻表",
+      "org": "交通局公運處",
+      "format": "CSV,JSON",
+      "url": "/api/dataset/3e9f580d-ef7d-4389-939f-e93f7b9af535/resource/aca87c13-aa35-4e69-b607-1d1cb2f8d915/download,https://tcgbusfs.blob.core.windows.net/blobbus/TstSemiTimeTable.json",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "7f284567-cbaa-4153-a289-9ce10820b06c",
+      "title": "臺北市預定班表資訊",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstTimeTable.json,/api/dataset/7f284567-cbaa-4153-a289-9ce10820b06c/resource/18572f88-dbf8-4c61-bf3d-86067d5bdfdf/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "e2ad1cbb-f7aa-4d3c-82d0-d770a7581d7f",
+      "title": "臺北市智慧型站牌所屬路線",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstIStopPath.json,/api/dataset/e2ad1cbb-f7aa-4d3c-82d0-d770a7581d7f/resource/8adff40f-88ea-4cdf-8b71-2c2182f1fde0/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "174d780f-6e87-45d8-b779-c608c6f01432",
+      "title": "臺北市附屬路線與路線對應資訊",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstPathDetail.json,/api/dataset/174d780f-6e87-45d8-b779-c608c6f01432/resource/09774877-93ef-4a0b-b321-31422c9fb434/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "09672da0-772a-4bf2-9340-587941f958c5",
+      "title": "臺北市定點車機資訊",
+      "org": "交通局公運處",
+      "format": "CSV,JSON,JSON",
+      "url": "/api/dataset/09672da0-772a-4bf2-9340-587941f958c5/resource/3773ad43-0662-4b23-81a3-753ebfe6dafe/download,/api/dataset/09672da0-772a-4bf2-9340-587941f958c5/resource/2a452a40-d2d3-49d3-b522-2f5ca0207270/download,https://tcgbusfs.blob.core.windows.net/blobbus/TstBusEvent.json",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "b5bd0edd-99c3-441b-b205-be44e5ae2621",
+      "title": "臺北市共同管道圖資",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/commonduct/2Dshapefile.zip",
+      "fields": "DUCT_ID(管道ID)、CAPTION(管道名稱)、DUCT(管道別)、SECTION(管道別稱)、CLASS1(管道分類1)、CLASS2(管道分類2)、START_STA(起點里程)、END_STA(終點里程)、CENTER_STA(中心里程)、LENGTH(長度)、ID1(編號)"
+    },
+    {
+      "id": "b13c20dd-87fb-4ce0-a9ae-587f70f427d5",
+      "title": "臺北市共同管道圖資_支管",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/commonduct/F808010102.zip",
+      "fields": "DUCT_ID(管道ID)、CAPTION(管道名稱)、DUCT(管道別)、SECTION(管道別稱)、CLASS1(管道分類1)、CLASS2(管道分類2)、START_STA(起點里程)、END_STA(終點里程)、CENTER_STA(中心里程)、LENGTH(長度)、ID1(編號)"
+    },
+    {
+      "id": "2b20d87e-1ebc-4a47-9f86-35e96c434adc",
+      "title": "臺北市共同管道圖資_電纜溝",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/commonduct/F808010103.zip",
+      "fields": "DUCT_ID(管道ID)、CAPTION(管道名稱)、DUCT(管道別)、SECTION(管道別稱)、CLASS1(管道分類1)、CLASS2(管道分類2)、START_STA(起點里程)、END_STA(終點里程)、CENTER_STA(中心里程)、LENGTH(長度)、FEATID1(原始編號)、ID1(編號)"
+    },
+    {
+      "id": "3dcbb9b9-1b80-44b3-ac7d-d213a3717dd9",
+      "title": "臺北市共同管道圖資_幹管",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/commonduct/F808010101.zip",
+      "fields": "DUCT_ID(管道ID)、CAPTION(管道名稱)、DUCT(管道別)、SECTION(管道別稱)、CLASS1(管道分類1)、CLASS2(管道分類2)、START_STA(起點里程)、END_STA(終點里程)、CENTER_STA(中心里程)、LENGTH(長度)、ID1(編號)"
+    },
+    {
+      "id": "906b65b8-b1e2-4d9a-8f0e-9b146266f238",
+      "title": "臺北市共同管道圖資_纜線管路",
+      "org": "工務局新工處",
+      "format": "SHP",
+      "url": "https://tpnco.blob.core.windows.net/blobfs/commonduct/F808010104.zip",
+      "fields": "DUCT_ID(管道ID)、CAPTION(管道名稱)、DUCT(管道別)、SECTION(管道別稱)、CLASS1(管道分類1)、CLASS2(管道分類2)、START_STA(起點里程)、END_STA(終點里程)、CENTER_STA(中心里程)、LENGTH(長度)、ID1(編號)"
+    },
+    {
+      "id": "fe8a0ddd-6f70-4e63-92a1-a3463c790a1b",
+      "title": "臺北市YouBike區域互補站點",
+      "org": "資訊局",
+      "format": "CSV",
+      "url": "/api/dataset/fe8a0ddd-6f70-4e63-92a1-a3463c790a1b/resource/6d38ddf5-ae05-4dab-ac24-1e05f5841b01/download",
+      "fields": "times（互補人數）、stop_id1（站點ID1）、longitude1（經度）、latitude1（緯度）、stop_id2（站點ID2）、longitude2、latitude2"
+    },
+    {
+      "id": "5f8c170a-d5e3-498d-a998-43ccc266c613",
+      "title": "臺北市公車特殊時刻表",
+      "org": "交通局公運處",
+      "format": "CSV",
+      "url": "/api/dataset/5f8c170a-d5e3-498d-a998-43ccc266c613/resource/8f99e75c-218f-4969-96a0-7ef93c8577ae/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明\t、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "e1281862-c974-49ca-837e-77f4074e32eb",
+      "title": "臺北市車輛基本資訊",
+      "org": "交通局公運處",
+      "format": "CSV,JSON",
+      "url": "/api/dataset/e1281862-c974-49ca-837e-77f4074e32eb/resource/cd862b68-4e97-4cb1-9972-86a48d77fb3a/download,https://tcgbusfs.blob.core.windows.net/blobbus/TstCarInfo.json",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "ad5c0c55-bfee-4211-be1a-00f938e1bcec",
+      "title": "臺北市車機異常資訊",
+      "org": "交通局公運處",
+      "format": "CSV",
+      "url": "/api/dataset/ad5c0c55-bfee-4211-be1a-00f938e1bcec/resource/86ed7c4a-7a1e-456e-83c4-324e75ffb4c1/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "ae3023be-9fe6-4a9c-9f44-c36242be4146",
+      "title": "營運通阻",
+      "org": "交通局公運處",
+      "format": "CSV",
+      "url": "/api/dataset/ae3023be-9fe6-4a9c-9f44-c36242be4146/resource/37a682ec-9bf1-42b0-a639-f2986171f469/download",
+      "fields": "資料名稱、縣市、縣市代碼、介接網址、欄位說明、檔案格式、說明文件網址"
+    },
+    {
+      "id": "2181b885-02da-4124-a673-3ca6546c1f1d",
+      "title": "臺北市路線及營業站對應",
+      "org": "交通局公運處",
+      "format": "CSV",
+      "url": "/api/dataset/2181b885-02da-4124-a673-3ca6546c1f1d/resource/05d6b724-249e-45be-a287-d2698c7957d7/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "f11a5af0-7b37-48ef-98cc-f6f102ed43c6",
+      "title": "臺北市預估到站時間(公車)",
+      "org": "交通局公運處",
+      "format": "CSV",
+      "url": "/api/dataset/f11a5af0-7b37-48ef-98cc-f6f102ed43c6/resource/2749b84d-a09c-4c03-a7ff-710e7ebf209c/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "656784f0-f96e-4212-b027-f32724d420ad",
+      "title": "臺北市公車車上擁擠度",
+      "org": "交通局公運處",
+      "format": "JSON",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstBusSeatEvent.json",
+      "fields": "ProviderID、StationID、BusID、CarType、CarID、DutyStatus、BusStatus、RouteID、GoBack、StopID、CarOnStop、DataTime"
+    },
+    {
+      "id": "ce7d3d2b-096f-4f2d-b7cf-cdd6a529f35c",
+      "title": "臺北市站位資訊",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstStopLocation.json,/api/dataset/ce7d3d2b-096f-4f2d-b7cf-cdd6a529f35c/resource/a3677de6-5da8-47e9-8cbb-b991c5b429e5/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "efad90af-4bbe-4c6a-ac60-06f3e52d8a97",
+      "title": "臺北市公車路線軌跡",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstBusShape.json,/api/dataset/efad90af-4bbe-4c6a-ac60-06f3e52d8a97/resource/f3246e89-3579-470b-8034-085576bead32/download",
+      "fields": "資料名稱、縣市、縣市代碼、介接網址、欄位說明、檔案格式、說明文件網址、更新頻率"
+    },
+    {
+      "id": "12e55747-ea2e-4cd0-8ad9-3a9e0eb1d252",
+      "title": "大臺北公車最新消息",
+      "org": "交通局公運處",
+      "format": "XML,CSV,JSON",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstBusNewsList.xml,/api/dataset/12e55747-ea2e-4cd0-8ad9-3a9e0eb1d252/resource/9ea7635f-99c1-492b-b3c0-c292f4aedb2b/download,https://tcgbusfs.blob.core.windows.net/blobbus/TstLatestNews.json",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "6535d6cc-aabc-405c-9167-58a1d32823b9",
+      "title": "智慧型站牌",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstIStop.json,/api/dataset/6535d6cc-aabc-405c-9167-58a1d32823b9/resource/3470a161-f06a-4836-8e01-44ed21aa7a58/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "6a03b03d-90d1-4d9e-a952-c940fd869772",
+      "title": "臺北市路線",
+      "org": "交通局公運處",
+      "format": "CSV,JSON",
+      "url": "/api/dataset/6a03b03d-90d1-4d9e-a952-c940fd869772/resource/f62256e9-7175-4a70-b032-6d960c472e46/download,https://tcgbusfs.blob.core.windows.net/blobbus/TstRoute.json",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    },
+    {
+      "id": "651f6f05-074c-4f7a-a9cf-a367c32aa60b",
+      "title": "臺北市公車結構性票價資訊",
+      "org": "交通局公運處",
+      "format": "CSV,XML",
+      "url": "/api/dataset/651f6f05-074c-4f7a-a9cf-a367c32aa60b/resource/05856a0d-a284-49c4-9dca-b906d04650b0/download,https://tcgbusfs.blob.core.windows.net/blobbus/TstBusRouteFareList.xml",
+      "fields": "資料名稱、縣市、縣市代碼、介接網址、欄位說明、檔案格式、說明文件網址、更新頻率"
+    },
+    {
+      "id": "c84f781f-02e7-45a4-84c2-0fc690749f66",
+      "title": "臺北市定時車機資訊",
+      "org": "交通局公運處",
+      "format": "JSON,CSV",
+      "url": "https://tcgbusfs.blob.core.windows.net/blobbus/TstBusData.json,/api/dataset/c84f781f-02e7-45a4-84c2-0fc690749f66/resource/2a54b4be-1a18-4aea-9574-1dd0c21c56ec/download",
+      "fields": "檔案名稱、縣市、縣市代碼、介接網址、主要欄位說明、更新頻率、檔案格式、說明文件網址"
+    }
+  ],
+  "捷運局": [
+    {
+      "id": "7084a8e6-9df6-4311-84ae-a08f30a831c2",
+      "title": "臺北捷運局路網說明",
+      "org": "捷運局",
+      "format": "CSV",
+      "url": "/api/dataset/7084a8e6-9df6-4311-84ae-a08f30a831c2/resource/d0e17e4a-f576-4c36-87d4-0de5d06b03ae/download",
+      "fields": "序號、縣市代碼、機關代碼、路網名稱、路網進度、備註"
+    },
+    {
+      "id": "befda230-f023-4eb5-8b4f-ec6111fc07ec",
+      "title": "臺北都市計畫變更案",
+      "org": "捷運局",
+      "format": "CSV",
+      "url": "/api/dataset/befda230-f023-4eb5-8b4f-ec6111fc07ec/resource/b8453f04-8783-4f16-94db-57f486dfb28f/download",
+      "fields": "序號、縣市代碼、機關代碼、都市計畫變更名稱、變更法源依據、辦理情形\n"
+    },
+    {
+      "id": "13e1a6fa-5345-43d1-8c85-cea1d1882d66",
+      "title": "臺北市政府訂定自治規則統計表",
+      "org": "法務局",
+      "format": "CSV",
+      "url": "/api/dataset/13e1a6fa-5345-43d1-8c85-cea1d1882d66/resource/b3501a67-fd19-43c7-aa93-cde6db64df18/download",
+      "fields": "年度、秘書處數量、民政局數量、財政局數量、產發局數量、教育局數量、工務局數量、交通局數量、社會局數量、勞動局數量、警察局數量、衛生局數量、環保局數量、都發局數量、消防局數量、捷運局數量、翡管局數量、地政局數量、觀傳局數量、兵役局數量、主計處數量、人事處數量、政風處數量、北水處數量、研考會數量、法務局數量、原民會數量、公訓處數量、文化局數量、客委會數量、都委會數量、資訊局數量、青年局數量、體育局數量、其他數量"
+    },
+    {
+      "id": "7bbbefa6-1d6f-4732-8adf-50f824a84cc1",
+      "title": "臺北市政府制定自治條例統計表",
+      "org": "法務局",
+      "format": "CSV",
+      "url": "/api/dataset/7bbbefa6-1d6f-4732-8adf-50f824a84cc1/resource/f406962d-9948-4cc5-ba36-4d1fd55c012e/download",
+      "fields": "年度、秘書處數量、民政局數量、財政局數量、產發局數量、教育局數量、工務局數量、交通局數量、社會局數量、勞動局數量、警察局數量、衛生局數量、環保局數量、都發局數量、消防局數量、捷運局數量、翡管局數量、地政局數量、觀傳局數量、兵役局數量、主計處數量、人事處數量、政風處數量、北水處數量、研考會數量、法務局數量、原民會數量、公訓處數量、文化局數量、客委會數量、都委會數量、資訊局數量、青年局數量、體育局數量、其他數量"
+    },
+    {
+      "id": "829815b6-4fa9-4c5b-9c64-f29db28aa4b6",
+      "title": "臺北市政府及所屬各機關訂定行政規則統計表",
+      "org": "法務局",
+      "format": "CSV",
+      "url": "/api/dataset/829815b6-4fa9-4c5b-9c64-f29db28aa4b6/resource/53e7d28d-7210-4487-918b-626b0d5bdc69/download",
+      "fields": "年度、秘書處數量、民政局數量、財政局數量、產發局數量、教育局數量、工務局數量、交通局數量、社會局數量、勞動局數量、警察局數量、衛生局數量、環保局數量、都發局數量、消防局數量、捷運局數量、翡管局數量、地政局數量、觀傳局數量、兵役局數量、主計處數量、人事處數量、政風處數量、北水處數量、研考會數量、法務局數量、原民會數量、公訓處數量、文化局數量、客委會數量、都委會數量、資訊局數量、體育局數量、其他數量"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/probes/*.zip
+data/raw/probes/*.csv
+data/raw/probes/*_extracted/
