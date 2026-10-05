@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>台北雙星土地型自住房研究引擎 - 合成示範模式 (Demo Fixtures) (淺色主題 (Light))</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+            background-color: #FFFFFF;
+            color: #212529;
+        }
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 320px;
+            background-color: #F1F3F5;
+            border-right: 1px solid #DEE2E6;
+            padding: 24px 20px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 24px 32px;
+            overflow-y: auto;
+        }
+        .metric-box {
+            background: #F8F9FA;
+            border: 1px solid #DEE2E6;
+            border-radius: 8px;
+            padding: 14px 18px;
+            text-align: center;
+            flex: 1;
+            margin-right: 12px;
+        }
+        .metric-box:last-child { margin-right: 0; }
+        .metric-val { font-size: 22px; font-weight: bold; margin-top: 4px; }
+        .metric-label { font-size: 13px; color: #666; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            background: #F8F9FA;
+            border: 1px solid #DEE2E6;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background: #E9ECEF;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #DEE2E6;
+        }
+        .tag-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div style="position: fixed; bottom: 20px; right: 25px; background: rgba(220, 53, 69, 0.9); color: white; padding: 8px 16px; border-radius: 20px; font-weight: bold; font-size: 13px; z-index: 99999; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+            🧪 合成示範資料，非真實成交
+        </div>
+        
+    <div class="app-container">
+        <!-- 側邊面板 -->
+        <div class="sidebar">
+            <h2 style="margin-top:0; font-size: 18px;">🏢 台北雙星研究引擎</h2>
+            <div style="font-size: 12px; color: #666; margin-bottom: 16px;">
+                土地型自住房客觀篩選 (UI-0 預覽)
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight:bold; font-size: 13px;">運行模式 (Mode)</label>
+                <div style="margin-top: 6px; padding: 8px; background: #F8F9FA; border: 1px solid #DEE2E6; border-radius: 6px; font-size: 13px;">
+                    <b>合成示範模式 (Demo Fixtures)</b>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight:bold; font-size: 13px;">主題外觀 (Theme)</label>
+                <div style="margin-top: 6px; padding: 8px; background: #F8F9FA; border: 1px solid #DEE2E6; border-radius: 6px; font-size: 13px;">
+                    <b>淺色主題 (Light)</b>
+                </div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #DEE2E6; margin: 20px 0;">
+
+            <div style="font-weight:bold; font-size: 14px; margin-bottom: 12px;">圖層控制 (Layer Panel)</div>
+            <div style="font-size: 13px; line-height: 1.8;">
+                <div>☑ C1/D1 雙基地外緣 (官方幾何)</div>
+                <div>☑ 500m / 700m 距離圈</div>
+                <div>☑ 候選成交住宅標的點</div>
+                <div>☑ 號碼區間外包範圍 (矩形)</div>
+                <div style="color: #999;">☐ 8米以上計畫道路 (待 2b 啟用)</div>
+                <div style="color: #999;">☐ 都市計畫使用分區 (待 2b 啟用)</div>
+                <div style="color: #999;">☐ 捷運/公車站位 (免金鑰，待 2a 啟用)</div>
+                <div style="color: #E74C3C; font-weight: bold;">🔒 TDX 運輸 API (待啟用 - Phase T)</div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #DEE2E6; margin: 20px 0;">
+            <div style="font-size: 11px; color: #888;">
+                依協議：UI-0 僅確認版面樣式，不實作評分/STRICT邏輯/交通外部串接。
+            </div>
+        </div>
+
+        <!-- 主內容區 -->
+        <div class="content">
+            
+        <div style="background-color: #F8D7DA; color: #721C24; border: 1px solid #F5C6CB; padding: 12px 18px; border-radius: 8px; margin-bottom: 16px; font-weight: bold;">
+            🧪 【合成示範資料，非真實成交】此模式所有物件均為合成假資料（依規格第 13 節建構），僅供驗證版面配置、視覺著色與互動流程。示範資料不存入資料庫，匯出功能已停用。
+        </div>
+        
+
+            <!-- 頂部統計列 -->
+            <div style="display: flex; margin-bottom: 24px;">
+                <div class="metric-box">
+                    <div class="metric-label">篩選後候選標的</div>
+                    <div class="metric-val">7 筆</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">雙星核心圈 (≤500m)</div>
+                    <div class="metric-val" style="color: #28A745;">4 筆</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">雙星次級圈 (500~700m)</div>
+                    <div class="metric-val" style="color: #FD7E14;">1 筆</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">需人工核實 (區間/跨門檻)</div>
+                    <div class="metric-val" style="color: #DC3545;">3 筆</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">計算基準日 (as-of)</div>
+                    <div class="metric-val" style="font-size: 18px;">2026-10-01</div>
+                </div>
+            </div>
+
+            <!-- 地圖區域 -->
+            <h3 style="margin-bottom: 8px;">生活圈空間總覽地圖 (Map View)</h3>
+            <div style="font-size: 12px; color: #666; margin-bottom: 12px;">
+                底圖：國土測繪圖資服務雲 (NLSC) 臺灣通用電子地圖 WMTS；點位圖徵依分級著色，A*/B* 採虛線空心圓，非精確門牌繪製外包矩形。
+            </div>
+            <div style="height: 500px; border-radius: 8px; overflow: hidden; border: 1px solid #DEE2E6; margin-bottom: 28px;">
+                <iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+    
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_6f8fd5ab3e08cedd64bf40dfcae182d7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css&quot;/>
+    <script src=&quot;https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css&quot;/>
+</head>
+<body>
+    
+    
+            <div class=&quot;folium-map&quot; id=&quot;map_6f8fd5ab3e08cedd64bf40dfcae182d7&quot; ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6f8fd5ab3e08cedd64bf40dfcae182d7 = L.map(
+                &quot;map_6f8fd5ab3e08cedd64bf40dfcae182d7&quot;,
+                {
+                    center: [25.0488, 121.5134],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 15,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+
+            
+
+        
+    
+            var tile_layer_72e418d14bb0b8d447a1f4515500127d = L.tileLayer(
+                &quot;https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u5167\u653f\u90e8\u570b\u571f\u6e2c\u7e6a\u4e2d\u5fc3 (NLSC) \u81fa\u7063\u901a\u7528\u96fb\u5b50\u5730\u5716&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_72e418d14bb0b8d447a1f4515500127d.addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+        
+    
+            var tile_layer_13da8829809640ec24c8b1d4db5f1657 = L.tileLayer(
+                &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;OpenStreetMap contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_13da8829809640ec24c8b1d4db5f1657.addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+        
+    
+            var feature_group_6b5912868d300f3042700364826c3417 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_0f2bb8531e319d2c3d097e56e6ec1873_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {&quot;color&quot;: &quot;#E74C3C&quot;, &quot;fillColor&quot;: &quot;#1F4E79&quot;, &quot;fillOpacity&quot;: 0.45, &quot;weight&quot;: 2.5};
+            }
+        }
+
+        function geo_json_0f2bb8531e319d2c3d097e56e6ec1873_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0f2bb8531e319d2c3d097e56e6ec1873 = L.geoJson(null, {
+                onEachFeature: geo_json_0f2bb8531e319d2c3d097e56e6ec1873_onEachFeature,
+            
+                style: geo_json_0f2bb8531e319d2c3d097e56e6ec1873_styler,
+            ...{
+}
+        });
+
+        function geo_json_0f2bb8531e319d2c3d097e56e6ec1873_add (data) {
+            geo_json_0f2bb8531e319d2c3d097e56e6ec1873
+                .addData(data);
+        }
+            geo_json_0f2bb8531e319d2c3d097e56e6ec1873_add({&quot;crs&quot;: {&quot;properties&quot;: {&quot;name&quot;: &quot;urn:ogc:def:crs:OGC:1.3:CRS84&quot;}, &quot;type&quot;: &quot;name&quot;}, &quot;features&quot;: [{&quot;geometry&quot;: {&quot;coordinates&quot;: [[[121.5152231789511, 25.048797643158082], [121.51356541052954, 25.04919630881565], [121.51350217087774, 25.04915274746922], [121.51348588226125, 25.04832087480799], [121.51512258476365, 25.048315216295265], [121.5152231789511, 25.048797643158082]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;properties&quot;: {&quot;area_sqm&quot;: 12993.081398974651, &quot;fid&quot;: 802, &quot;name&quot;: &quot;C1\u57fa\u5730&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;geometry&quot;: {&quot;coordinates&quot;: [[[121.51165455032113, 25.04853809058598], [121.51162280472639, 25.048446817584086], [121.5115812297226, 25.048327311469997], [121.51164705428995, 25.048327075741167], [121.51182270419656, 25.048326564822702], [121.51318854216764, 25.04832189679334], [121.5132069674695, 25.04926300639198], [121.51317376722236, 25.04930794515528], [121.51205870357116, 25.049699830055232], [121.51205839959468, 25.049698957324956], [121.5120232631892, 25.0495979548101], [121.51194262933825, 25.049366192760406], [121.51165455032113, 25.04853809058598]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;properties&quot;: {&quot;area_sqm&quot;: 18633.506586997868, &quot;fid&quot;: 803, &quot;name&quot;: &quot;D1\u57fa\u5730&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;name&quot;: &quot;c1d1_bases_4326&quot;, &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+    geo_json_0f2bb8531e319d2c3d097e56e6ec1873.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = [&quot;name&quot;, &quot;area_sqm&quot;];
+    let aliases = [&quot;\u57fa\u5730:&quot;, &quot;\u9762\u7a4d (m\u00b2):&quot;];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  &quot;sticky&quot;: true,
+  &quot;className&quot;: &quot;foliumtooltip&quot;,
+});
+                     
+    
+            geo_json_0f2bb8531e319d2c3d097e56e6ec1873.addTo(feature_group_6b5912868d300f3042700364826c3417);
+        
+    
+            feature_group_6b5912868d300f3042700364826c3417.addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+        
+    
+            var feature_group_e1ceb0de263dff63898a744be8d3faad = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_0e6c0b3baf68d84abc96ae320476d954 = L.circle(
+                [25.048779, 121.513358],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#28A745&quot;, &quot;dashArray&quot;: &quot;6, 6&quot;, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#28A745&quot;, &quot;fillOpacity&quot;: 0.08, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 500, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(feature_group_e1ceb0de263dff63898a744be8d3faad);
+        
+    
+            circle_0e6c0b3baf68d84abc96ae320476d954.bindTooltip(
+                `<div>
+                     方案 B 核心半徑 (500m 圈)
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var circle_4a68e37851ac16bc703d630e16d3d548 = L.circle(
+                [25.048779, 121.513358],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#FD7E14&quot;, &quot;dashArray&quot;: &quot;6, 6&quot;, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FD7E14&quot;, &quot;fillOpacity&quot;: 0.04, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 700, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(feature_group_e1ceb0de263dff63898a744be8d3faad);
+        
+    
+            circle_4a68e37851ac16bc703d630e16d3d548.bindTooltip(
+                `<div>
+                     方案 B 次級半徑 (700m 圈)
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            feature_group_e1ceb0de263dff63898a744be8d3faad.addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+        
+    
+            var feature_group_ccdda9d47fa62601caf533460dd54c01 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_13c9c9b9e0e46e31440f71bb1b1cdd23 = L.circleMarker(
+                [25.0465, 121.5132],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#28A745&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#28A745&quot;, &quot;fillOpacity&quot;: 0.85, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 7, &quot;stroke&quot;: true, &quot;weight&quot;: 2.0}
+            ).addTo(feature_group_ccdda9d47fa62601caf533460dd54c01);
+        
+    
+        var popup_76218aeb07ba4213ebf5c7abc0f4364b = L.popup({
+  &quot;maxWidth&quot;: 300,
+});
+
+        
+            
+                var html_edf9be69e2fe528f76a4c95cccc3a814 = $(`<div id=&quot;html_edf9be69e2fe528f76a4c95cccc3a814&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>         <div style=&quot;font-family: sans-serif; font-size: 13px; line-height: 1.5; min-width: 220px;&quot;>             <div style=&quot;font-weight: bold; border-bottom: 2px solid #28A745; padding-bottom: 4px; margin-bottom: 6px;&quot;>                 [A] 台北市中正區重慶南路一段50號             </div>             <div><b>編號:</b> DEMO_A_CORE</div>             <div><b>房地淨價:</b> 1850.0 萬元 </div>             <div><b>土地坪數:</b> 8.25 坪 (信心度: HIGH)</div>             <div><b>雙星距離:</b> 320.5 m (PASS)</div>             <div><b>精度等級:</b> EXACT </div>             <div><b>面臨路寬:</b> 10.5m</div>             <div style=&quot;margin-top: 6px; font-size: 11px; color: #888;&quot;>                 註：距離由 C1/D1 多邊形外緣起算             </div>         </div>         </div>`)[0];
+                popup_76218aeb07ba4213ebf5c7abc0f4364b.setContent(html_edf9be69e2fe528f76a4c95cccc3a814);
+            
+        
+
+        circle_marker_13c9c9b9e0e46e31440f71bb1b1cdd23.bindPopup(popup_76218aeb07ba4213ebf5c7abc0f4364b)
+        ;
+
+        
+    
+    
+            circle_marker_13c9c9b9e0e46e31440f71bb1b1cdd23.bindTooltip(
+                `<div>
+                     [A] 台北市中正區重慶南路一段50號 | 1850.0萬 | 8.25坪
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var circle_marker_71a1e282d5e7c064af04188ae47bb3a3 = L.circleMarker(
+                [25.0512, 121.5115],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#28A745&quot;, &quot;dashArray&quot;: &quot;4, 4&quot;, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#28A745&quot;, &quot;fillOpacity&quot;: 0.25, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 7, &quot;stroke&quot;: true, &quot;weight&quot;: 2.0}
+            ).addTo(feature_group_ccdda9d47fa62601caf533460dd54c01);
+        
+    
+        var popup_9422dafb1b01b5bdfd586cf4afa925b0 = L.popup({
+  &quot;maxWidth&quot;: 300,
+});
+
+        
+            
+                var html_c0ee88e26d1b70f0140e37abbca11f35 = $(`<div id=&quot;html_c0ee88e26d1b70f0140e37abbca11f35&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>         <div style=&quot;font-family: sans-serif; font-size: 13px; line-height: 1.5; min-width: 220px;&quot;>             <div style=&quot;font-weight: bold; border-bottom: 2px solid #28A745; padding-bottom: 4px; margin-bottom: 6px;&quot;>                 [A*] 台北市大同區延平北路一段1~50號             </div>             <div><b>編號:</b> DEMO_A_STAR_RANGE</div>             <div><b>房地淨價:</b> 1920.0 萬元 </div>             <div><b>土地坪數:</b> 7.65 坪 (信心度: HIGH)</div>             <div><b>雙星距離:</b> 485.0 m (UNKNOWN)</div>             <div><b>精度等級:</b> NUMBER_RANGE </div>             <div><b>面臨路寬:</b> 9.0m</div>             <div style=&quot;margin-top: 6px; font-size: 11px; color: #888;&quot;>                 註：距離由 C1/D1 多邊形外緣起算             </div>         </div>         </div>`)[0];
+                popup_9422dafb1b01b5bdfd586cf4afa925b0.setContent(html_c0ee88e26d1b70f0140e37abbca11f35);
+            
+        
+
+        circle_marker_71a1e282d5e7c064af04188ae47bb3a3.bindPopup(popup_9422dafb1b01b5bdfd586cf4afa925b0)
+        ;
+
+        
+    
+    
+            circle_marker_71a1e282d5e7c064af04188ae47bb3a3.bindTooltip(
+                `<div>
+                     [A*] 台北市大同區延平北路一段1~50號 | 1920.0萬 | 7.65坪
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var circle_marker_8252a237f8d34d1d10684833dbf6f9fe = L.circleMarker(
+                [25.045, 121.5125],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#007BFF&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#007BFF&quot;, &quot;fillOpacity&quot;: 0.85, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 7, &quot;stroke&quot;: true, &quot;weight&quot;: 2.0}
+            ).addTo(feature_group_ccdda9d47fa62601caf533460dd54c01);
+        
+    
+        var popup_2501504403696b6497d8970375cd64be = L.popup({
+  &quot;maxWidth&quot;: 300,
+});
+
+        
+            
+                var html_efc8ca06a185ed88d9751442e7b64a2b = $(`<div id=&quot;html_efc8ca06a185ed88d9751442e7b64a2b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>         <div style=&quot;font-family: sans-serif; font-size: 13px; line-height: 1.5; min-width: 220px;&quot;>             <div style=&quot;font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 4px; margin-bottom: 6px;&quot;>                 [B] 台北市中正區漢口街一段30號             </div>             <div><b>編號:</b> DEMO_B_NEAR_PRICE</div>             <div><b>房地淨價:</b> 2150.0 萬元 </div>             <div><b>土地坪數:</b> 7.1 坪 (信心度: HIGH)</div>             <div><b>雙星距離:</b> 390.0 m (PASS)</div>             <div><b>精度等級:</b> EXACT </div>             <div><b>面臨路寬:</b> 11.0m</div>             <div style=&quot;margin-top: 6px; font-size: 11px; color: #888;&quot;>                 註：距離由 C1/D1 多邊形外緣起算             </div>         </div>         </div>`)[0];
+                popup_2501504403696b6497d8970375cd64be.setContent(html_efc8ca06a185ed88d9751442e7b64a2b);
+            
+        
+
+        circle_marker_8252a237f8d34d1d10684833dbf6f9fe.bindPopup(popup_2501504403696b6497d8970375cd64be)
+        ;
+
+        
+    
+    
+            circle_marker_8252a237f8d34d1d10684833dbf6f9fe.bindTooltip(
+                `<div>
+                     [B] 台北市中正區漢口街一段30號 | 2150.0萬 | 7.1坪
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var circle_marker_21b73ba51b6ec40a8cfaaa331113b07f = L.circleMarker(
+                [25.0505, 121.516],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#007BFF&quot;, &quot;dashArray&quot;: &quot;4, 4&quot;, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#007BFF&quot;, &quot;fillOpacity&quot;: 0.25, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 7, &quot;stroke&quot;: true, &quot;weight&quot;: 2.0}
+            ).addTo(feature_group_ccdda9d47fa62601caf533460dd54c01);
+        
+    
+        var popup_76391381cf8534a02e9f9fad026f1c3d = L.popup({
+  &quot;maxWidth&quot;: 300,
+});
+
+        
+            
+                var html_ae605779e33840518c556db7f0c6c5a8 = $(`<div id=&quot;html_ae605779e33840518c556db7f0c6c5a8&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>         <div style=&quot;font-family: sans-serif; font-size: 13px; line-height: 1.5; min-width: 220px;&quot;>             <div style=&quot;font-weight: bold; border-bottom: 2px solid #007BFF; padding-bottom: 4px; margin-bottom: 6px;&quot;>                 [B*] 台北市大同區長安西路120號             </div>             <div><b>編號:</b> DEMO_B_STAR_PARKING</div>             <div><b>房地淨價:</b> 2100.0 萬元 (車位內含)</div>             <div><b>土地坪數:</b> 6.2 坪 (信心度: LOW)</div>             <div><b>雙星距離:</b> 620.0 m (NEAR)</div>             <div><b>精度等級:</b> EXACT </div>             <div><b>面臨路寬:</b> 9.5m</div>             <div style=&quot;margin-top: 6px; font-size: 11px; color: #888;&quot;>                 註：距離由 C1/D1 多邊形外緣起算             </div>         </div>         </div>`)[0];
+                popup_76391381cf8534a02e9f9fad026f1c3d.setContent(html_ae605779e33840518c556db7f0c6c5a8);
+            
+        
+
+        circle_marker_21b73ba51b6ec40a8cfaaa331113b07f.bindPopup(popup_76391381cf8534a02e9f9fad026f1c3d)
+        ;
+
+        
+    
+    
+            circle_marker_21b73ba51b6ec40a8cfaaa331113b07f.bindTooltip(
+                `<div>
+                     [B*] 台北市大同區長安西路120號 | 2100.0萬 | 6.2坪
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var circle_marker_22446523f84ed279dade3a23b033364c = L.circleMarker(
+                [25.0468, 121.514],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#FFC107&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#FFC107&quot;, &quot;fillOpacity&quot;: 0.85, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 7, &quot;stroke&quot;: true, &quot;weight&quot;: 2.0}
+            ).addTo(feature_group_ccdda9d47fa62601caf533460dd54c01);
+        
+    
+        var popup_28ebcc804c427f3251180b7f2824cc64 = L.popup({
+  &quot;maxWidth&quot;: 300,
+});
+
+        
+            
+                var html_a6a0e75025cec167ffc7044bdd0d610f = $(`<div id=&quot;html_a6a0e75025cec167ffc7044bdd0d610f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>         <div style=&quot;font-family: sans-serif; font-size: 13px; line-height: 1.5; min-width: 220px;&quot;>             <div style=&quot;font-weight: bold; border-bottom: 2px solid #FFC107; padding-bottom: 4px; margin-bottom: 6px;&quot;>                 [C] 台北市中正區忠孝西路一段70號             </div>             <div><b>編號:</b> DEMO_C_SINGLE_FAIL</div>             <div><b>房地淨價:</b> 2450.0 萬元 </div>             <div><b>土地坪數:</b> 11.2 坪 (信心度: HIGH)</div>             <div><b>雙星距離:</b> 280.0 m (PASS)</div>             <div><b>精度等級:</b> EXACT </div>             <div><b>面臨路寬:</b> 25.0m</div>             <div style=&quot;margin-top: 6px; font-size: 11px; color: #888;&quot;>                 註：距離由 C1/D1 多邊形外緣起算             </div>         </div>         </div>`)[0];
+                popup_28ebcc804c427f3251180b7f2824cc64.setContent(html_a6a0e75025cec167ffc7044bdd0d610f);
+            
+        
+
+        circle_marker_22446523f84ed279dade3a23b033364c.bindPopup(popup_28ebcc804c427f3251180b7f2824cc64)
+        ;
+
+        
+    
+    
+            circle_marker_22446523f84ed279dade3a23b033364c.bindTooltip(
+                `<div>
+                     [C] 台北市中正區忠孝西路一段70號 | 2450.0萬 | 11.2坪
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var circle_marker_105cb17d03375f6eec27655120397fab = L.circleMarker(
+                [25.038, 121.5],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#DC3545&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#DC3545&quot;, &quot;fillOpacity&quot;: 0.85, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 7, &quot;stroke&quot;: true, &quot;weight&quot;: 2.0}
+            ).addTo(feature_group_ccdda9d47fa62601caf533460dd54c01);
+        
+    
+        var popup_71f3dfa809542e51ece7cee30c189079 = L.popup({
+  &quot;maxWidth&quot;: 300,
+});
+
+        
+            
+                var html_0737ca61092f922da6b124dbd7a5dd87 = $(`<div id=&quot;html_0737ca61092f922da6b124dbd7a5dd87&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>         <div style=&quot;font-family: sans-serif; font-size: 13px; line-height: 1.5; min-width: 220px;&quot;>             <div style=&quot;font-weight: bold; border-bottom: 2px solid #DC3545; padding-bottom: 4px; margin-bottom: 6px;&quot;>                 [D] 台北市萬華區西昌街200號             </div>             <div><b>編號:</b> DEMO_D_MULTI_FAIL</div>             <div><b>房地淨價:</b> 2950.0 萬元 </div>             <div><b>土地坪數:</b> 4.5 坪 (信心度: HIGH)</div>             <div><b>雙星距離:</b> 950.0 m (FAIL)</div>             <div><b>精度等級:</b> EXACT </div>             <div><b>面臨路寬:</b> 6.0m</div>             <div style=&quot;margin-top: 6px; font-size: 11px; color: #888;&quot;>                 註：距離由 C1/D1 多邊形外緣起算             </div>         </div>         </div>`)[0];
+                popup_71f3dfa809542e51ece7cee30c189079.setContent(html_0737ca61092f922da6b124dbd7a5dd87);
+            
+        
+
+        circle_marker_105cb17d03375f6eec27655120397fab.bindPopup(popup_71f3dfa809542e51ece7cee30c189079)
+        ;
+
+        
+    
+    
+            circle_marker_105cb17d03375f6eec27655120397fab.bindTooltip(
+                `<div>
+                     [D] 台北市萬華區西昌街200號 | 2950.0萬 | 4.5坪
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            feature_group_ccdda9d47fa62601caf533460dd54c01.addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+        
+    
+            var feature_group_10fe62dbcae8c61bc19ca072696e1d02 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var rectangle_6a4b6cb11a5eed81b3e427877e600dc4 = L.rectangle(
+                [[25.05077870954989, 121.51288739555754], [25.05276246277392, 121.51358941019166]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#28A745&quot;, &quot;dashArray&quot;: &quot;5, 5&quot;, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#28A745&quot;, &quot;fillOpacity&quot;: 0.15, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 1.5}
+            ).addTo(feature_group_10fe62dbcae8c61bc19ca072696e1d02);
+        
+    
+            rectangle_6a4b6cb11a5eed81b3e427877e600dc4.bindTooltip(
+                `<div>
+                     號碼區間外包範圍：台北市大同區延平北路一段1~50號
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            feature_group_10fe62dbcae8c61bc19ca072696e1d02.addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+        
+    
+            var layer_control_99cede46c746b2789bde75e8d6cab3b6_layers = {
+                base_layers : {
+                    &quot;\u570b\u571f\u6e2c\u7e6a\u4e2d\u5fc3\u81fa\u7063\u901a\u7528\u96fb\u5b50\u5730\u5716 (\u5b98\u65b9\u9996\u9078)&quot; : tile_layer_72e418d14bb0b8d447a1f4515500127d,
+                    &quot;OpenStreetMap (\u958b\u653e\u8857\u9053\u5716)&quot; : tile_layer_13da8829809640ec24c8b1d4db5f1657,
+                },
+                overlays :  {
+                    &quot;\u81fa\u5317\u96d9\u661f C1/D1 \u57fa\u5730 (\u5b98\u65b9\u5e7e\u4f55)&quot; : feature_group_6b5912868d300f3042700364826c3417,
+                    &quot;\u96d9\u661f\u751f\u6d3b\u5708\u534a\u5f91 (500m / 700m)&quot; : feature_group_e1ceb0de263dff63898a744be8d3faad,
+                    &quot;\u6210\u4ea4\u4f4f\u5b85\u5019\u9078\u7269\u4ef6&quot; : feature_group_ccdda9d47fa62601caf533460dd54c01,
+                    &quot;\u975e\u7cbe\u78ba\u9580\u724c\u5916\u5305\u7bc4\u570d (Bounding Box)&quot; : feature_group_10fe62dbcae8c61bc19ca072696e1d02,
+                },
+            };
+            let layer_control_99cede46c746b2789bde75e8d6cab3b6 = L.control.layers(
+                layer_control_99cede46c746b2789bde75e8d6cab3b6_layers.base_layers,
+                layer_control_99cede46c746b2789bde75e8d6cab3b6_layers.overlays,
+                {
+  &quot;position&quot;: &quot;topright&quot;,
+  &quot;collapsed&quot;: false,
+  &quot;autoZIndex&quot;: true,
+}
+            ).addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+
+        
+    
+            L.control.fullscreen(
+                {
+  &quot;position&quot;: &quot;topleft&quot;,
+  &quot;title&quot;: &quot;Full Screen&quot;,
+  &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;,
+  &quot;forceSeparateButton&quot;: false,
+}
+            ).addTo(map_6f8fd5ab3e08cedd64bf40dfcae182d7);
+        
+    
+            var measure_control_38236d74fc4885848031fc504795b682 = new L.Control.Measure(
+                {
+  &quot;position&quot;: &quot;bottomleft&quot;,
+  &quot;primaryLengthUnit&quot;: &quot;meters&quot;,
+  &quot;secondaryLengthUnit&quot;: &quot;miles&quot;,
+  &quot;primaryAreaUnit&quot;: &quot;sqmeters&quot;,
+  &quot;secondaryAreaUnit&quot;: &quot;acres&quot;,
+});
+            map_6f8fd5ab3e08cedd64bf40dfcae182d7.addControl(measure_control_38236d74fc4885848031fc504795b682);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+</script>
+</html>" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+
+            <!-- 表格區域 -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h3 style="margin: 0;">候選標的清單 (Candidates Table)</h3>
+                <div>
+                    <button style="padding: 6px 14px; border-radius: 4px; border: 1px solid #DEE2E6; background: #F8F9FA; color: #212529; cursor: not-allowed;" disabled>
+                        📥 匯出 CSV (示範模式停用)
+                    </button>
+                </div>
+            </div>
+            <div style="max-height: 380px; overflow-y: auto; margin-bottom: 28px; border-radius: 8px; border: 1px solid #DEE2E6;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>候選編號</th>
+                            <th>分級</th>
+                            <th>評分</th>
+                            <th>行政區</th>
+                            <th>成交地址</th>
+                            <th>房地淨價</th>
+                            <th>土地坪數</th>
+                            <th>土地信心</th>
+                            <th>雙星距離</th>
+                            <th>門牌精度</th>
+                            <th>面臨路寬</th>
+                            <th>人工核實</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr style="border-bottom: 1px solid #DEE2E6;">
+            <td style="padding: 10px 12px;"><b>DEMO_A_CORE</b></td>
+            <td style="padding: 10px 12px;"><span style="background: #28A745; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">A</span></td>
+            <td style="padding: 10px 12px;">92.5</td>
+            <td style="padding: 10px 12px;">中正區</td>
+            <td style="padding: 10px 12px;">台北市中正區重慶南路一段50號</td>
+            <td style="padding: 10px 12px; font-weight: bold; color: #0056B3;">1850.0 萬</td>
+            <td style="padding: 10px 12px; font-weight: bold;">8.25 坪</td>
+            <td style="padding: 10px 12px;"><small>HIGH</small></td>
+            <td style="padding: 10px 12px;">320.5 m</td>
+            <td style="padding: 10px 12px;"><small>EXACT</small></td>
+            <td style="padding: 10px 12px;">10.5m</td>
+            <td style="padding: 10px 12px;">否</td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid #DEE2E6;">
+            <td style="padding: 10px 12px;"><b>DEMO_A_STAR_RANGE</b></td>
+            <td style="padding: 10px 12px;"><span style="background: #28A745; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">A*</span></td>
+            <td style="padding: 10px 12px;">88.0</td>
+            <td style="padding: 10px 12px;">大同區</td>
+            <td style="padding: 10px 12px;">台北市大同區延平北路一段1~50號</td>
+            <td style="padding: 10px 12px; font-weight: bold; color: #0056B3;">1920.0 萬</td>
+            <td style="padding: 10px 12px; font-weight: bold;">7.65 坪</td>
+            <td style="padding: 10px 12px;"><small>HIGH</small></td>
+            <td style="padding: 10px 12px;">485.0 m</td>
+            <td style="padding: 10px 12px;"><small>NUMBER_RANGE</small></td>
+            <td style="padding: 10px 12px;">9.0m</td>
+            <td style="padding: 10px 12px;">⚠️ 需查核</td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid #DEE2E6;">
+            <td style="padding: 10px 12px;"><b>DEMO_B_NEAR_PRICE</b></td>
+            <td style="padding: 10px 12px;"><span style="background: #007BFF; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">B</span></td>
+            <td style="padding: 10px 12px;">84.0</td>
+            <td style="padding: 10px 12px;">中正區</td>
+            <td style="padding: 10px 12px;">台北市中正區漢口街一段30號</td>
+            <td style="padding: 10px 12px; font-weight: bold; color: #0056B3;">2150.0 萬</td>
+            <td style="padding: 10px 12px; font-weight: bold;">7.1 坪</td>
+            <td style="padding: 10px 12px;"><small>HIGH</small></td>
+            <td style="padding: 10px 12px;">390.0 m</td>
+            <td style="padding: 10px 12px;"><small>EXACT</small></td>
+            <td style="padding: 10px 12px;">11.0m</td>
+            <td style="padding: 10px 12px;">否</td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid #DEE2E6;">
+            <td style="padding: 10px 12px;"><b>DEMO_B_STAR_PARKING</b></td>
+            <td style="padding: 10px 12px;"><span style="background: #007BFF; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">B*</span></td>
+            <td style="padding: 10px 12px;">78.5</td>
+            <td style="padding: 10px 12px;">大同區</td>
+            <td style="padding: 10px 12px;">台北市大同區長安西路120號</td>
+            <td style="padding: 10px 12px; font-weight: bold; color: #0056B3;">2100.0 萬</td>
+            <td style="padding: 10px 12px; font-weight: bold;">6.2 坪</td>
+            <td style="padding: 10px 12px;"><small>LOW</small></td>
+            <td style="padding: 10px 12px;">620.0 m</td>
+            <td style="padding: 10px 12px;"><small>EXACT</small></td>
+            <td style="padding: 10px 12px;">9.5m</td>
+            <td style="padding: 10px 12px;">⚠️ 需查核</td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid #DEE2E6;">
+            <td style="padding: 10px 12px;"><b>DEMO_C_SINGLE_FAIL</b></td>
+            <td style="padding: 10px 12px;"><span style="background: #FFC107; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">C</span></td>
+            <td style="padding: 10px 12px;">69.0</td>
+            <td style="padding: 10px 12px;">中正區</td>
+            <td style="padding: 10px 12px;">台北市中正區忠孝西路一段70號</td>
+            <td style="padding: 10px 12px; font-weight: bold; color: #0056B3;">2450.0 萬</td>
+            <td style="padding: 10px 12px; font-weight: bold;">11.2 坪</td>
+            <td style="padding: 10px 12px;"><small>HIGH</small></td>
+            <td style="padding: 10px 12px;">280.0 m</td>
+            <td style="padding: 10px 12px;"><small>EXACT</small></td>
+            <td style="padding: 10px 12px;">25.0m</td>
+            <td style="padding: 10px 12px;">否</td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid #DEE2E6;">
+            <td style="padding: 10px 12px;"><b>DEMO_D_MULTI_FAIL</b></td>
+            <td style="padding: 10px 12px;"><span style="background: #DC3545; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">D</span></td>
+            <td style="padding: 10px 12px;">42.0</td>
+            <td style="padding: 10px 12px;">萬華區</td>
+            <td style="padding: 10px 12px;">台北市萬華區西昌街200號</td>
+            <td style="padding: 10px 12px; font-weight: bold; color: #0056B3;">2950.0 萬</td>
+            <td style="padding: 10px 12px; font-weight: bold;">4.5 坪</td>
+            <td style="padding: 10px 12px;"><small>HIGH</small></td>
+            <td style="padding: 10px 12px;">950.0 m</td>
+            <td style="padding: 10px 12px;"><small>EXACT</small></td>
+            <td style="padding: 10px 12px;">6.0m</td>
+            <td style="padding: 10px 12px;">否</td>
+        </tr>
+        
+        <tr style="border-bottom: 1px solid #DEE2E6;">
+            <td style="padding: 10px 12px;"><b>DEMO_X_UNRESOLVED</b></td>
+            <td style="padding: 10px 12px;"><span style="background: #6C757D; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold;">X</span></td>
+            <td style="padding: 10px 12px;">0.0</td>
+            <td style="padding: 10px 12px;">中正區</td>
+            <td style="padding: 10px 12px;">台北市中正區無法解析未名地號巷段</td>
+            <td style="padding: 10px 12px; font-weight: bold; color: #0056B3;">1680.0 萬</td>
+            <td style="padding: 10px 12px; font-weight: bold;">8.0 坪</td>
+            <td style="padding: 10px 12px;"><small>MEDIUM</small></td>
+            <td style="padding: 10px 12px;">未知</td>
+            <td style="padding: 10px 12px;"><small>UNRESOLVED</small></td>
+            <td style="padding: 10px 12px;">待查</td>
+            <td style="padding: 10px 12px;">⚠️ 需查核</td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 單筆深度診斷區域 -->
+            <h3>候選標的深度診斷 (Candidate Inspection)</h3>
+            <div style="display: flex; gap: 24px; background: #F8F9FA; border: 1px solid #DEE2E6; border-radius: 8px; padding: 20px;">
+                <div style="flex: 1;">
+                    <h4 style="margin-top: 0;">標的總覽：<code>DEMO_A_CORE</code></h4>
+                    <p><b>門牌地址：</b> 台北市中正區重慶南路一段50號</p>
+                    <p><b>建物型態：</b> 公寓(5樓含以下無電梯) | <b>屋齡：</b> 41.2 年</p>
+                    <p><b>房地淨價：</b> <b style="color: #0056B3;">1850.0 萬元</b> </p>
+                    <p><b>土地移轉：</b> <b>8.25 坪</b> (信心度: HIGH)</p>
+                    <p><b>雙星邊界距離：</b> <b>320.5 m</b> (PASS)</p>
+                    <p><b>地址精度：</b> EXACT</p>
+                    <hr style="border: 0; border-top: 1px solid #DEE2E6; margin: 16px 0;">
+                    <h5 style="margin-bottom: 8px;">方案 B 條件符合度 (Why Matches)</h5>
+                    <ul style="list-style: none; padding-left: 0; font-size: 13.5px;">
+                        <li style='margin-bottom: 6px;'>✅ <b>總價 (≤2000萬)</b>: PASS</li><li style='margin-bottom: 6px;'>✅ <b>土地坪數 (≥7坪)</b>: PASS</li><li style='margin-bottom: 6px;'>✅ <b>雙星距離 (≤500m)</b>: PASS</li><li style='margin-bottom: 6px;'>✅ <b>臨路路寬 (≥8m)</b>: PASS</li><li style='margin-bottom: 6px;'>❓ <b>街廓與整合</b>: UNKNOWN</li>
+                    </ul>
+                </div>
+
+                <div style="flex: 1.2;">
+                    <h4 style="margin-top: 0;">客觀事實與衍生證據表 (Evidence Table)</h4>
+                    <div style="font-size: 12px; color: #666; margin-bottom: 8px;">
+                        嚴格帶狀態（OBSERVED/DERIVED/INFERRED/UNKNOWN）與來源出處：
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>欄位</th>
+                                <th>數值</th>
+                                <th>觀察狀態</th>
+                                <th>資料來源</th>
+                                <th>核實備註</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+            <tr style="border-bottom: 1px solid #DEE2E6;">
+                <td style="padding: 8px 10px;"><b>成交門牌</b></td>
+                <td style="padding: 8px 10px;">重慶南路一段50號</td>
+                <td style="padding: 8px 10px;"><small>OBSERVED</small></td>
+                <td style="padding: 8px 10px;"><small>實價登錄 (示範)</small></td>
+                <td style="padding: 8px 10px;">EXACT</td>
+            </tr>
+            
+            <tr style="border-bottom: 1px solid #DEE2E6;">
+                <td style="padding: 8px 10px;"><b>房地淨價</b></td>
+                <td style="padding: 8px 10px;">1850 萬元 (≤2000萬)</td>
+                <td style="padding: 8px 10px;"><small>OBSERVED</small></td>
+                <td style="padding: 8px 10px;"><small>實價登錄</small></td>
+                <td style="padding: 8px 10px;">PASS</td>
+            </tr>
+            
+            <tr style="border-bottom: 1px solid #DEE2E6;">
+                <td style="padding: 8px 10px;"><b>土地持份</b></td>
+                <td style="padding: 8px 10px;">8.25 坪 (≥7坪)</td>
+                <td style="padding: 8px 10px;"><small>DERIVED</small></td>
+                <td style="padding: 8px 10px;"><small>法定換算 (1坪=3.305785m²)</small></td>
+                <td style="padding: 8px 10px;">PASS (HIGH)</td>
+            </tr>
+            
+            <tr style="border-bottom: 1px solid #DEE2E6;">
+                <td style="padding: 8px 10px;"><b>雙星距離</b></td>
+                <td style="padding: 8px 10px;">320.5 m (≤500m)</td>
+                <td style="padding: 8px 10px;"><small>DERIVED</small></td>
+                <td style="padding: 8px 10px;"><small>C1/D1多邊形邊界起算</small></td>
+                <td style="padding: 8px 10px;">PASS (精確驗證)</td>
+            </tr>
+            
+            <tr style="border-bottom: 1px solid #DEE2E6;">
+                <td style="padding: 8px 10px;"><b>臨路寬度</b></td>
+                <td style="padding: 8px 10px;">10.5 m (≥8m)</td>
+                <td style="padding: 8px 10px;"><small>DERIVED</small></td>
+                <td style="padding: 8px 10px;"><small>都市計畫道路圖層</small></td>
+                <td style="padding: 8px 10px;">PASS</td>
+            </tr>
+            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -227,12 +227,13 @@ sources:
     format: "REST_API"
     crs: "EPSG:4326"
     license: "TDX 服務條款 (需自行申請 Client ID / Secret)"
-    status: "UNVERIFIED"
+    status: "DEFERRED"
     verification:
-      verified_at: "2026-10-05T11:01:28+08:00"
-      note: "本機環境無 TDX_CLIENT_ID / TDX_CLIENT_SECRET，依法標為 UNVERIFIED。提供 .env.example 供使用者自行設定。"
-    role: "臺鐵/高鐵車站、公車站位與路線數（選用情境輔助）"
-    degradation_impact: "無金鑰時情境圖層標示 UNAVAILABLE，系統完全正常運作"
+      verified_at: "2026-10-05T11:34:00+08:00"
+      note: "依據使用者指令，所有 TDX 取用、驗證、金鑰設定延到最終階段 Phase T。在此之前嚴禁呼叫 TDX，亦不要求金鑰。.env.example 僅保留變數占位。UI 圖層面板標記為「待啟用（NOT_ENABLED）」"
+    role: "臺鐵/高鐵車站、公車站位與動態路線（Phase T 選用補充）"
+    degradation_impact: "延後至 Phase T；Phase 2a 交通圖層僅使用無需金鑰之官方開放資料（如台北市公車站位、捷運站出口、YouBike 靜態資料）"
+
 
   taipei_cadastral_sections:
     source_id: "taipei_cadastral_sections"
