@@ -1,0 +1,25 @@
+# 評分與權重設定 (scoring.yaml)
+# 總權重基準：100 分 (排除停用項目)
+weights:
+  land_area: 30.0        # 土地坪數 (30%)
+  distance: 20.0         # 雙星距離 (20%)
+  price: 15.0            # 總價 (15%)
+  road_condition: 15.0   # 臨路寬度 (15%)
+  block_integrity: 10.0  # 街廓完整度 (10%)
+  integration: 10.0      # 鄰地整合潛力 (10%)
+  
+  # 預留交通機能分項 (預設權重 0 且停用，不影響 Phase 1 分數與覆蓋率)
+  transit_accessibility:
+    enabled: false
+    weight: 0.0
+
+# 階梯式給分百分比 (相對於該項權重)
+tier_score_ratios:
+  PASS: 1.0     # 滿分 (100% of weight)
+  NEAR: 0.6     # 次級符合 (60% of weight)
+  FAIL: 0.0     # 未符合 (0% of weight)
+  UNKNOWN: null # 未知項不計入分子也不計入分母 (不扣分、不給分)
+
+# 門檻規則
+rules:
+  min_coverage_for_ab_grade: 0.50  # data_coverage < 0.50 不得列為 A / B 分級

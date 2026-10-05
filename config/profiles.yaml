@@ -1,0 +1,58 @@
+# 篩選設定與方案 B Profile (profiles.yaml)
+profiles:
+  B_CORE:
+    name: "方案 B 核心目標"
+    description: "總價≤2,000萬 (軟2,200萬); 土地≥7坪 (接近≥5.5坪); 距雙星≤500m (次級≤700m); 適合自住"
+    
+    # 價格門檻 (新台幣元) - 採用扣除車位之房屋價
+    price:
+      pass_max_twd: 20000000.0   # 2,000 萬 (PASS)
+      near_max_twd: 22000000.0   # 2,200 萬 (NEAR)
+      
+    # 土地持分門檻 (坪)
+    land_ping:
+      pass_min_ping: 7.0         # 7.0 坪 (PASS)
+      near_min_ping: 5.5         # 5.5 坪 (NEAR)
+      
+    # 距雙星基地距離門檻 (公尺)
+    distance_m:
+      pass_max_m: 500.0          # ≤ 500 公尺 (PASS)
+      near_max_m: 700.0          # ≤ 700 公尺 (NEAR)
+      
+    # 臨路寬度門檻 (公尺) - Phase 2 啟用
+    road_width_m:
+      pass_min_m: 8.0            # ≥ 8 公尺 (PASS)
+      
+    # 屋齡帶劃分 (年)
+    building_age_bands:
+      NEW: [0, 20]               # 屋齡 < 20 年
+      MID: [20, 40]              # 20 ~ 39 年
+      OLD: [40, 50]              # 40 ~ 49 年
+      VERY_OLD: [50, 999]        # ≥ 50 年
+      
+    # 交易歷史時間視窗 (年)
+    history_window_years: 5.0
+    
+    # 特殊交易排除規則
+    exclude_special_transactions: true
+    
+    # 車位處理規則
+    parking_deduction_policy: "deduct_if_known_else_use_total_with_flag"
+
+  RELAXED:
+    name: "方案 B 寬鬆探索"
+    description: "總價≤2,500萬; 土地≥5.0坪; 距雙星≤800m"
+    price:
+      pass_max_twd: 23000000.0
+      near_max_twd: 25000000.0
+    land_ping:
+      pass_min_ping: 6.0
+      near_min_ping: 5.0
+    distance_m:
+      pass_max_m: 600.0
+      near_max_m: 800.0
+    road_width_m:
+      pass_min_m: 8.0
+    history_window_years: 5.0
+    exclude_special_transactions: true
+    parking_deduction_policy: "deduct_if_known_else_use_total_with_flag"

@@ -1,0 +1,39 @@
+# 雙星目標與幾何設定 (targets.yaml)
+target_id: "twintower_c1_d1"
+target_name: "臺北車站特定專用區 C1/D1 (台北雙星)"
+distance_method: "polygon_min_distance" # 依 Phase 0b 裁決採用選項 A: 官方多邊形邊界起算
+
+# 官方多邊形來源 (臺北市都市計畫主要計畫面圖層 FID 802 與 FID 803)
+polygon_source:
+  description: "臺北市都市計畫主要計畫特定專用區 (聯合開發區) C1/D1 基地多邊形"
+  crs: "EPSG:3826"
+  total_area_sqm: 31626.6
+  c1_base:
+    fid: 802
+    name: "C1基地 (約12,993.1m²)"
+    centroid_twd97: [301888.89, 2771267.44]
+  d1_base:
+    fid: 803
+    name: "D1基地 (約18,633.5m²)"
+    centroid_twd97: [301707.57, 2771290.85]
+
+# 備用參考點 (Reference Points)
+reference_points:
+  candidate_a_doorplate:
+    name: "鄭州路8號 (D1主要門牌)"
+    twd97: [301917.188, 2771280.254]
+    wgs84: [121.514536, 25.048789]
+  candidate_b_centroid:
+    name: "C1/D1多邊形幾何中心"
+    twd97: [301798.23, 2771279.14]
+    wgs84: [121.513358, 25.048779]
+  candidate_c_station:
+    name: "北平西路3號 (臺北車站)"
+    twd97: [302172.309, 2771102.538]
+    wgs84: [121.517058, 25.047176]
+
+# 距離門檻分帶 (公尺)
+thresholds:
+  core_radius_m: 500.0       # 方案 B 核心半徑
+  secondary_radius_m: 700.0  # 方案 B 次級半徑
+  max_search_radius_m: 1200.0 # 空間關聯搜尋最大範圍

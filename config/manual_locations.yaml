@@ -5,12 +5,25 @@
 # 3. 查核證據必須具體記錄查證管道（如地政事務所謄本、地籍套繪圖、門牌編釘對照表）。
 
 overrides:
-  # 範例 (供格式參考，不影響實際運算):
-  # - original_address: "臺北市大同區長安西路200號"
-  #   location_id: "LOC_MANUAL_001"
-  #   resolved_precision: "EXACT"
-  #   point_x_twd97: 301850.12
-  #   point_y_twd97: 2771500.35
-  #   geometry_wkt: null
-  #   verified_by: "manual_inspection"
-  #   evidence_notes: "依據臺北市門牌整編證明書查證原舊門牌對應至現況門牌"
+  - original_address: "台北市中正區鄭州路8號"
+    location_id: "LOC_MANUAL_D1_001"
+    resolved_precision: "EXACT"
+    point_x_twd97: 301917.188
+    point_y_twd97: 2771280.254
+    district: "中正區"
+    road_name: "鄭州路"
+    geometry_wkt: null
+    verified_by: "manual_inspection"
+    evidence_notes: "雙星D1基地主要工程門牌（鄭州路8號），由官方都市計畫圖與門牌系統實地核實"
+
+  - original_address: "臺北市中正區鄭州路8號"
+    location_id: "LOC_MANUAL_D1_002"
+    resolved_precision: "EXACT"
+    point_x_twd97: 301917.188
+    point_y_twd97: 2771280.254
+    district: "中正區"
+    road_name: "鄭州路"
+    geometry_wkt: null
+    verified_by: "manual_inspection"
+    evidence_notes: "雙星D1基地主要工程門牌（鄭州路8號），由官方都市計畫圖與門牌系統實地核實"
+
