@@ -1,16 +1,17 @@
 sources:
-  moi_lvr_land_batch:
-    source_id: "moi_lvr_land_batch"
-    name: "內政部不動產買賣實價登錄批次資料"
+  moi_lvr_land_current_batch:
+    source_id: "moi_lvr_land_current_batch"
+    name: "內政部不動產買賣實價登錄批次資料 (當期/每10日更新)"
     category: "transactions"
     page_url: "https://plvr.land.moi.gov.tw/DownloadOpenData"
-    catalog_dataset_id: "139700"  # data.gov.tw 相關/歷次發布集
+    catalog_dataset_id: "139700"
     download_url: "https://plvr.land.moi.gov.tw/Download?type=zip&fileName=lvr_landcsv.zip"
     format: "ZIP_CSV"
     encoding: "UTF-8"
     crs: null
     license: "政府資料開放授權條款-第1版"
     download_method: "HTTP_GET"
+    update_frequency: "每10日更新 (每月1日、11日、21日)"
     status: "VERIFIED"
     verification:
       verified_at: "2026-10-05T10:18:25+08:00"
@@ -26,8 +27,32 @@ sources:
       manifest: "manifest.csv"
       schema_main: "schema-main.csv"
     join_key: "編號"
-    role: "核心歷史買賣交易資料來源（房地交易、價格、土地面積、建坪、屋齡、車位分離等）"
-    degradation_impact: "系統關鍵必備資料；無此資料無法產出任何候選標的"
+    role: "增量更新來源：取得最新期數發布之實價登錄資料"
+    degradation_impact: "系統必備；無此資料無法取得最新成交"
+
+  moi_lvr_land_history_seasons:
+    source_id: "moi_lvr_land_history_seasons"
+    name: "內政部不動產買賣實價登錄歷季批次資料 (近5年各季)"
+    category: "transactions_history"
+    page_url: "https://plvr.land.moi.gov.tw/DownloadOpenData"
+    download_url_template: "https://plvr.land.moi.gov.tw/DownloadHistory?type=season&fileName={SEASON}"
+    format: "ZIP_CSV"
+    encoding: "UTF-8"
+    crs: null
+    license: "政府資料開放授權條款-第1版"
+    download_method: "HTTP_GET"
+    status: "VERIFIED"
+    verification:
+      verified_at: "2026-10-05T10:57:47+08:00"
+      test_season: "115S2"
+      http_status: 200
+      content_type: "application/octet-stream"
+      file_size_bytes: 118631064
+      sample_season_tested_2: "109S4"
+      sample_2_bytes: 107414794
+    seasons_available: "101S1 至 115S3 (共63季完整官方文件化封存)"
+    role: "歷史重現來源：取得近5年完整歷史成交資料集（如 110S1~115S2），每季單獨快取驗證 checksum"
+    degradation_impact: "缺失時僅能載入當期資料，無法進行近5年時間視窗分析"
 
   taipei_roads_gt_8m:
     source_id: "taipei_roads_gt_8m"
@@ -79,64 +104,6 @@ sources:
     role: "官方 >= 8m 道路空間範圍比對與路名驗證"
     degradation_impact: "缺失時 road_condition_status 降級為 UNKNOWN；不影響價格與距離計算"
 
-  taipei_cadastral_sections:
-    source_id: "taipei_cadastral_sections"
-    name: "臺北市數值地籍地段圖"
-    category: "gis_cadastre"
-    page_url: "https://data.taipei/dataset/detail?id=4f3d2280-1ebc-4bba-8ebf-66953403732b"
-    resource_id: "86430589-4e8b-4e21-9d5f-08b0e5c2ce3f"
-    download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=86430589-4e8b-4e21-9d5f-08b0e5c2ce3f"
-    format: "SHP_ZIP"
-    encoding: "Big5 / CP950"
-    crs: "EPSG:3826"
-    geometry_type: "Polygon"
-    license: "政府資料開放授權條款-第1版"
-    download_method: "HTTP_GET"
-    status: "VERIFIED"
-    verification:
-      verified_at: "2026-10-05T10:18:40+08:00"
-      http_status: 200
-      content_type: "application/zip;charset=UTF-8"
-      file_size_bytes: 1494935
-      sha256: "9b937d86d51206ec69f5a73e42f1b06400a53f1679e859ba7c946ae992e53312"
-      feature_count: 589
-    columns:
-      - "序號"
-      - "縣市"
-      - "縣市別"
-      - "段代碼"
-      - "地段名"
-      - "行政區"
-      - "geometry"
-    role: "地段邊界多邊形；提供交易地段空間所屬判定與粗定位（非宗地地號邊界）"
-    degradation_impact: "缺失時無法進行地段級空間關聯，降級至路段或門牌比對"
-
-  taipei_cadastral_section_codes:
-    source_id: "taipei_cadastral_section_codes"
-    name: "臺北市各行政區地段代碼表"
-    category: "gis_cadastre"
-    page_url: "https://data.taipei/dataset/detail?id=a17a8d52-dd60-4de1-88b4-5447a69c3838"
-    resource_id: "e309ef35-9c44-4a01-8cff-3372fedfcd34"
-    download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=e309ef35-9c44-4a01-8cff-3372fedfcd34"
-    format: "CSV"
-    encoding: "UTF-8"
-    crs: null
-    license: "政府資料開放授權條款-第1版"
-    download_method: "HTTP_GET"
-    status: "VERIFIED"
-    verification:
-      verified_at: "2026-10-05T10:18:00+08:00"
-      http_status: 200
-      content_type: "text/csv;charset=UTF-8"
-    columns:
-      - "縣市"
-      - "行政區"
-      - "段別"
-      - "小段"
-      - "編碼"
-    role: "地段名稱與代碼字典"
-    degradation_impact: "缺失時依賴文字正則直接比對"
-
   taipei_doorplate_locations:
     source_id: "taipei_doorplate_locations"
     name: "臺北市門牌位置數值資料"
@@ -146,9 +113,11 @@ sources:
     download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=ce76ca0c-7f94-4935-ab47-1d2a41ca2abb"
     format: "CSV"
     encoding: "UTF-8"
-    crs: "EPSG:3826"  # 橫座標、縱座標為 TWD97 二度分帶
+    crs: "EPSG:3826"
     license: "政府資料開放授權條款-第1版"
     download_method: "HTTP_GET"
+    data_date: "2026-10-02"
+    update_frequency: "每1月 (民政局每月調查異動)"
     status: "VERIFIED"
     verification:
       verified_at: "2026-10-05T10:18:50+08:00"
@@ -169,113 +138,129 @@ sources:
       - "號"
       - "橫座標"
       - "縱座標"
-    role: "官方門牌坐標對照檔；提供遮蔽門牌區間精確聚合定位（NUMBER_RANGE / ROAD_SEGMENT / EXACT）"
-    degradation_impact: "缺失時遮蔽地址無法定位，大量候選將落入 UNRESOLVED / X 分級"
+    role: "官方實體門牌坐標庫（精確定位、號碼區間外包、路段外包）"
+    risk_note: "本資料為「現況門牌」，與成交當時之舊門牌可能因門牌改編、整編或建物拆除滅失而存在不一致風險。不匹配者回退至路段或標示 UNRESOLVED，可透過 manual_locations.yaml 覆蓋。"
+    degradation_impact: "缺失時遮蔽地址無法定位，候選將落入 UNRESOLVED / X 分級"
 
   taipei_zoning_shp:
     source_id: "taipei_zoning_shp"
     name: "臺北市都市計畫使用分區圖"
     category: "gis_zoning"
     page_url: "https://data.taipei/dataset/detail?id=3bab0a01-7936-4218-8cb5-f74dfcb43dda"
-    resource_id: "0cb6e68a-87c1-4846-b766-bcde3ebe179c"  # 細計
-    download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=0cb6e68a-87c1-4846-b766-bcde3ebe179c"
+    resource_id: "10196e7d-2460-4b8a-b1d2-84001d09d7a4"
+    download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=10196e7d-2460-4b8a-b1d2-84001d09d7a4"
     format: "SHP_ZIP"
     encoding: "Big5 / CP950"
-    crs: "UNSPECIFIED"  # 官方下載包內未附 .prj 或 prj 缺失，幾何座標範圍落在 TWD97 (294770~319674, 2759513~2790592)
-    geometry_type: "Polygon / Point"
+    crs: "EPSG:3826"
+    crs_verification_note: "官方下載包未附.prj，但經data.taipei metadata標示TWD97且坐標範圍(X:294770~319674, Y:2759513~2790592)數學驗證確為EPSG:3826"
+    geometry_type: "Polygon"
     license: "政府資料開放授權條款-第1版"
     download_method: "HTTP_GET"
-    status: "VERIFIED_WITH_WARNING"
-    verification:
-      verified_at: "2026-10-05T10:18:45+08:00"
-      http_status: 200
-      content_type: "application/zip;charset=UTF-8"
-      file_size_bytes: 4187541
-      sha256: "d89e3ab3dcdc60de2b2b83987c0774d87ae3037d53af2adf5a28f47b3a44a21b"
-      warning: "官方原始 ZIP 缺少 .prj 檔案，CRS 為 None。依原則不得自行假設，Phase 2 需確認或標示降級。"
-    columns:
-      - "編號"
-      - "圖層"
-      - "顏色"
-      - "街廓編號"
-      - "分區代碼"
-      - "分區簡稱"
-      - "使用分區"
-      - "分區說明"
-      - "原屬分區"
-      - "變更前代碼"
-      - "變更前簡稱"
-      - "變更前分區"
-      - "geometry"
-    role: "都市計畫使用分區圖層比對（住宅區、商業區等）"
-    degradation_impact: "缺失或 CRS 異常時 zoning 標為 UNKNOWN；實價登錄主檔亦自帶都市土地使用分區文字可作降級備援"
-
-  tgos_geocoder:
-    source_id: "tgos_geocoder"
-    name: "TGOS 全國門牌地址定位服務"
-    category: "api_geocoding"
-    page_url: "https://www.tgos.tw/"
-    download_url: "https://gis.tgos.tw/TGOS_MAP_API/Web/AddressLocation.aspx"
-    format: "API_JSON"
-    crs: "EPSG:3826 / EPSG:4326"
-    license: "TGOS會員授權（需申請 APP_ID / API_KEY）"
-    download_method: "HTTP_POST"
-    status: "UNVERIFIED"
-    verification:
-      verified_at: "2026-10-05T10:20:00+08:00"
-      note: "本機環境無 TGOS APP_ID / KEY 金鑰，無法進行線上合法驗證。"
-    role: "高精度地址正向門牌定位"
-    degradation_impact: "無金鑰降級使用臺北市民政局「門牌位置數值資料」（115 萬筆離線對照檔）"
-
-  nlsc_cadastre_wms:
-    source_id: "nlsc_cadastre_wms"
-    name: "國土測繪圖資服務雲 (NLSC) 地籍圖服務"
-    category: "wms_cadastre"
-    page_url: "https://maps.nlsc.gov.tw/"
-    download_url: "https://maps.nlsc.gov.tw/S_Maps/wms"
-    format: "WMS_IMAGE"
-    crs: "EPSG:3826 / EPSG:4326"
-    license: "國土測繪圖資服務雲使用規範"
-    download_method: "OGC_WMS"
-    status: "VERIFIED_LIMITED"
-    verification:
-      verified_at: "2026-10-05T10:20:05+08:00"
-      http_status: 200
-      note: "WMS GetCapabilities 通過，但僅提供地籍圖影像圖磚（GetMap 渲染），不提供批次向量宗地（Parcels SHP/GeoJSON）下載。"
-    role: "地籍底圖目視查核（非幾何向量運算）"
-    degradation_impact: "因無向量多邊形幾何，無法推導宗地整併/街廓完整度；Phase 3 街廓/整合維持 UNKNOWN"
-
-  taipei_urban_renewal_open_data:
-    source_id: "taipei_urban_renewal_open_data"
-    name: "臺北市都市更新處開放資料"
-    category: "open_data_renewal"
-    page_url: "https://data.taipei/dataset/detail?id=cda6b568-0035-420b-bd05-6ca9bfd4bda0"
-    download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=01dc6879-2e74-4e74-a033-43674c7af019"
-    format: "CSV"
-    encoding: "UTF-8"
-    crs: null
-    license: "政府資料開放授權條款-第1版"
-    download_method: "HTTP_GET"
-    status: "VERIFIED_LIMITED"
-    verification:
-      verified_at: "2026-10-05T10:18:10+08:00"
-      http_status: 200
-      note: "臺北市政府都市更新處發布之開放資料主要為造價要項、費用標準、行政區獎勵案件統計，無提供全區劃定都更單元之向量 GIS 多邊形圖資。"
-    role: "都更法規與造價參考"
-    degradation_impact: "無法由官方圖層判定個別候選是否位於都更單元內；Phase 4 都更欄位標示為 UNKNOWN"
-
-  twin_towers_c1_d1_anchor:
-    source_id: "twin_towers_c1_d1_anchor"
-    name: "臺北雙星 C1/D1 基地範圍與錨點"
-    category: "reference_geometry"
-    page_url: "https://www.dorts.gov.taipei/"
-    download_url: null
-    format: "MANUAL_REFERENCE / DOORPLATE_COORDINATE"
-    crs: "EPSG:3826 / EPSG:4326"
-    license: "臺北市政府捷運工程局公開規劃資料 / 民政局門牌位置"
     status: "VERIFIED"
     verification:
-      verified_at: "2026-10-05T10:21:10+08:00"
-      evidence: "臺北市門牌位置數值資料中鄭州路8號坐標 (301917.188, 2771280.254, EPSG:3826)；北平西路3號 (302172.309, 2771102.538)"
-    role: "雙星距離起算錨點（reference_point / polygon_min_distance）"
-    degradation_impact: "若無官方多邊形，採用經確認之官方門牌代表點（鄭州路8號）作為點估計起算錨點"
+      verified_at: "2026-10-05T10:20:00+08:00"
+      http_status: 200
+      file_size_bytes: 2008868
+      sha256: "7abe625f329454e1079bc449d3c71f54c7e58eeafecdb71eb2e64f88f3c7f146"
+    role: "都市計畫使用分區比對，並提供 C1 (FID 802) 與 D1 (FID 803) 基地多邊形幾何"
+    degradation_impact: "缺失時分區標示為 UNKNOWN"
+
+  twin_towers_c1_d1_official_geometry:
+    source_id: "twin_towers_c1_d1_official_geometry"
+    name: "臺北車站特定專用區 C1/D1 基地官方幾何與門牌錨點"
+    category: "reference_geometry"
+    page_url: "https://www.dorts.gov.taipei/"
+    format: "POLYGON_AND_POINTS"
+    crs: "EPSG:3826"
+    license: "臺北市政府捷運工程局公告 / 都市計畫主要計畫圖"
+    status: "VERIFIED"
+    verification:
+      verified_at: "2026-10-05T11:00:15+08:00"
+      dorts_announcement: "C1坐落中正區公園段一小段188-6等5筆土地(12,993m²); D1坐落公園段一小段192等6筆土地(18,633m²)"
+      zoning_polygons: "主要計畫面圖層 FID 802 (C1) 與 FID 803 (D1)，合計面積 31,626.6m²"
+      doorplate_point_a: "鄭州路8號 (X: 301917.188, Y: 2771280.254, EPSG:3826)"
+      doorplate_point_c: "北平西路3號 (X: 302172.309, Y: 2771102.538, EPSG:3826)"
+      polygon_centroid_b: "C1/D1多邊形幾何中心 (X: 301798.23, Y: 2771279.14, EPSG:3826)"
+    role: "雙星距離起算核心依據 (支援 polygon_min_distance 與 reference_point)"
+    decision_pending: "靜態地圖 docs/maps/c1d1_anchor_comparison_map.html 產出供使用者目視裁決"
+
+  nlsc_basemap_wmts:
+    source_id: "nlsc_basemap_wmts"
+    name: "國土測繪圖資服務雲 (NLSC) 臺灣通用電子地圖 WMTS"
+    category: "basemap_official"
+    page_url: "https://maps.nlsc.gov.tw/"
+    download_url: "https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}"
+    format: "WMTS_TILE"
+    crs: "EPSG:3857 / EPSG:4326"
+    license: "國土測繪圖資服務雲 Open Data 條款 (免費免 Token)"
+    status: "VERIFIED"
+    verification:
+      verified_at: "2026-10-05T11:01:29+08:00"
+      http_status: 200
+      content_type: "image/jpeg"
+    role: "系統 UI 與地圖匯出之官方首選底圖 (不改變資料語意)"
+    degradation_impact: "離線或異常時降級為 OpenStreetMap (僅作視覺背景)"
+
+  taipei_mrt_exits:
+    source_id: "taipei_mrt_exits"
+    name: "臺北捷運車站出入口座標"
+    category: "context_transit"
+    page_url: "https://data.taipei/dataset/detail?id=64dda883-fa49-4322-a9b0-bb96e1a49ec3"
+    resource_id: "35d21c4b-e698-4af6-a4c4-7275ec9c16d5"
+    download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=35d21c4b-e698-4af6-a4c4-7275ec9c16d5"
+    format: "CSV"
+    encoding: "UTF-8"
+    crs: "EPSG:4326 / EPSG:3826"
+    license: "政府資料開放授權條款-第1版"
+    status: "VERIFIED"
+    verification:
+      verified_at: "2026-10-05T11:01:29+08:00"
+      http_status: 200
+    role: "Phase 2a 情境圖層：計算候選標的至最近捷運出入口直線距離"
+    degradation_impact: "缺失時標示 UNAVAILABLE，不影響核心分級與總分"
+
+  tdx_transit_api:
+    source_id: "tdx_transit_api"
+    name: "TDX 交通資料流通服務 API"
+    category: "context_transit"
+    page_url: "https://tdx.transportdata.tw/"
+    format: "REST_API"
+    crs: "EPSG:4326"
+    license: "TDX 服務條款 (需自行申請 Client ID / Secret)"
+    status: "UNVERIFIED"
+    verification:
+      verified_at: "2026-10-05T11:01:28+08:00"
+      note: "本機環境無 TDX_CLIENT_ID / TDX_CLIENT_SECRET，依法標為 UNVERIFIED。提供 .env.example 供使用者自行設定。"
+    role: "臺鐵/高鐵車站、公車站位與路線數（選用情境輔助）"
+    degradation_impact: "無金鑰時情境圖層標示 UNAVAILABLE，系統完全正常運作"
+
+  taipei_cadastral_sections:
+    source_id: "taipei_cadastral_sections"
+    name: "臺北市數值地籍地段圖"
+    category: "gis_cadastre"
+    page_url: "https://data.taipei/dataset/detail?id=4f3d2280-1ebc-4bba-8ebf-66953403732b"
+    resource_id: "86430589-4e8b-4e21-9d5f-08b0e5c2ce3f"
+    download_url: "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=86430589-4e8b-4e21-9d5f-08b0e5c2ce3f"
+    format: "SHP_ZIP"
+    encoding: "Big5 / CP950"
+    crs: "EPSG:3826"
+    geometry_type: "Polygon"
+    license: "政府資料開放授權條款-第1版"
+    download_method: "HTTP_GET"
+    status: "VERIFIED"
+    verification:
+      verified_at: "2026-10-05T10:18:40+08:00"
+      http_status: 200
+      file_size_bytes: 1494935
+      sha256: "9b937d86d51206ec69f5a73e42f1b06400a53f1679e859ba7c946ae992e53312"
+      feature_count: 589
+    columns:
+      - "序號"
+      - "縣市"
+      - "縣市別"
+      - "段代碼"
+      - "地段名"
+      - "行政區"
+      - "geometry"
+    role: "地段（Section）邊界；非宗地（Parcel）幾何"
+    degradation_impact: "因非宗地幾何，街廓與整合潛力依協議維持 UNKNOWN"

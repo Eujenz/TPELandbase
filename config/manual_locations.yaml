@@ -1,0 +1,16 @@
+# 人工地址覆蓋設定檔 (manual_locations.yaml)
+# 規範：
+# 1. 本檔案僅允許填寫人工查核之「位置、精度與查證證據」。
+# 2. distance_min_m、distance_max_m 與 distance_verified 嚴禁手填，一律由計算管線依幾何自動推導。
+# 3. 查核證據必須具體記錄查證管道（如地政事務所謄本、地籍套繪圖、門牌編釘對照表）。
+
+overrides:
+  # 範例 (供格式參考，不影響實際運算):
+  # - original_address: "臺北市大同區長安西路200號"
+  #   location_id: "LOC_MANUAL_001"
+  #   resolved_precision: "EXACT"
+  #   point_x_twd97: 301850.12
+  #   point_y_twd97: 2771500.35
+  #   geometry_wkt: null
+  #   verified_by: "manual_inspection"
+  #   evidence_notes: "依據臺北市門牌整編證明書查證原舊門牌對應至現況門牌"

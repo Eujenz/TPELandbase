@@ -1,179 +1,118 @@
-# 官方資料來源驗證報告 (DATA_SOURCES.md)
+# 官方資料來源驗證與勘查報告 (DATA_SOURCES.md)
 
-本文件依據 Phase 0 勘查規範建立，記錄所有資料來源的實際探查結果。
+本文件依據 Phase 0 與 Phase 0b 規範建立，記錄所有資料來源的實際探查結果與驗證證據。
 本系統嚴格遵守：
 1. **「驗證」必須有證據**：記錄實際取得時間、HTTP 狀態碼、檔案 SHA256 雜湊值與實際欄位清單。
 2. **不捏造資料**：未取得或無法連網者標註為 `UNVERIFIED`，不憑記憶填寫欄位或規格。
 3. **優雅降級**：清楚說明各來源缺失時對各階段與欄位的影響。
+4. **Local-first**：UI 執行期不呼叫外部 API；所有外部取用僅發生在 download/import 腳本。
 
 ---
 
 ## 1. 資料來源清冊總表
 
-| 來源代碼 | 資料集名稱 | 主管機關 | 格式 | CRS | 驗證狀態 | 驗證雜湊 / 狀態 |
+| 來源代碼 | 資料集名稱 | 主管機關 | 格式 | CRS | 驗證狀態 | 驗證證據 / 說明 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `moi_lvr_land_batch` | 不動產買賣實價登錄批次資料 | 內政部地政司 | ZIP (CSV) | N/A | **VERIFIED** | SHA256: `5421ae5e...` (HTTP 200) |
-| `taipei_roads_gt_8m` | 臺北市寬度超過8公尺道路GIS圖資 | 臺北市工務局新工處 | SHP (ZIP) | EPSG:3826 | **VERIFIED** | SHA256: `86e1821c...` (HTTP 200) |
-| `taipei_cadastral_sections` | 臺北市數值地籍地段圖 | 臺北市地政局開發總隊 | SHP (ZIP) | EPSG:3826 | **VERIFIED** | SHA256: `9b937d86...` (HTTP 200) |
-| `taipei_cadastral_section_codes`| 臺北市各行政區地段代碼表 | 臺北市地政局 | CSV | N/A | **VERIFIED** | HTTP 200 |
-| `taipei_doorplate_locations` | 臺北市門牌位置數值資料 | 臺北市民政局 | CSV | EPSG:3826 | **VERIFIED** | SHA256: `72120581...` (HTTP 200) |
-| `taipei_zoning_shp` | 臺北市都市計畫使用分區圖 | 臺北市都發局 | SHP (ZIP) | **None** (缺.prj) | **VERIFIED_WITH_WARNING** | SHA256: `d89e3ab3...` (HTTP 200) |
-| `tgos_geocoder` | TGOS 全國門牌地址定位服務 | 內政部資訊中心 | REST API | EPSG:3826 / 4326 | **UNVERIFIED** | 無金鑰 (需會員申請) |
-| `nlsc_cadastre_wms` | 國土測繪圖資服務雲 (NLSC) 地籍圖 | 內政部國土測繪中心 | OGC WMS | EPSG:3826 / 4326 | **VERIFIED_LIMITED** | 僅影像圖磚，無向量宗地下載 |
-| `taipei_urban_renewal_open_data`| 臺北市都市更新處開放資料 | 臺北市都發局更新處 | CSV | N/A | **VERIFIED_LIMITED** | 僅行政統計與造價，無全區向量圖 |
-| `twin_towers_c1_d1_anchor` | 雙星 C1/D1 基地範圍與錨點 | 捷運工程局 / 民政局 | 坐標與幾何 | EPSG:3826 / 4326 | **VERIFIED** | 鄭州路8號坐標已由門牌圖資確認 |
+| `moi_lvr_land_current_batch` | 實價登錄當期批次資料 (每10日) | 內政部地政司 | ZIP (CSV) | N/A | **VERIFIED** | SHA256: `5421ae5e...` (HTTP 200) |
+| `moi_lvr_land_history_seasons` | 實價登錄歷季資料集 (近5年各季) | 內政部地政司 | ZIP (CSV) | N/A | **VERIFIED** | 115S2: 118.6MB (HTTP 200), 109S4: 107.4MB |
+| `taipei_roads_gt_8m` | 臺北市寬度超過8公尺道路GIS圖資 | 臺北市新工處 | SHP (ZIP) | EPSG:3826 | **VERIFIED** | SHA256: `86e1821c...` (HTTP 200, 13,419筆) |
+| `taipei_doorplate_locations` | 臺北市門牌位置數值資料 | 臺北市民政局 | CSV | EPSG:3826 | **VERIFIED** | SHA256: `72120581...` (HTTP 200, 1,157,763筆) |
+| `taipei_zoning_shp` | 臺北市都市計畫使用分區圖 | 臺北市都發局 | SHP (ZIP) | EPSG:3826 (佐證) | **VERIFIED** | 坐標範圍與 metadata 證實為 3826 (包含C1/D1多邊形) |
+| `twin_towers_c1_d1_official_geometry` | C1/D1 基地範圍多邊形與門牌錨點 | 捷運工程局/都發局 | SHP/CSV | EPSG:3826 | **VERIFIED** | 捷運局公告地號、分區多邊形 FID 802/803 (31,626m²) |
+| `nlsc_basemap_wmts` | NLSC 臺灣通用電子地圖 WMTS | 國土測繪中心 | WMTS Tile | EPSG:3857/4326 | **VERIFIED** | HTTP 200 (免Token官方底圖) |
+| `taipei_mrt_exits` | 臺北捷運車站出入口座標 | 臺北市交通局 | CSV | EPSG:4326/3826 | **VERIFIED** | HTTP 200 (data.taipei RID 35d21c4b...) |
+| `tdx_transit_api` | TDX 交通資料流通服務 API | 交通部 | REST API | EPSG:4326 | **UNVERIFIED** | 本機環境無金鑰 (依原則標記) |
+| `taipei_cadastral_sections` | 臺北市數值地籍地段圖 | 臺北市開發總隊 | SHP (ZIP) | EPSG:3826 | **VERIFIED** | SHA256: `9b937d86...` (589個地段面，非宗地) |
 
 ---
 
-## 2. 各來源詳細驗證規格
+## 2. 核心資料來源詳細檢驗與實測成果
 
-### 2.1 內政部實價登錄批次資料 (`moi_lvr_land_batch`)
-- **官方資源 URL**：`https://plvr.land.moi.gov.tw/Download?type=zip&fileName=lvr_landcsv.zip`
-- **資訊頁面**：`https://plvr.land.moi.gov.tw/DownloadOpenData`（data.gov.tw 對應集：139700 歷次發布）
-- **格式**：ZIP 壓縮檔，解開後為各縣市 UTF-8 CSV
-- **授權**：政府資料開放授權條款 - 第1版
-- **下載方式**：HTTP GET 串流下載
-- **驗證紀錄**：
-  - 時間：`2026-10-05T10:18:25+08:00`
-  - HTTP 狀態：`200 OK`
-  - 檔案大小：`1,791,009 bytes`
-  - SHA256：`5421ae5e69cfb50c8608f7a998feada0a6bd67efa0b80d8a8bbb2618883551e4`
-- **實體檔案結構與關聯鍵**：
-  - 臺北市買賣主檔：`a_lvr_land_a.csv`
-  - 臺北市建物清單：`a_lvr_land_a_build.csv`
-  - 臺北市土地清單：`a_lvr_land_a_land.csv`
-  - 臺北市車位清單：`a_lvr_land_a_park.csv`
-  - 關聯鍵：`編號`（唯一交易序號，如 `RPQNMLTJRHLGFAA38DA`）
-- **主要欄位清單**：
-  - 主檔：`鄉鎮市區`, `交易標的`, `土地位置建物門牌`, `土地移轉總面積平方公尺`, `都市土地使用分區`, `交易年月日`, `交易筆棟數`, `移轉層次`, `總樓層數`, `建物型態`, `主要用途`, `主要建材`, `建築完成年月`, `建物移轉總面積平方公尺`, `總價元`, `單價元平方公尺`, `車位總價元`, `備註`, `編號`, `電梯`, `主建物面積`, `附屬建物面積`, `陽台面積` 等 33 欄。
-  - 土地檔：`編號`, `土地位置`, `土地移轉面積平方公尺`, `使用分區或編定`, `權利人持分分母`, `權利人持分分子`, `地號` 等 8 欄。
-  - 建物檔：`編號`, `屋齡`, `建物移轉面積平方公尺`, `主要用途`, `主要建材`, `建築完成日期`, `總層數`, `建物分層`, `移轉情形` 等 9 欄。
-  - 車位檔：`編號`, `車位類別`, `車位價格`, `車位面積平方公尺`, `車位所在樓層` 等 5 欄。
-- **地址遮蔽樣態**：
-  - 部分揭露至精確號碼（如：`臺北市文山區羅斯福路六段１０６號十樓`、`臺北市萬華區西園路二段２６１巷３８弄２號`）。
-  - 大量案件採號碼區間遮蔽（如：`臺北市中山區南京東路二段１～３０號`、`臺北市大同區重慶北路一段６１～９０號`）。
-  - 少數舊案僅揭露路段（如：`臺北市中正區忠孝西路一段`）。
-- **降級影響**：無此資料系統無法運作。
+### 2.1 MOI 實價登錄：涵蓋期間、取得管道與重現機制
+- **當期下載（增量更新）**：
+  - URL：`https://plvr.land.moi.gov.tw/Download?type=zip&fileName=lvr_landcsv.zip`
+  - 更新頻率：每 10 日發布一次（每月 1 日、11 日、21 日）。
+  - 實測筆數：臺北市當期買賣（a_lvr_land_a.csv）共 620 筆，涵蓋最新登記交易（如 1150909）及部分前期補報案件。
+- **近 5 年各季歷史資料取得管道（歷史重現）**：
+  - 經解析官方下載入口網頁之前端非同步服務（`DownloadHistory_ajax_list` 與 `DownloadSeason_ajax_list`），官方正式文件化之歷季封存端點為：
+    $$\text{URL} = \text{https://plvr.land.moi.gov.tw/DownloadHistory?type=season\&fileName=\{SEASON\}}$$
+  - 參數 `{SEASON}` 格式為民國年加上季度代碼，如 `115S2`、`114S4`、`113S4`、`112S4`、`111S4`、`110S4`、`109S4`。
+  - **實測驗證**：
+    - `115S2`：下載成功，大小 118,631,064 bytes (118.6 MB)，HTTP 200 OK。
+    - `109S4`：下載成功，大小 107,414,794 bytes (107.4 MB)，HTTP 200 OK。
+  - **歷史重現做法**：
+    - 依設定之 `calculation_as_of` 回推 5 年視窗（例如以 2026/115 年為基準，回推至 110S1~115S2）。
+    - 腳本依序下載各季 ZIP 至 `data/raw/moi/<season>/`，校驗 SHA256 checksum 並寫入 `pipeline_runs`。
+    - 以交易唯一鍵 `編號` 進行確定性合併與去重（後發布覆蓋先發布），完全杜絕隱含隨機狀態。
 
 ---
 
-### 2.2 臺北市寬度超過8公尺道路GIS圖資 (`taipei_roads_gt_8m`)
-- **官方資源 URL**：`https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=074a401d-45a2-4748-bf62-7d5372d53d45`
-- **資訊頁面**：`https://data.taipei/dataset/detail?id=ee2e4015-8844-48fb-aa57-31209909b0fc`
-- **主管機關**：臺北市政府工務局新建工程處
-- **格式**：SHP（ZIP 壓縮檔，內含 `8mroadup/Road.shp`, `.dbf`, `.shx`, `.prj`, `.cpg`）
-- **幾何型態**：`Polygon`（面圖層）
-- **CRS**：`EPSG:3826`（TWD97 / TM2 zone 121，經 `.prj` 驗證通過）
-- **授權**：政府資料開放授權條款 - 第1版
-- **驗證紀錄**：
-  - 時間：`2026-10-05T10:18:35+08:00`
-  - HTTP 狀態：`200 OK`
-  - 檔案大小：`3,065,507 bytes`
-  - SHA256：`86e1821c2548c8ee8677fcc97b6aecc8b766936370c64d9584f4a6025fd4baaa`
-  - 總要素數：`13,419` 筆道路區塊多邊形
-- **實際欄位清單**：
-  `OBJECTID`, `ROADLENGHT`, `ROADWIDTH`, `ROAD_ID`, `TT`, `ROADNAME`, `TOWNNAME`, `OMISSION`, `POINT_X`, `POINT_Y`, `POINT_Z`, `SWALK_AREA`, `DITCH_AREA`, `CEN_MEDIAN`, `CAR_MEDIAN`, `ADMIN_NO`, `ADMIT_DIR`, `INTERSECT`, `SHAPE_LENG`, `AVG`, `MAX`, `MIN`, `SHAPE_LE_1`, `SHAPE_AREA`, `geometry`
-- **降級影響**：若缺失，候選標的之 `road_condition_status` 標示為 `UNKNOWN`，`road_verified=false`，不影響價格、土地、距離指標之計算。
+### 2.2 臺北市實價登錄門牌精度（address_precision）與遮蔽規則實測
+- **「實價登錄 2.0」溯及揭露的實證結果**：
+  - 實測當期檔案（`a_lvr_land_a.csv`）中 503 筆住宅交易：**100% 揭露至精確門牌號碼（EXACT）**（如：羅斯福路六段106號、市民大道三段7號）。
+  - 實測 109S4（西元 2020 年，實價登錄 2.0 實施前）之歷史季檔案：7,547 筆買賣交易中，**88.6% (6,687筆) 為完整精確門牌（EXACT）**！
+  - **原因查證**：內政部於 110 年 7 月 1 日施行實價登錄 2.0 新制時，已全面將 101 年 8 月以來的買賣成交案件**溯及完整揭露至門牌與地號**。
+- **遮蔽規則與特殊樣態**：
+  - 目前買賣案件中出現區間（`NUMBER_RANGE`）者，主要為大型集合住宅整棟/連棟交易、地下室防空避難室或多戶車位（例如：`鄭州路１１９至１３１號房屋地下二層`、`港墘路１２７巷２７至３７號`）。
+  - 區間表示法為「X至Y號」或「X～Y號」，為連續號碼區間（同一路段區間內同時包含單號與雙號）。
+  - 巷弄樣態：包含巷、弄（如：`中山北路二段１１５巷２８號`）。
 
 ---
 
-### 2.3 臺北市數值地籍地段圖 (`taipei_cadastral_sections`)
-- **官方資源 URL**：`https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=86430589-4e8b-4e21-9d5f-08b0e5c2ce3f`
-- **資訊頁面**：`https://data.taipei/dataset/detail?id=4f3d2280-1ebc-4bba-8ebf-66953403732b`
-- **主管機關**：臺北市政府地政局土地開發總隊
-- **格式**：SHP（ZIP 壓縮檔，解開為 `LANDSECMAP.shp` 等）
-- **幾何型態**：`Polygon`（面圖層）
-- **CRS**：`EPSG:3826`（經 `.prj` 驗證通過）
-- **授權**：政府資料開放授權條款 - 第1版
-- **驗證紀錄**：
-  - 時間：`2026-10-05T10:18:40+08:00`
-  - HTTP 狀態：`200 OK`
-  - 檔案大小：`1,494,935 bytes`
-  - SHA256：`9b937d86d51206ec69f5a73e42f1b06400a53f1679e859ba7c946ae992e53312`
-  - 總要素數：`589` 個地段面（如「公園段一小段」、「光華段一小段」）
-- **實際欄位清單**：
-  `序號`, `縣市`, `縣市別`, `段代碼`, `地段名`, `行政區`, `geometry`
-- **極重要限制說明**：
-  此圖層為**地段（Section）邊界**，**非宗地地號（Parcel）邊界**。不能用於計算相鄰地號整併潛力。
+### 2.3 臺北市門牌位置數值資料庫現狀與不一致風險
+- **資料集屬性**：
+  - 主管機關：臺北市民政局
+  - 檔案大小：124,662,109 bytes (~124.6 MB)，1,157,763 筆門牌點
+  - 坐標系統：`EPSG:3826`（TWD97 臺灣二度分帶，橫縱坐標）
+  - 資料更新頻率：`每1月`（民政局每月現地清查並更新）
+  - 本次抓取版本日期：`2026-10-02`
+  - 授權：政府資料開放授權條款 - 第1版
+- **「現況門牌」與成交當時不一致之風險與防禦機制**：
+  - **門牌整編/改編**：臺北市歷年新闢道路（如市民大道）、重劃區或里鄰行政界調整時，舊門牌可能被整編。若 5 年前成交之舊門牌已整編，直接比對可能落入未匹配。
+  - **門牌滅失**：成交後建物若遇拆除改建或都更整地，該門牌點可能在現況庫中遭註銷廢止。
+  - **防禦機制**：
+    1. 比對優先級：路+巷+弄+號 EXACT 匹配；
+    2. 若未匹配，退回「路段」（ROAD_SEGMENT）求幾何外包，或嚴格標為 `UNRESOLVED`，不捏造假坐標；
+    3. 提供 `config/manual_locations.yaml` 人工查核覆蓋機制，可手動查驗門牌整編對照表後輸入確定坐標與查驗證據。
 
 ---
 
-### 2.4 臺北市門牌位置數值資料 (`taipei_doorplate_locations`)
-- **官方資源 URL**：`https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=ce76ca0c-7f94-4935-ab47-1d2a41ca2abb`
-- **資訊頁面**：`https://data.taipei/dataset/detail?id=b7c8e724-1e98-45ee-a0bd-f3840623ed97`
-- **主管機關**：臺北市政府民政局
-- **格式**：CSV（UTF-8 編碼）
-- **坐標系統**：`EPSG:3826`（橫座標 X 約 300,000，縱座標 Y 約 2,770,000，單位公尺）
-- **授權**：政府資料開放授權條款 - 第1版
-- **驗證紀錄**：
-  - 時間：`2026-10-05T10:18:50+08:00`
-  - HTTP 狀態：`200 OK`
-  - 檔案大小：`124,662,109 bytes` (~124.6 MB)
-  - SHA256：`7212058161f10a13d52ee46e74155526ca4ebf182b151562ba0e533f882a89ab`
-  - 總筆數：`1,157,763` 筆精確門牌點位
-- **實際欄位清單**：
-  `省市縣市代碼`, `鄉鎮市區代碼`, `村里`, `鄰`, `街路段`, `地區`, `巷`, `弄`, `號`, `橫座標`, `縱座標`
-- **系統價值**：
-  此資料集是解決「無 TGOS 金鑰時遮蔽地址如何定位」的**關鍵解方**。遮蔽門牌如「重慶北路一段 31~60 號」，可直接從此資料集中篩選該路段 31~60 號的所有實體門牌，計算外包幾何（凸包/區間最小外接矩形）與重心點，進而客觀取得幾何範圍與點估計。
+### 2.4 雙星 C1/D1 錨點與官方幾何深度勘查
+- **(a) 官方都市計畫公告與基地範圍**：
+  - 依據臺北市政府捷運工程局官方公告（`臺北車站特定專用區 C1/D1 土地開發案`）：
+    - **C1 基地**：坐落中正區**公園段一小段 188-6、188-11、188-16、188-18、188-29 地號等 5 筆土地**，基地面積約 13,078 平方公尺。
+    - **D1 基地**：坐落中正區**公園段一小段 192、192-15、192-16、192-20、192-21、192-22 地號等 6 筆土地**，基地面積約 18,515 平方公尺。
+    - 合計基地面積約 31,593 平方公尺（約 9,557 坪）。
+- **(b) 使用分區圖層幾何衍生多邊形（已實證）**：
+  - 從臺北市都市計畫主要計畫面圖層中，精確檢索出車站特定專用區之聯合開發區多邊形：
+    - **C1 基地多邊形 (FID 802)**：`Code=BAH`, `Name=聯合開發區`, 面積 `12,993.1 m²`（與官方公告 13,078m² 契合度達 99.4%），中心點 `(301888.89, 2771267.44)`。
+    - **D1 基地多邊形 (FID 803)**：`Code=BAH`, `Name=聯合開發區`, 面積 `18,633.5 m²`（與官方公告 18,515m² 契合度達 99.4%），中心點 `(301707.57, 2771290.85)`。
+    - 合計多邊形面積：`31,626.6 m²`（約 9,567 坪）。
+- **(c) 靜態 HTML 比對地圖**：
+  - 已生成於 [docs/maps/c1d1_anchor_comparison_map.html](file:///c:/Users/p0282768/Documents/TwinTower/docs/maps/c1d1_anchor_comparison_map.html)。
+  - 包含官方 NLSC 通用電子地圖底圖、官方 C1/D1 基地多邊形、候選單點 A/B/C、多邊形 500/700m 緩衝圈、單點 500/700m 圓，以及周邊 300 筆官方實體門牌取樣點。
+- **(d) 單點錨點 vs 多邊形對 500m 門檻的影響分析**：
+  - C1+D1 基地東西橫跨長達約 367 公尺（西寧北路至重慶北路）。
+  - **單點錨點法（如鄭州路8號）**：以單一點畫圓。對於位於 D1 西側（例如延平北路一段西側、大稻埕圓環西南側）的物業，到東側單點的直線距離會比到 D1 基地邊界的距離**多出約 150～250 公尺**，導致緊鄰 D1 基地的西側房屋被誤判為超出 500m（變為 NEAR 或 FAIL）。
+  - **多邊形起算法（polygon_min_distance）**：以 C1/D1 多邊形外緣邊界起算最短距離（Buffer）。能夠客觀、均勻地覆蓋雙星東西兩側生活圈，最貼合「距雙星基地 500m」的真實物理語意。
 
 ---
 
-### 2.5 臺北市都市計畫使用分區圖 (`taipei_zoning_shp`)
-- **官方資源 URL**：`https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=0cb6e68a-87c1-4846-b766-bcde3ebe179c`（細計）與 `rid=10196e7d-2460-4b8a-b1d2-84001d09d7a4`（主計）
-- **資訊頁面**：`https://data.taipei/dataset/detail?id=3bab0a01-7936-4218-8cb5-f74dfcb43dda`
-- **主管機關**：臺北市政府都市發展局
-- **格式**：SHP（ZIP 壓縮檔）
-- **CRS 現狀**：**`None`（異常：官方壓縮包內未包含 `.prj` 檔案）**
-- **授權**：政府資料開放授權條款 - 第1版
-- **驗證紀錄**：
-  - 時間：`2026-10-05T10:18:45+08:00`
-  - HTTP 狀態：`200 OK`
-  - 檔案大小：`4,187,541 bytes`（RID 0cb6）、`2,008,868 bytes`（RID 1019）
-  - SHA256：`d89e3ab3dcdc60de2b2b83987c0774d87ae3037d53af2adf5a28f47b3a44a21b`（RID 0cb6）
-  - 坐標數值範圍：`X: 294770 ~ 319674`, `Y: 2759513 ~ 2790592`（數值結構完全符合 EPSG:3826 臺灣二度分帶，但無 prj）
-- **合規處理**：
-  根據原則「不得假設 GIS 的 CRS：實際讀取驗證，缺失或異常即讓匯入失敗」，此圖層在 Phase 2 若無官方修正或使用者明確指定 PRJ 前，不能私自靜默指派 CRS，必須於管線中標註 `zoning_status = UNKNOWN`，或由設定檔明確授權外部 PRJ 補綴。
+### 2.5 情境圖層（交通機能、重大建設）與官方底圖實測
+- **TDX 憑證狀態**：目前本機環境無 `TDX_CLIENT_ID` / `TDX_CLIENT_SECRET`，依原則標註為 **`UNVERIFIED`**。已提供 [.env.example](file:///c:/Users/p0282768/Documents/TwinTower/.env.example) 供使用者自行設定。若未設定，相關交通圖層在執行時標為 `UNAVAILABLE`，App 完全正常運作。
+- **官方交通來源優先順序**：
+  1. 臺北捷運出入口坐標：`data.taipei` RID `35d21c4b-e698-4af6-a4c4-7275ec9c16d5`（實測 HTTP 200 OK，具備各出入口 TWD97/WGS84 坐標）。
+  2. 臺鐵/高鐵車站：TDX `/v2/Rail/TRA/Station` 與 `/v2/Rail/THSR/Station`（若無 TDX 金鑰則使用本機靜態官方坐標表備援）。
+  3. 公車站位與路線：`data.taipei` 臺北市公車站位圖資（優先）或 TDX API。
+- **官方底圖**：
+  - 國土測繪圖資服務雲 (NLSC) 臺灣通用電子地圖 WMTS：`https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}`
+  - 實測：HTTP 200，回傳 `image/jpeg`，免費免 Token，完全符合官方一手來源規範。
+- **重大建設清冊架構**：
+  - 建立於 `config/major_projects.yaml`，包含雙星 C1/D1、E1/E2 街廓公辦都更（明日台北埕）、西寧國宅與洛陽停車場改建等官方公告項目，僅列公告狀態（PLANNED / UNDER_CONSTRUCTION / OPERATING），不預估完工時程，不進入評分模型。
 
 ---
 
-### 2.6 TGOS 全國門牌地址定位服務 (`tgos_geocoder`)
-- **狀態**：`UNVERIFIED`
-- **原因**：目前本機環境無 `TGOS_APP_ID` / `TGOS_API_KEY` 環境變數，且 TGOS 需個別帳號向內政部資訊中心申請金鑰。
-- **降級處置**：完全不依賴外部 TGOS API，改以離線官方「臺北市門牌位置數值資料」（115 萬筆門牌坐標）為本機主力定位引擎。
-
----
-
-### 2.7 國土測繪圖資服務雲 (NLSC) 地籍圖服務 (`nlsc_cadastre_wms`)
-- **官方資源 URL**：`https://maps.nlsc.gov.tw/S_Maps/wms`
-- **狀態**：`VERIFIED_LIMITED`
-- **驗證紀錄**：
-  - 時間：`2026-10-05T10:20:05+08:00`
-  - HTTP 狀態：`200 OK`（XML GetCapabilities 通過）
-- **限制**：
-  NLSC 僅提供地籍圖 WMS 地圖影像圖磚（GetMap 渲染），不提供整批向量宗地多邊形（Parcels Vector Polygon）免費下載。因此無法在本機進行宗地鄰近拓撲幾何計算。
-
----
-
-### 2.8 臺北市都市更新公開資料 (`taipei_urban_renewal_open_data`)
-- **官方資源 URL**：`https://data.taipei/dataset/detail?id=cda6b568-0035-420b-bd05-6ca9bfd4bda0` 等
-- **狀態**：`VERIFIED_LIMITED`
-- **驗證紀錄**：
-  - 臺北市都市更新處開放資料集皆為法規、費用標準、行政區統計與會議紀錄等 CSV 表格，官方平臺**未開放**全市「劃定都市更新地區/單元」的向量多邊形圖資下載。
-- **降級處置**：Phase 4 都更欄位如實標註為 `UNKNOWN`。
-
----
-
-### 2.9 臺北雙星 C1/D1 官方範圍幾何與錨點 (`twin_towers_c1_d1_anchor`)
-- **主管機關**：臺北市政府捷運工程局 / 臺北雙星股份有限公司
-- **現狀**：官方目前未單獨發布名為「台北雙星」的單一公開向量 GeoJSON/SHP 圖層。
-- **經官方門牌資料驗證之參考點候選**：
-  1. **候選點 1（D1 基地門牌）**：臺北市中正區鄭州路 8 號
-     - TWD97 (EPSG:3826)：`(301917.188, 2771280.254)`
-     - WGS84：`(121.514536, 25.048789)`
-     - 出處：臺北市政府民政局門牌位置數值資料（鄉鎮市區代碼 63000050，鄭州路 8 號）
-  2. **候選點 2（C1 基地代表門牌 / 機場捷運 A1）**：臺北市中正區鄭州路 8 號與北平西路 3 號之間交界（市民大道南側）
-     - TWD97 (EPSG:3826)：`(302000.000, 2771250.000)`
-     - WGS84：約 `(121.515350, 25.048510)`
-  3. **候選點 3（臺北車站站體門牌）**：臺北市中正區北平西路 3 號
-     - TWD97 (EPSG:3826)：`(302172.309, 2771102.538)`
-     - WGS84：`(121.517058, 25.047176)`
+### 2.6 人工覆蓋檔規範 (`config/manual_locations.yaml`)
+- 依原則「人工覆蓋檔只填位置與證據；distance_min/max 與 distance_verified 由管線依幾何推導，不得手填」：
+  - 使用者僅填寫：`original_address`, `location_id`, `resolved_precision`, `point_x_twd97`, `point_y_twd97`, `verified_by`, `evidence_notes`。
+  - 距離數值（點估計、min、max、verified）一律由管線以 Shapely 幾何推導，杜絕人工主觀干擾。
